@@ -1,0 +1,9 @@
+'use client';
+import {useState} from 'react';
+import {CUSTOMER_EMAIL_STATUSES} from '@/lib/customer-email-content';
+export default function CustomerEmailStatus({id,status,recipient,payload,error,retryable,providerId}:{id:string;status:string|null;recipient:string|null;payload:string|null;error:string|null;retryable:number|null;providerId:string|null}){
+ const [pending,setPending]=useState(false),[message,setMessage]=useState('');
+ async function retry(){setPending(true);try{const result=await fetch('/api/manage/customer-email',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'retry',id})});const body=await result.json() as {error?:string};if(!result.ok)throw Error(body.error||'Could not retry.');window.location.reload();}catch(e){setMessage(e instanceof Error?e.message:'Could not retry.');setPending(false);}}
+ const email=payload?JSON.parse(payload) as {subject:string;text:string;reply_to:string}:null;
+ return <section aria-label="Automatic email confirmation"><p><strong>Automatic confirmation:</strong> {status?(CUSTOMER_EMAIL_STATUSES[status]||status):'Not requested for this inquiry'}</p>{status&&<><p className="crm-help">Original recipient: {recipient}. Personal follow-up still needs your review.</p>{error&&<p className="crm-help">{error}</p>}{email&&<details><summary>View saved email</summary><p className="crm-help">Subject: {email.subject}<br/>Replies to: {email.reply_to}</p><blockquote className="response-draft">{email.text}</blockquote>{providerId&&<p className="crm-help">Resend reference: {providerId}</p>}</details>}{retryable===1&&['pending','failed','sending'].includes(status)&&<button className="crm-button crm-button-secondary" disabled={pending} onClick={retry}>{pending?'Checking email…':'Retry saved confirmation'}</button>}<p role="status" className="crm-help">{message}</p></>}</section>;
+}

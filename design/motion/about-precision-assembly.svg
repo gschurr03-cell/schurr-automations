@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 510" aria-hidden="true" focusable="false">
+<rect width="620" height="510" fill="#141217"/><defs>
+ <linearGradient id="about-metal" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#dedbe4"/><stop offset=".24" stop-color="#7c7685"/><stop offset=".5" stop-color="#e6dcea"/><stop offset=".7" stop-color="#5c5564"/><stop offset="1" stop-color="#aaa1b5"/></linearGradient>
+ <linearGradient id="about-surface" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#29252f"/><stop offset="1" stop-color="#141317"/></linearGradient>
+ <linearGradient id="about-amethyst" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#b790d4"/><stop offset=".35" stop-color="#8450bf"/><stop offset="1" stop-color="#3c234f"/></linearGradient>
+ <linearGradient id="about-edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#342740"/><stop offset=".5" stop-color="#9a68c6"/><stop offset="1" stop-color="#493255"/></linearGradient>
+ <radialGradient id="about-ambient"><stop stop-color="#70418f" stop-opacity=".17"/><stop offset="1" stop-color="#17131c" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="310" cy="272" rx="268" ry="195" fill="url(#about-ambient)"/>
+<g stroke="#39333f" stroke-width=".8" fill="none"><path d="M36 86V38H84M536 38H584V86M36 424V472H84M536 472H584V424"/><path d="M62 415L387 321L558 418M62 426L387 332L558 429" opacity=".5"/><path d="M309 70V445" stroke-dasharray="2 10"/></g>
+<g stroke="#7d688d" fill="none" stroke-width=".8" opacity=".6"><path d="M82 395V221M382 308V133M520 390V215"/><path d="M76 389H88M76 304H88M76 221H88M376 302H388M376 218H388M376 133H388M514 384H526M514 300H526M514 215H526"/></g>
+<g data-about-layer="2" transform="translate(302 293)">
+ <path d="M-220 9L80-78L218 4V13L-82 100L-220 18Z" fill="#100d14" stroke="#49414f" stroke-width="1"/>
+ <path d="M-220 9L80-78L218 4L-82 91Z" fill="url(#about-surface)" stroke="url(#about-metal)" stroke-width="1.2"/>
+ <path d="M-198 12L78-68L197 3L-79 83Z" fill="none" stroke="#736181" stroke-width=".7"/>
+ <g transform="matrix(1 -.29 .72 .43 -97 52)" fill="none" stroke="#ad92c4" stroke-width="1.25"><path d="M0 0H52V28H106V0H150M0 48H28V18M88 48V32H154"/><path d="M40-4V32M114-5V34" opacity=".4"/><rect x="53" y="9" width="29" height="26" fill="#382640"/><path d="M60 18H76M60 25H70"/><circle cx="0" cy="0" r="3"/><circle cx="150" cy="0" r="3"/><circle cx="0" cy="48" r="3"/><circle cx="154" cy="32" r="3"/></g>
+ <path d="M-209 18L-82 91L204 8" fill="none" stroke="#bd99d5" stroke-opacity=".45" stroke-width=".65"/>
+</g>
+<g data-about-layer="1" transform="translate(302 222)">
+ <path d="M-220 9L80-78L218 4V13L-82 100L-220 18Z" fill="#261931" stroke="#674577" stroke-width="1"/>
+ <path d="M-220 9L80-78L218 4L-82 91Z" fill="url(#about-amethyst)" stroke="url(#about-metal)" stroke-width="1.25"/>
+ <path d="M-198 12L78-68L197 3L-79 83Z" fill="none" stroke="#d8b9ee" stroke-opacity=".55" stroke-width=".7"/>
+ <g transform="matrix(1 -.29 .72 .43 -95 42)" fill="none" stroke="#f1defb" stroke-width="1.2"><path d="M0 0H49V25H0ZM68 0H143M68 11H121M0 42H143M0 53H92"/><path d="M112 53H144M137 48L144 53L137 58"/></g>
+ <path d="M-209 18L-82 91L204 8" fill="none" stroke="#ead5fa" stroke-opacity=".6" stroke-width=".7"/>
+</g>
+<g data-about-layer="0" transform="translate(302 151)">
+ <path d="M-220 9L80-78L218 4V13L-82 100L-220 18Z" fill="#1b1820" stroke="#6d6376" stroke-width="1"/>
+ <path d="M-220 9L80-78L218 4L-82 91Z" fill="url(#about-surface)" stroke="url(#about-metal)" stroke-width="1.35"/>
+ <path d="M-198 12L78-68L197 3L-79 83Z" fill="none" stroke="#65546f" stroke-width=".7"/>
+ <g transform="matrix(1 -.29 .72 .43 -10 -15)" fill="none" stroke="#d4bedf" stroke-width="1.2"><circle r="43"/><circle r="25"/><circle r="6" fill="#b383d5"/><path d="M-57 0H-33M33 0H57M0-55V-32M0 32V55"/><path d="M-43 10H-21M21-10H43" stroke="#8450bf" stroke-width="2"/></g>
+ <path d="M-209 18L-82 91L204 8" fill="none" stroke="#ddd4e4" stroke-opacity=".35" stroke-width=".7"/>
+</g>
+<g class="about-instrument-labels" font-family="Archivo, Arial, sans-serif" font-size="12" fill="#d4c9df" letter-spacing="1.1">
+ <g data-about-label="0"><path d="M408 87H523" stroke="#796b86" stroke-width=".7"/><text x="528" y="91" font-size="10" letter-spacing="0">01</text><text x="418" y="77">BUSINESS</text></g>
+ <g data-about-label="1"><path d="M479 253H558" stroke="#ae81d0" stroke-width=".7"/><text x="501" y="273" text-anchor="middle" font-size="10" letter-spacing=".7">EXPERIENCE</text></g>
+ <g data-about-label="2"><path d="M82 370H52V402" fill="none" stroke="#796b86" stroke-width=".7"/><text x="54" y="421" font-size="11">ENGINEERING</text></g>
+</g>
+<g data-about-complete="" opacity="1"><path d="M241 428H276L289 441L318 413H381" fill="none" stroke="url(#about-edge)" stroke-width="1.3"/><text x="310" y="469" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-size="11" letter-spacing="1.45" fill="#b9a0cb">EVERY DETAIL HAS A REASON</text></g>
+</svg>

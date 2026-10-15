@@ -1,0 +1,7 @@
+PASS lost-response recovery retains the exact body/key and consent, blocks double submit, recovers one receipt, and restores chosen-channel controls
+PASS a response body that stalls after headers times out, retains the request and recovers its saved receipt
+PASS token failures before POST and explicit 400 validation keep the form editable, display errors, and accept corrected details
+PASS a newly paused optional callback can be unchecked and resubmitted without creating a callback
+PASS a removed inquiry stays removed and recovery offers no further submission
+PASS phone metrics distinguish the receptionist demo from a direct call to Gavin
+All public inquiry recovery fixtures passed. Zero live records, provider calls or messages.

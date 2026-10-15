@@ -1,0 +1,5 @@
+PASS request-only public contract, signed lookup, permission/field rejection, durable atomic save, concurrent deduplication, notification outage, rollback and deletion tombstone
+PASS lost-response browser recovery locks the original payload and looks up the receipt before retrying; requested state never renders confirmed
+PASS Denver fall-back time remains timezone-aware, customer zones valid, and printed QR selectors/media paths preserved
+PASS all seven allowlisted source labels persist separately in CRM, remain filterable and idempotent; invalid attribution rejected; default receipt hashes preserved; no campaign or personal data added to metrics
+All public booking fixtures passed. Zero live provider calls or messages.

@@ -1,0 +1,1150 @@
+{
+  "candidate": "schurr-handoff-2026-10-14-r2",
+  "site_id": "appgprj_6abd3e1333308191928b1d9102e7b093",
+  "production_baseline": {
+    "version": 103,
+    "commit": "ad38b90e90f37baed2f0b61b4668951bf40b23fc"
+  },
+  "previous_unpublished_version": {
+    "version": 104,
+    "commit": "762e8b5ce9209939fe0d453246348dfd64d0b49c"
+  },
+  "frozen_at_utc": "2026-10-14T17:14:24.029884+00:00",
+  "immutable_version_commit": "See the saved Sites receipt in the final delivery; this manifest cannot embed its own commit hash.",
+  "content_fingerprint_sha256": "ef834747f16acc151365eff1190b84ef2c973701710cbb8caf1f3b623a45e37b",
+  "elapsed_this_continuation_minutes_at_freeze": 19.9,
+  "effort_per_ticket": "Not separately tracked; no estimated ticket time is presented as actual.",
+  "all_changed_files": [
+    "app/api/booking/route.ts",
+    "app/api/inquiries/route.ts",
+    "app/book/automotive/README.md",
+    "app/book/automotive/automotive.css",
+    "app/book/automotive/campaign-page.tsx",
+    "app/book/automotive/campaign-video.tsx",
+    "app/book/automotive/campaigns.ts",
+    "app/book/automotive/revenue-review-form.tsx",
+    "app/book/booking-form.tsx",
+    "app/book/booking.css",
+    "app/book/page.tsx",
+    "app/industries/used-car-dealers/route.ts",
+    "app/manage/crm-ui.tsx",
+    "app/resources/inquiry-checklist/route.ts",
+    "docs/website-review/COPY-DYNAMIC.md",
+    "docs/website-review/COPY.md",
+    "docs/website-review/DECISIONS.md",
+    "docs/website-review/FILE-MAP.md",
+    "docs/website-review/README.md",
+    "docs/website-review/ROLLBACK.md",
+    "docs/website-review/WQA.md",
+    "docs/website-review/evidence/auth-security.log",
+    "docs/website-review/evidence/backend.log",
+    "docs/website-review/evidence/build.log",
+    "docs/website-review/evidence/crm-render.log",
+    "docs/website-review/evidence/crm.log",
+    "docs/website-review/evidence/customer-email.log",
+    "docs/website-review/evidence/diff-check.log",
+    "docs/website-review/evidence/environment.json",
+    "docs/website-review/evidence/intake-security.log",
+    "docs/website-review/evidence/monitoring-retell.log",
+    "docs/website-review/evidence/public-booking-request.log",
+    "docs/website-review/evidence/retell-owner-alerts.log",
+    "docs/website-review/evidence/scheduling.log",
+    "docs/website-review/evidence/site-content.log",
+    "docs/website-review/evidence/typecheck.log",
+    "docs/website-review/evidence/workflow-stories.log",
+    "docs/website-review/manifest.json",
+    "lib/booking-request.ts",
+    "lib/crm.ts",
+    "lib/inquiries.ts",
+    "lib/inquiry-attribution.ts",
+    "lib/receptionist-sales.ts",
+    "lib/site-seo.ts",
+    "public/agency.js",
+    "public/brief-release.css",
+    "public/dealer-demo.css",
+    "public/dealer-demo.js",
+    "public/inquiry-compact.css",
+    "public/site.js",
+    "public/sitemap.xml",
+    "public/workflow-stories.js",
+    "site-html/demo.html",
+    "site-html/how-it-works/index.html",
+    "site-html/index.html",
+    "site-html/industries/used-car-dealers/index.html",
+    "site-html/inquire.html",
+    "site-html/meet-gavin/index.html",
+    "site-html/privacy/index.html",
+    "site-html/resources/inquiry-checklist/index.html",
+    "site-html/solutions/ai-receptionist/index.html",
+    "site-html/solutions/custom-automation/index.html",
+    "site-html/solutions/local-seo-reviews/index.html",
+    "site-html/solutions/websites-chatbots/index.html",
+    "site-html/why-automation/index.html",
+    "tests/auth-security.test.cjs",
+    "tests/backend.test.cjs",
+    "tests/crm-render.test.cjs",
+    "tests/customer-email.test.cjs",
+    "tests/monitoring-retell.test.cjs",
+    "tests/public-booking-request.test.cjs",
+    "tests/retell.test.cjs",
+    "tests/site-content.test.cjs",
+    "tests/website-flow.test.cjs"
+  ],
+  "changed_since_104": [
+    "app/book/automotive/README.md",
+    "app/book/automotive/campaign-page.tsx",
+    "app/book/automotive/campaigns.ts",
+    "app/book/page.tsx",
+    "app/manage/crm-ui.tsx",
+    "docs/website-review/COPY-DYNAMIC.md",
+    "docs/website-review/COPY.md",
+    "docs/website-review/DECISIONS.md",
+    "docs/website-review/FILE-MAP.md",
+    "docs/website-review/README.md",
+    "docs/website-review/ROLLBACK.md",
+    "docs/website-review/WQA.md",
+    "docs/website-review/evidence/auth-security.log",
+    "docs/website-review/evidence/backend.log",
+    "docs/website-review/evidence/build.log",
+    "docs/website-review/evidence/crm-render.log",
+    "docs/website-review/evidence/crm.log",
+    "docs/website-review/evidence/customer-email.log",
+    "docs/website-review/evidence/diff-check.log",
+    "docs/website-review/evidence/environment.json",
+    "docs/website-review/evidence/intake-security.log",
+    "docs/website-review/evidence/monitoring-retell.log",
+    "docs/website-review/evidence/public-booking-request.log",
+    "docs/website-review/evidence/retell-owner-alerts.log",
+    "docs/website-review/evidence/scheduling.log",
+    "docs/website-review/evidence/site-content.log",
+    "docs/website-review/evidence/typecheck.log",
+    "docs/website-review/evidence/workflow-stories.log",
+    "docs/website-review/manifest.json",
+    "lib/booking-request.ts",
+    "lib/crm.ts",
+    "lib/inquiries.ts",
+    "lib/inquiry-attribution.ts",
+    "lib/receptionist-sales.ts",
+    "site-html/how-it-works/index.html",
+    "site-html/index.html",
+    "site-html/industries/used-car-dealers/index.html",
+    "site-html/meet-gavin/index.html",
+    "site-html/privacy/index.html",
+    "site-html/solutions/ai-receptionist/index.html",
+    "tests/crm-render.test.cjs",
+    "tests/public-booking-request.test.cjs",
+    "tests/retell.test.cjs",
+    "tests/site-content.test.cjs"
+  ],
+  "source_and_test_hashes": [
+    {
+      "path": "app/api/booking/route.ts",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-10"
+      ],
+      "route": "/api/booking",
+      "sha256": "6356976d2cb17fe8549864a7a5562caf81f05f65965840107fdab412e0bec115"
+    },
+    {
+      "path": "app/api/inquiries/route.ts",
+      "change": "Modified",
+      "tickets": [
+        "WEB-04"
+      ],
+      "route": "/api/inquiries",
+      "sha256": "e27e416ad51212826c358be80f790b79c11dc740a3a85f1bde63f8bb35e8f41e"
+    },
+    {
+      "path": "app/book/automotive/README.md",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "3ba511c007424822925b45d2cd2653e2a293ffa1086d0189ebfc8ba85ee68740"
+    },
+    {
+      "path": "app/book/automotive/automotive.css",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "cd21f941c5e044863230db22adf327fd668d95d097ecea0b6764e7b178664c0f"
+    },
+    {
+      "path": "app/book/automotive/campaign-page.tsx",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "cd0bd695cce4e32f55773645a587afcfa36879ba7fe7e3b22210d578b1bd7857"
+    },
+    {
+      "path": "app/book/automotive/campaign-video.tsx",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "d0136774e80fff94ca02a39c923c69522f6315bbe703e6ae670c2d84d28257a1"
+    },
+    {
+      "path": "app/book/automotive/campaigns.ts",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "ee687c139290a42b7950c310f5147a8f1a4e8f5e945f44471f81f6d735c594fb"
+    },
+    {
+      "path": "app/book/automotive/revenue-review-form.tsx",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "378709f2d0cb1f3e3250c4b4d095b7952e0079d19e40612af784e2d9e5f35da2"
+    },
+    {
+      "path": "app/book/booking-form.tsx",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "f46d19ce030ef9a19fc873e265a91d598c385065a221736d2e31e38bafb4cb1f"
+    },
+    {
+      "path": "app/book/booking.css",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "e24975b3e6cd656392e4ecd3dedd44e84a6d56399daf3dc5aae4d808233a24fe"
+    },
+    {
+      "path": "app/book/page.tsx",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-03",
+        "WEB-09",
+        "WEB-10",
+        "WEB-13"
+      ],
+      "route": "/book and existing dealer/repair QR variants",
+      "sha256": "8873ff1a3a26e351c489e1a1cb1d5e53311fa53b7035387728c7d6d3f07c5b4f"
+    },
+    {
+      "path": "app/industries/used-car-dealers/route.ts",
+      "change": "Added",
+      "tickets": [
+        "WEB-07",
+        "WEB-12"
+      ],
+      "route": "/industries/used-car-dealers/",
+      "sha256": "64ab0bd669cc63ca9ad1f779112ea781735a77db711e2f2aadff78006519ab0c"
+    },
+    {
+      "path": "app/manage/crm-ui.tsx",
+      "change": "Modified",
+      "tickets": [
+        "WEB-12"
+      ],
+      "route": "/manage/leads; /manage/leads/new; /manage/leads/[id] (shared rendering; original manual choices retained)",
+      "sha256": "0d4bf315131399d6d6d59c9cc63c50d542fdb151ef1fdca7560bf4b5ba3e8368"
+    },
+    {
+      "path": "app/resources/inquiry-checklist/route.ts",
+      "change": "Added",
+      "tickets": [
+        "WEB-09",
+        "WEB-12"
+      ],
+      "route": "/resources/inquiry-checklist/",
+      "sha256": "2b11693a0d0030854a52ad3182a7fd4a639de4cb26535ef92dcf11641f0ac0dd"
+    },
+    {
+      "path": "lib/booking-request.ts",
+      "change": "Added",
+      "tickets": [
+        "WEB-03",
+        "WEB-10",
+        "WEB-12"
+      ],
+      "route": "/api/booking",
+      "sha256": "55f133216ec32904eda0afd1200512e63633956f7260e201f48f622dba2d4181"
+    },
+    {
+      "path": "lib/crm.ts",
+      "change": "Modified",
+      "tickets": [
+        "WEB-12"
+      ],
+      "route": "/manage/leads; /manage/leads/[id]; /manage/leads/new; /api/manage/export",
+      "sha256": "f98ac4cec9ffe83eebe9281b3d443d7eec393133351d75b2d53f07484a1f3f6d"
+    },
+    {
+      "path": "lib/inquiries.ts",
+      "change": "Modified",
+      "tickets": [
+        "WEB-04",
+        "WEB-05",
+        "WEB-12"
+      ],
+      "route": "/api/inquiries; /api/booking; /api/metrics (shared validation/persistence)",
+      "sha256": "004ec2e7b231d08439afaf8cfd94122f037e4374b90236f0f01d776ed3e18857"
+    },
+    {
+      "path": "lib/inquiry-attribution.ts",
+      "change": "Added",
+      "tickets": [
+        "WEB-04",
+        "WEB-12"
+      ],
+      "route": "/api/inquiries; /api/booking; CRM source labels",
+      "sha256": "42bb9cb927265589d6c834a4278e168f744defe563cd9a3f13952b9917363b08"
+    },
+    {
+      "path": "lib/receptionist-sales.ts",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-08"
+      ],
+      "route": "Local prompt candidate for owner-authorized receptionist operations; no sync",
+      "sha256": "8247b6d125d9ed2b4e37293959f5cf9d9989f579d2e4c0b3a226e85cc94c7065"
+    },
+    {
+      "path": "lib/site-seo.ts",
+      "change": "Modified",
+      "tickets": [
+        "WEB-12"
+      ],
+      "route": "Internal SEO inventory",
+      "sha256": "04b4b3ed16c93b2bffcb0be940674e91d2f55f95f0dca38a91c122c83b4ec09f"
+    },
+    {
+      "path": "public/agency.js",
+      "change": "Modified",
+      "tickets": [
+        "WEB-06",
+        "WEB-12",
+        "WEB-13"
+      ],
+      "route": "Shared public navigation/CTA counting",
+      "sha256": "45178475dcd48d4ce0dd577b513b0b44faefeaf684bf6601a74d00de9f0cb261"
+    },
+    {
+      "path": "public/brief-release.css",
+      "change": "Added",
+      "tickets": [
+        "WEB-06",
+        "WEB-07",
+        "WEB-13"
+      ],
+      "route": "Shared public layout and responsive styles",
+      "sha256": "8138e7feb4a89f87f3912482c2dd2cdfe07df9e7501cb89b189f1685e9e1f70d"
+    },
+    {
+      "path": "public/dealer-demo.css",
+      "change": "Added",
+      "tickets": [
+        "WEB-09",
+        "WEB-13"
+      ],
+      "route": "/demo/; /resources/inquiry-checklist/",
+      "sha256": "2b9c616fcc3e8ab5cf0760779ca54e31ec884f06d41b692436632db27bff18c3"
+    },
+    {
+      "path": "public/dealer-demo.js",
+      "change": "Added",
+      "tickets": [
+        "WEB-09",
+        "WEB-13"
+      ],
+      "route": "/demo/; /resources/inquiry-checklist/",
+      "sha256": "e6c788391620d3d1ac58fd0c84031c758e20b0842ddf8654193a13d9abdc27ca"
+    },
+    {
+      "path": "public/inquiry-compact.css",
+      "change": "Added",
+      "tickets": [
+        "WEB-04",
+        "WEB-13"
+      ],
+      "route": "/inquire/",
+      "sha256": "39161e554a80a189d39bfe6bf8c947ec2d2bb332d877107f467c5d0c3f03e858"
+    },
+    {
+      "path": "public/site.js",
+      "change": "Modified",
+      "tickets": [
+        "WEB-04",
+        "WEB-12",
+        "WEB-13"
+      ],
+      "route": "/inquire/; legacy scripted demo support",
+      "sha256": "2a2ea031f220c82f304d2c16f8ce6168ca3a73ab460a42ec5f5c7e58c48518ce"
+    },
+    {
+      "path": "public/sitemap.xml",
+      "change": "Modified",
+      "tickets": [
+        "WEB-12"
+      ],
+      "route": "/sitemap.xml",
+      "sha256": "764fc4968ea0ba49d6a043787651cda15e8242d4bdd40bd6a1dab0dabe99cda7"
+    },
+    {
+      "path": "public/workflow-stories.js",
+      "change": "Modified",
+      "tickets": [
+        "WEB-06",
+        "WEB-13"
+      ],
+      "route": "Shared motion behavior; Home timing",
+      "sha256": "a92fe5af7794383b29e889c7e6f024a8daa7a954afecd895801d04defe85aa74"
+    },
+    {
+      "path": "site-html/demo.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-09",
+        "WEB-13"
+      ],
+      "route": "/demo/",
+      "sha256": "325cc2e2ee9990578ac8c6bf0b3ed0a0199c47f52313458a2279f9d04a3d1674"
+    },
+    {
+      "path": "site-html/how-it-works/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-11"
+      ],
+      "route": "/how-it-works/",
+      "sha256": "9390be44a18403b79712d1d13f59da044184e6054b066a9863b3a77161d250aa"
+    },
+    {
+      "path": "site-html/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-06",
+        "WEB-12",
+        "WEB-13"
+      ],
+      "route": "/",
+      "sha256": "31535338d3dd5ae6855c69c6481f2c6a9202c69ca8701180bb8e5e5cc6784d1a"
+    },
+    {
+      "path": "site-html/industries/used-car-dealers/index.html",
+      "change": "Added",
+      "tickets": [
+        "WEB-07",
+        "WEB-12",
+        "WEB-13"
+      ],
+      "route": "/industries/used-car-dealers/",
+      "sha256": "13487f8c837b29f757d54d2da40fed6553a5b7407ea52d0ef6bb11949201b1a1"
+    },
+    {
+      "path": "site-html/inquire.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-04",
+        "WEB-05",
+        "WEB-13"
+      ],
+      "route": "/inquire/",
+      "sha256": "d4add35f8e48088880dff89617fdf2b5776d1309ca5f7ec50570289f4fc7c0f8"
+    },
+    {
+      "path": "site-html/meet-gavin/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-11"
+      ],
+      "route": "/meet-gavin/",
+      "sha256": "39f0a602762ba5c8cd3dc3a0c1ba267df2c33741957dc723dbc68f5d095ce824"
+    },
+    {
+      "path": "site-html/privacy/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-05",
+        "WEB-12"
+      ],
+      "route": "/privacy/",
+      "sha256": "5bf7674e0843b1599ceb6ad4db3aa0f18992084c56d1d9a91ae6a96344cbc2a3"
+    },
+    {
+      "path": "site-html/resources/inquiry-checklist/index.html",
+      "change": "Added",
+      "tickets": [
+        "WEB-09",
+        "WEB-12",
+        "WEB-13"
+      ],
+      "route": "/resources/inquiry-checklist/",
+      "sha256": "85188dcaf7fe7f4135977a61bff7734c7b9e78cd126878b65058399d8ffa46a0"
+    },
+    {
+      "path": "site-html/solutions/ai-receptionist/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-08",
+        "WEB-11",
+        "WEB-12"
+      ],
+      "route": "/solutions/ai-receptionist/",
+      "sha256": "4c36f820ca96d2f16b421f08842fa84711bd9394bf822705ac5cebb36e46e278"
+    },
+    {
+      "path": "site-html/solutions/custom-automation/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-08",
+        "WEB-11",
+        "WEB-12"
+      ],
+      "route": "/solutions/custom-automation/",
+      "sha256": "7d9d59712a7b23aa160bb008152029946ab3ce55209047832fbadc865b571999"
+    },
+    {
+      "path": "site-html/solutions/local-seo-reviews/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-08",
+        "WEB-11",
+        "WEB-12"
+      ],
+      "route": "/solutions/local-seo-reviews/",
+      "sha256": "10ab77c8d1e10d7e62be7db745b93aa107dd3597b6b8f450fab42839d30244bd"
+    },
+    {
+      "path": "site-html/solutions/websites-chatbots/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-08",
+        "WEB-11",
+        "WEB-12"
+      ],
+      "route": "/solutions/websites-chatbots/",
+      "sha256": "8aa373c9c7154929a004f1401302bde64bea8008dcd091c4c0353b831d30d5ff"
+    },
+    {
+      "path": "site-html/why-automation/index.html",
+      "change": "Modified",
+      "tickets": [
+        "WEB-02",
+        "WEB-11"
+      ],
+      "route": "/why-automation/",
+      "sha256": "d656fb3c01c5513d9d161f2ef7cfd159eed14d2ae1543b61f88bad9c664b2ee2"
+    },
+    {
+      "path": "tests/auth-security.test.cjs",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "f7805744e5300f5a040f6417545acf1e95369ed02744ba990cb2d1df10ccc81d"
+    },
+    {
+      "path": "tests/backend.test.cjs",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "8594932871150cdfef443398786e14a215d15662338d0e76dae087721b8ab0d6"
+    },
+    {
+      "path": "tests/crm-render.test.cjs",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "7e3022f043395c1b8fdc734656db793cbbd1a123db2a465d82c52a3db1859d9b"
+    },
+    {
+      "path": "tests/customer-email.test.cjs",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "d5b3ed26fdad67b8fee0c2c6fbe82c4e7b1ee44dbccac9088ed01ff6084329c5"
+    },
+    {
+      "path": "tests/monitoring-retell.test.cjs",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "8d63c2e1f35285677331bbc1023b5e3f7ded966e340e49efb7f10bc41a03832b"
+    },
+    {
+      "path": "tests/public-booking-request.test.cjs",
+      "change": "Added",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "231de3abfb6512ee9f208e5490a39a60ff5c47686304f87338d69aee6a6552bb"
+    },
+    {
+      "path": "tests/retell.test.cjs",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "8e126a9f0f30cd5b75eb02c43bee7937b3ced0ad5b039f6925bc8ed990f9d093"
+    },
+    {
+      "path": "tests/site-content.test.cjs",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "38084f93735c367e2f80a3e97837324ce6f3cfd6ecf8a2af7617e516c09ffd85"
+    },
+    {
+      "path": "tests/website-flow.test.cjs",
+      "change": "Modified",
+      "tickets": [
+        "WEB-03",
+        "WEB-04",
+        "WEB-05",
+        "WEB-12",
+        "WEB-13",
+        "WEB-14"
+      ],
+      "route": "Local regression evidence; see WQA.md for scope",
+      "sha256": "8758a2648468bc3237d2feb15031ab96d80f7404bb25233af2ba3f74ac12ccbd"
+    }
+  ],
+  "protected_assets": [
+    {
+      "path": ".openai/hosting.json",
+      "sha256": "4fbb6fd8e04494ade30502cc0c4399f7588f5096f928a196c06499f5ed340df7",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "app/chatgpt-auth.ts",
+      "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "db/schema.ts",
+      "sha256": "0b070a0b95d5dcb7fe0d8f65b0ba4bc8d8c887dfd7529dee1b9573f1c1cca659",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0000_glamorous_mindworm.sql",
+      "sha256": "17df73240dc8ca8134e89cb600026bd6eb06c5c38f021fd88cbeb6cf65fe4aef",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0001_natural_sue_storm.sql",
+      "sha256": "f581fb3cd224504c6c677d3f9342ad150c0419a20b4739eb3373f150cd772a89",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0002_skinny_excalibur.sql",
+      "sha256": "1d92e22552e96a8cf726c25e485e036270a9faea1c3908e71dd79f7951f8419a",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0003_silly_johnny_storm.sql",
+      "sha256": "59c8ca7a625615b0977403260cad3e7890305b822455471900cba3ef3d829e22",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0004_careless_violations.sql",
+      "sha256": "0983897297015422915f6b70ed5f44730c6dbf04ab773fb38f58c11a4270d137",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0005_nappy_sunset_bain.sql",
+      "sha256": "45696e2eac1274e3445adcb115ab7465e53cc62a21f8678e720ea10d96fab292",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0006_unusual_eternity.sql",
+      "sha256": "1f4038c27d6e1bbc586e71b6f65d945024203369fe3f86119801262d941f37b9",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0007_chilly_blackheart.sql",
+      "sha256": "c6b00c9dbe3ebbd73136662afab34baef6f5c1d4b5db76f782b7e5ce189a99ef",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0008_unique_blue_shield.sql",
+      "sha256": "570e911c6f4b917cc07deb03644b205803eba1aab44ab6002150cdeb9e8386a8",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0009_bright_whiplash.sql",
+      "sha256": "ac7f724b36b0c1f5664d65e8f5d209ea005238d38c9cf2712d466c349fb4f048",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0010_thankful_doomsday.sql",
+      "sha256": "55fd9327eff34cefb06e69b2cc32a7f7f1fed4796d1c0e9b6c3d32d6639d65bd",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0011_chemical_dorian_gray.sql",
+      "sha256": "65725bdf0b09143746d9e75d2c988741feb5e298b501cd9272d417379957994c",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0012_past_aqueduct.sql",
+      "sha256": "57268b97fb82a8b50aff14667bc4c981dde56dbedd07c1895117858381181082",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0013_stormy_toro.sql",
+      "sha256": "0b6f0ac28ec66b89df9251705d3ab19b093bd02b70fcd149bffbb9125999f16f",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0014_lucky_jasper_sitwell.sql",
+      "sha256": "525e3458c4978794797fa4476f4b9b1c13f4f942d41b2dff8b5638b0de0012f2",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0015_fantastic_blockbuster.sql",
+      "sha256": "53f2e48ef63f895c2402be59b25d21ed7e3af69f7d856ae74c955c1095b34d54",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0016_sticky_obadiah_stane.sql",
+      "sha256": "378a94723bde3952c96e01500eff66539fd54d9c7e500dfc5ab7613f8cf833cb",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0017_cooing_garia.sql",
+      "sha256": "8ccd1fb09bbd33d71af70a8e73570b0792c63ea393323b74db5f57eed2978d1f",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0018_even_dark_beast.sql",
+      "sha256": "c09a45aeb6f3e7c387f4aeb40b4bbdb778cb98e4e2145d6a00c45822f4e078f2",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0019_tearful_network.sql",
+      "sha256": "12333315488541b92fa3c8a9246bb4b61a276549bb0472cd2ebeca6d82304f5a",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0020_cute_celestials.sql",
+      "sha256": "b3020777d22b9231aa2ac9b2e5b7fb81f70eb67907523d1978c0832321fa69a4",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0021_massive_guardian.sql",
+      "sha256": "bda5dede1cb5370cc74e702420023753d349f5d737a75ae512aee801c84ca9bd",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0022_fresh_rictor.sql",
+      "sha256": "cfedc65bc20cbbaa209cfb1495ed421450701f5b5fffc76f847fb2965db87c3e",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0023_serious_hammerhead.sql",
+      "sha256": "e5130cb0ae73bb5159590840d65a69abe51a0ced1662c393c4a547107befd423",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0024_gmail_mailbox.sql",
+      "sha256": "3221c66738c91577aac1448837940b2ab8533e79815fd6c1f9101e4dc33e2dc8",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0025_gmail_batch_queue.sql",
+      "sha256": "03e520b7da86e7858b73513fa374b5ad828cf6a609c5ff94e26115e6ecada79d",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0026_queue_live_ownership.sql",
+      "sha256": "acfa8966d532bd115d91a905f8c2e82626b31e60d1ffa8708aa894b9040c309f",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/0027_zippy_vindicator.sql",
+      "sha256": "88cabef775fdd8a756740ac41f317a2069d56ee3187950f184245731a3f37970",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "sha256": "1241a74e44155a53d6fcd60ffdde0a9b8e972c29b6585387e07d70f03cb4b4b8",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0001_snapshot.json",
+      "sha256": "b456ed7916c77fa06ba890713a9b156fafd9a895c4ab07cd719cd4cc8edea1a6",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0002_snapshot.json",
+      "sha256": "598a2989cc9cd81018abfc71923a8adf1f4cfc66f2c71ef496a916a802fef338",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0003_snapshot.json",
+      "sha256": "02de7666b3c36f54d2a91a21d904340697f8c938c9fc007f75b77eaa0ba449a5",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0004_snapshot.json",
+      "sha256": "08100b60ae14b56673c94c73c7e1c43f5f5e1fb6a5fb60f11a9c2d280f2381f0",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0005_snapshot.json",
+      "sha256": "59cb7f41701fc8911778be7c6a19fec345d4bec34aaaf4664fa9a4b313660432",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0006_snapshot.json",
+      "sha256": "85077c14352b493e3a149bce2c195d9a1e1b630f06f0a4c8a6c0a2b4af16b950",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0007_snapshot.json",
+      "sha256": "073f34491ac4a4e2d62b05f9105e2af8ab5b181f32e012307ceae650468becc0",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0008_snapshot.json",
+      "sha256": "25e66309d10950c046fa67129397ce96249d3a65b8ecc0663bc8996d63391731",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0009_snapshot.json",
+      "sha256": "3058a78caa1fc13e538411edb0ef4a9381fa54d9027ca1451e5ab0131d7ff0c0",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0010_snapshot.json",
+      "sha256": "7b3ae8082c4163402a14620ab17da24d421b9297eb59bd19dfcc236b81464748",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0011_snapshot.json",
+      "sha256": "1f375d9d9d3d02819fd4304635ddfd9f37d597d55bba8c5bcf1b59c7346bddaf",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0012_snapshot.json",
+      "sha256": "f0a3f13fbac322995c92629a72742710652c48664a1b3711abce6e8c1eafa8d5",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0013_snapshot.json",
+      "sha256": "3db5c2193c96ac1bbbd7f94b3ca8ca0935a891b659ebbbb67847680159c217d5",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0014_snapshot.json",
+      "sha256": "f300f0f99546b4fc39420d04d6cc4dae27219b9035c2e9b6a46bde5ddf8f0ef5",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0015_snapshot.json",
+      "sha256": "1fe8d8283d311ce5dd87c92a6ed9facbbaaf6f7a889ee56b831a7f2bf890f4d9",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0016_snapshot.json",
+      "sha256": "310b872ac942846de3abcb48ac4d81d5aef39d882a1a38ecdc6bc0127f9542ef",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0017_snapshot.json",
+      "sha256": "d5b3062cb4d922fb9ee5fdfd7a17768264e3a34c92e4397a09f0e0d5a2d83b77",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0018_snapshot.json",
+      "sha256": "4abe18909b05ec719baca40cc6f07de42602a2b9a8f5a8979a09c3d6610b0d0c",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0019_snapshot.json",
+      "sha256": "c375ade9f3f44ab0fa03c81eef41407164fbe943b1ae9905bbfd2bac7fd0bf02",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0020_snapshot.json",
+      "sha256": "be0c211182393bbe936688be94e09486bf2e9993b9becb907e6e2c52e9d6cd28",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0021_snapshot.json",
+      "sha256": "0cb014c2ba2ea2ffaf93197a70ef2e1cc201ef9df26a23d0cfb29973334ada02",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0022_snapshot.json",
+      "sha256": "c310e4167717de01d67129fdcfd0e51b6544e9dead71605d2e6588e47bb9fa51",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0023_snapshot.json",
+      "sha256": "f11efdd70968ada786cfb3e3a5e3d75111a9d1a003aa4b1407ccb20dc1ead3e5",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0024_snapshot.json",
+      "sha256": "bf9be424b4cbf27364bcab5a7a467767697eeda69ba8f1ae0a395272211f14c3",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0025_snapshot.json",
+      "sha256": "08911c1c9e14c936c1d71cad2a3188d14ee203b043fc3cab35580bad68d50fd2",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0026_snapshot.json",
+      "sha256": "568526a6a0612f9108555e52d98660eacfbde4217f47f7e57ad55893757f27a1",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/0027_snapshot.json",
+      "sha256": "6e67a56eb4357999d874fdde97c8c0d1914b682b7febf2fa447e54afbe71af0f",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "sha256": "b2fa8cae8f4ed4b4bb8a1287748142c0cda54accc5e97d1141fc1ae485ebe2a3",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "lib/owner.ts",
+      "sha256": "f8a562900fdf0f874b46194d461ecdce600daad3d1ce927147202bc898d272e2",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/automotive/dealer-poster.png",
+      "sha256": "ec0181e23cb761dd3e8640de71c9b76f2de30ee016d096dbc29aea5b62c4f764",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/automotive/repair-poster.png",
+      "sha256": "0b652966d461c75552871f8d2711d8fe301716dfa90d1d6c7f900683300bc82b",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/audit.pdf",
+      "sha256": "de9e4f463c2e64827d4580bfb63fcb4cd9bfdd3b2b5575d6c832908acd2efc6b",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/brain.pdf",
+      "sha256": "6f944d2246c9ae0afcdd2f5da30f1f499ac177acd41792516778dcd71f710895",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/calls.pdf",
+      "sha256": "fd7bff5d12d83c408f97a48f2037adef4074d18413a05e9d2bcfe05ef82089b3",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/coding.pdf",
+      "sha256": "32f951dd02b76b58dc689105d7c39f2f26f565c875ddb6e4748d0f7bd1375da6",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/growth.pdf",
+      "sha256": "3ba6b5bc87503a1c253f21a8dbeb2ec4dc9e87145db08e59de8626d9bfe01998",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/leads.pdf",
+      "sha256": "cb7e34f73e8822cb7f1d64aa490b278d6c9ff5e62332841323be8aea72ffb753",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/manifest.json",
+      "sha256": "88d10af9b22ac155350a573bdc00922e9d1b617f4d1f32249a41703e269ec4f7",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/marketing.pdf",
+      "sha256": "b7e1f91facbbb4af8c222128a6570783fc781255e8ab3b2da6468f844973f292",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/reviews.pdf",
+      "sha256": "9276931659ce6f1db71b82dc134d591ffdc985c346a9f2e6e387d9f2a4b20308",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/source-briefs.json",
+      "sha256": "d17c5b965154c1cedab122def2e0ef6630ad8ef5bb1ba0a32e8de9996fcc9a4d",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/time.pdf",
+      "sha256": "9d6599a2340536d37510143e3186dc822fcab80745252949258e3aa0ae8e1e96",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/briefs/website.pdf",
+      "sha256": "02b15c9c911365ec543653f83621291ea94d109ed998509785b769090157287a",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "5158f9747d7f43d1118e26e807d78f628bc11c5e67ee970ce0a37bb787b97f81",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/fonts/Archivo-OFL.txt",
+      "sha256": "108b4e57c9c796d3d38d0428ca7ee39de47ad93187302718d9b2d8864b9b716b",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/fonts/Source-Sans-3-OFL.txt",
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/fonts/archivo-latin.woff2",
+      "sha256": "8f704806dbedeaaeca334b11ec348bc3ac3a439d6431544b3afb54f534ee4967",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/fonts/source-sans-3-latin.woff2",
+      "sha256": "7a19a7027e125257d310c6dbd78ae3a30b5ea1e3794d60b12bb28227a003bfda",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/schurr-fusion-approved.png",
+      "sha256": "1b9f4a0ca3b6dcb84ae15dacd3691a783e68fe30be894510b6858f36f6f6cf1f",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/videos/business-overview-poster.jpg",
+      "sha256": "cce57429c90b592e9c0fb64ec213948787d800633a3db3581862e5dcd45f6d7c",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/videos/business-overview.mp4",
+      "sha256": "7361568c752de251920cc787a98787363b4ee64d294f29b5704a8ea6f837b05b",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/videos/dealer-explainer.mp4",
+      "sha256": "e79876689d677f42aecc09587b061f49d3cb3063b5a22febaf605d68f12c6606",
+      "unchanged_from_production_103": true
+    },
+    {
+      "path": "public/videos/repair-explainer.mp4",
+      "sha256": "99512da700ee9970e1c1b7da446a2ed2a7e0bcdc8e72e2c14ed094bb138cc32f",
+      "unchanged_from_production_103": true
+    }
+  ],
+  "schema_migrations_added": [],
+  "deployment_performed": false,
+  "live_customer_data_accessed": false,
+  "outbound_messages_sent": false,
+  "paid_tools_or_subscriptions_started": false
+}

@@ -1,0 +1,3219 @@
+{
+  "format": "schurr-operational-backup",
+  "version": 1,
+  "scope": "operational-records-only; not a production-restorable database backup",
+  "limits": {
+    "maxRows": 10000,
+    "maxRowsPerTable": 5000,
+    "maxRawBytes": 2097152,
+    "maxJsonBytes": 8388608,
+    "maxCellBytes": 262144
+  },
+  "migrations": [
+    {
+      "name": "0000_glamorous_mindworm.sql",
+      "sha256": "17df73240dc8ca8134e89cb600026bd6eb06c5c38f021fd88cbeb6cf65fe4aef"
+    },
+    {
+      "name": "0001_natural_sue_storm.sql",
+      "sha256": "f581fb3cd224504c6c677d3f9342ad150c0419a20b4739eb3373f150cd772a89"
+    },
+    {
+      "name": "0002_skinny_excalibur.sql",
+      "sha256": "1d92e22552e96a8cf726c25e485e036270a9faea1c3908e71dd79f7951f8419a"
+    },
+    {
+      "name": "0003_silly_johnny_storm.sql",
+      "sha256": "59c8ca7a625615b0977403260cad3e7890305b822455471900cba3ef3d829e22"
+    },
+    {
+      "name": "0004_careless_violations.sql",
+      "sha256": "0983897297015422915f6b70ed5f44730c6dbf04ab773fb38f58c11a4270d137"
+    },
+    {
+      "name": "0005_nappy_sunset_bain.sql",
+      "sha256": "45696e2eac1274e3445adcb115ab7465e53cc62a21f8678e720ea10d96fab292"
+    },
+    {
+      "name": "0006_unusual_eternity.sql",
+      "sha256": "1f4038c27d6e1bbc586e71b6f65d945024203369fe3f86119801262d941f37b9"
+    },
+    {
+      "name": "0007_chilly_blackheart.sql",
+      "sha256": "c6b00c9dbe3ebbd73136662afab34baef6f5c1d4b5db76f782b7e5ce189a99ef"
+    },
+    {
+      "name": "0008_unique_blue_shield.sql",
+      "sha256": "570e911c6f4b917cc07deb03644b205803eba1aab44ab6002150cdeb9e8386a8"
+    },
+    {
+      "name": "0009_bright_whiplash.sql",
+      "sha256": "ac7f724b36b0c1f5664d65e8f5d209ea005238d38c9cf2712d466c349fb4f048"
+    },
+    {
+      "name": "0010_thankful_doomsday.sql",
+      "sha256": "55fd9327eff34cefb06e69b2cc32a7f7f1fed4796d1c0e9b6c3d32d6639d65bd"
+    },
+    {
+      "name": "0011_chemical_dorian_gray.sql",
+      "sha256": "65725bdf0b09143746d9e75d2c988741feb5e298b501cd9272d417379957994c"
+    },
+    {
+      "name": "0012_past_aqueduct.sql",
+      "sha256": "57268b97fb82a8b50aff14667bc4c981dde56dbedd07c1895117858381181082"
+    },
+    {
+      "name": "0013_stormy_toro.sql",
+      "sha256": "0b6f0ac28ec66b89df9251705d3ab19b093bd02b70fcd149bffbb9125999f16f"
+    },
+    {
+      "name": "0014_lucky_jasper_sitwell.sql",
+      "sha256": "525e3458c4978794797fa4476f4b9b1c13f4f942d41b2dff8b5638b0de0012f2"
+    },
+    {
+      "name": "0015_fantastic_blockbuster.sql",
+      "sha256": "53f2e48ef63f895c2402be59b25d21ed7e3af69f7d856ae74c955c1095b34d54"
+    },
+    {
+      "name": "0016_sticky_obadiah_stane.sql",
+      "sha256": "378a94723bde3952c96e01500eff66539fd54d9c7e500dfc5ab7613f8cf833cb"
+    },
+    {
+      "name": "0017_cooing_garia.sql",
+      "sha256": "8ccd1fb09bbd33d71af70a8e73570b0792c63ea393323b74db5f57eed2978d1f"
+    },
+    {
+      "name": "0018_even_dark_beast.sql",
+      "sha256": "c09a45aeb6f3e7c387f4aeb40b4bbdb778cb98e4e2145d6a00c45822f4e078f2"
+    },
+    {
+      "name": "0019_tearful_network.sql",
+      "sha256": "12333315488541b92fa3c8a9246bb4b61a276549bb0472cd2ebeca6d82304f5a"
+    },
+    {
+      "name": "0020_cute_celestials.sql",
+      "sha256": "b3020777d22b9231aa2ac9b2e5b7fb81f70eb67907523d1978c0832321fa69a4"
+    },
+    {
+      "name": "0021_massive_guardian.sql",
+      "sha256": "bda5dede1cb5370cc74e702420023753d349f5d737a75ae512aee801c84ca9bd"
+    },
+    {
+      "name": "0022_fresh_rictor.sql",
+      "sha256": "cfedc65bc20cbbaa209cfb1495ed421450701f5b5fffc76f847fb2965db87c3e"
+    },
+    {
+      "name": "0023_serious_hammerhead.sql",
+      "sha256": "e5130cb0ae73bb5159590840d65a69abe51a0ced1662c393c4a547107befd423"
+    },
+    {
+      "name": "0024_gmail_mailbox.sql",
+      "sha256": "3221c66738c91577aac1448837940b2ab8533e79815fd6c1f9101e4dc33e2dc8"
+    },
+    {
+      "name": "0025_gmail_batch_queue.sql",
+      "sha256": "03e520b7da86e7858b73513fa374b5ad828cf6a609c5ff94e26115e6ecada79d"
+    },
+    {
+      "name": "0026_queue_live_ownership.sql",
+      "sha256": "acfa8966d532bd115d91a905f8c2e82626b31e60d1ffa8708aa894b9040c309f"
+    },
+    {
+      "name": "0027_zippy_vindicator.sql",
+      "sha256": "88cabef775fdd8a756740ac41f317a2069d56ee3187950f184245731a3f37970"
+    }
+  ],
+  "omittedTables": [
+    "website_callback_settings",
+    "gmail_app_config",
+    "gmail_connections",
+    "gmail_oauth_states",
+    "client_installations",
+    "request_limits",
+    "retell_connection",
+    "retell_inbound_delays",
+    "owner_alert_connection"
+  ],
+  "tables": [
+    {
+      "name": "inquiry_receipts",
+      "columns": [
+        {
+          "name": "submission_key",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "receipt_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "inquiries",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "submission_key",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "business",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "phone",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "service",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "message",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "preferred_contact",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "daily_metrics",
+      "columns": [
+        {
+          "name": "day",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "event",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 2
+        },
+        {
+          "name": "route",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 3
+        },
+        {
+          "name": "service",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 4
+        },
+        {
+          "name": "count",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "crm_leads",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "inquiry_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "business",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "phone",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "service",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "preferred_contact",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "source",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "stage",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "monthly_cents",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "setup_cents",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "crm_events",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "lead_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "kind",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "crm_tasks",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "lead_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "due_date",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "completed_at",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "crm_settings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "business_name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "owner_name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "reply_email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "reply_phone",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "timezone",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "setup_complete",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "crm_mutations",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "request_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "redirect",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "attempt_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "outreach_prospects",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "company",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "website",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "domain",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "contact",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "phone",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "industry",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "location",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "service",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "evidence",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "source_url",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "observed_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "research",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "contact_candidates",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "import_source",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "lead_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "research_request_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "source_notes",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "import_identity",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "record_key",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "address",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "postal_code",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "contact_candidates": "array"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "outreach_campaigns",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "service",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "audience",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "steps",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "steps": "array"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "outreach_drafts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "campaign_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "prospect_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "step",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recipient",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "subject",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "sent_at",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": [
+        "approved_at",
+        "approved_revision",
+        "sender_revision"
+      ]
+    },
+    {
+      "name": "outreach_suppressions",
+      "columns": [
+        {
+          "name": "email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "reason",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "outreach_activity",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "prospect_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "campaign_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "kind",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recipient_email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "outreach_settings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "sender_name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "sender_email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "postal_address",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "daily_limit",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "window_start",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "window_end",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "response_jobs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "inquiry_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "lead_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "source_key",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "channel",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "draft",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_scope",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "confirmed_phone",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "voice_call_controls",
+      "columns": [
+        {
+          "name": "call_sid",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "stopped_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "owner_alerts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "lead_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "payload",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "attempts",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "first_attempt_at",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "email_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_error",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "accepted_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "payload": "object"
+      },
+      "omittedColumns": [
+        "lock_token",
+        "lock_until",
+        "next_attempt_at"
+      ]
+    },
+    {
+      "name": "customer_first_emails",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "recipient",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "payload",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_scope",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_text",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "attempts",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "first_attempt_at",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "email_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "accepted_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_error",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "event_rank",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "event_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "payload": "object"
+      },
+      "omittedColumns": [
+        "connection_fingerprint",
+        "lock_token",
+        "lock_until",
+        "next_attempt_at",
+        "retryable"
+      ]
+    },
+    {
+      "name": "customer_email_events",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "email_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "type",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "event_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "client_setups",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "business_name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "offers",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "profile",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "create_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "offers": "array",
+        "profile": "object"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "client_setup_previews",
+      "columns": [
+        {
+          "name": "client_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "recipe",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 2
+        },
+        {
+          "name": "scenario",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 3
+        },
+        {
+          "name": "setup_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "input",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "output",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "input": "object",
+        "output": "object"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "automation_settings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "profile",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "chat_enabled",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "google_eligibility",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "search_console_property",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "profile": "object"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "automation_runs",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "kind",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "event_key",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "profile_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "input",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "output",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "input": "object",
+        "output": "object"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "review_requests",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "job_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recipient",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_evidence",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "payload",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "profile_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "attempts",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "first_attempt_at",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "email_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_error",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "event_rank",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "event_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "payload": "object"
+      },
+      "omittedColumns": [
+        "connection_fingerprint",
+        "lock_token",
+        "lock_until",
+        "retryable",
+        "approved_at"
+      ]
+    },
+    {
+      "name": "booking_settings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "config",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "config": "object"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "appointments",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "request_key",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "response_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "kind",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "start_ms",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "end_ms",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "busy_start_ms",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "busy_end_ms",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "timezone",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "schedule_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "response_followups",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "response_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "channel",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recipient",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "due_ms",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "note",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "permission_evidence",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "reason",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "response_outcomes",
+      "columns": [
+        {
+          "name": "response_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "outcome",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "note",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "record_token",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recorded_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "appointment_operations",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "request_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "attempt_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "appointment_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "action",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "actor_scope",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "from_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "to_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "client_launch_checks",
+      "columns": [
+        {
+          "name": "client_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "check_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 2
+        },
+        {
+          "name": "setup_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "outcome",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "environment",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "evidence",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recorded_by",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recorded_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "installation_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "website_callbacks",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "recipient",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_scope",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_text",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "consent_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "attempted_at",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "call_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "from_number",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "agent_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "settings_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_error",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "gmail_outbox",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "draft_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "mailbox_email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "connection_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "draft_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "sender_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "prospect_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "campaign_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recipient",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "subject",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "raw_mime",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "raw_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "rfc_message_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "first_attempt_at",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "attempts",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "gmail_message_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "thread_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_error",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_checked_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": [
+        "lock_token",
+        "lock_until"
+      ]
+    },
+    {
+      "name": "gmail_replies",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "mailbox_email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "message_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "thread_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "outbox_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "sender_email",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "subject",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "received_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "kind",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": [
+        "import_token"
+      ]
+    },
+    {
+      "name": "gmail_queues",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "request_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "mailbox",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "active_key",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "interval_minutes",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "batch_size",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "next_due",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_batch_at",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "current_batch",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "reason",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "confirmed_by",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": [
+        "lease_token",
+        "lease_until"
+      ]
+    },
+    {
+      "name": "gmail_queue_items",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "queue_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "outbox_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "draft_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "ordinal",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "batch_number",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "reason",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": [
+        "lease_token"
+      ]
+    },
+    {
+      "name": "receptionist_audition_sessions",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "request_key",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "body_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "catalogue_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "environment",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "tested_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "agent_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "agent_version",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "config_evidence",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "naturalness",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "interruptions",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "pacing",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "recorded_by",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "recorded_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "receptionist_audition_results",
+      "columns": [
+        {
+          "name": "session_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "test_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 2
+        },
+        {
+          "name": "ordinal",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "scenario",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "expected",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "outcome",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "monitoring_settings",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "alerts_enabled",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "baseline_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "baseline_agent_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "baseline_agent_version",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "baseline_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_runner_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "runner_expected",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": [
+        "lease_token",
+        "lease_until"
+      ]
+    },
+    {
+      "name": "monitoring_checks",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "source",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "started_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "finished_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "checks",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "agent_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "agent_version",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "configuration_hash",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "checks": "array"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "monitoring_calls",
+      "columns": [
+        {
+          "name": "call_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "agent_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "agent_version",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "lifecycle_rank",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "provider_status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "started_at_ms",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "ended_at_ms",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "disconnection_reason",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "provider_error",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "latency_p50_ms",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "latency_p95_ms",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "analysis_reported",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "ai_call_successful",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "first_received_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_received_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "observation_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "reconciled_revision",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "monitoring_call_events",
+      "columns": [
+        {
+          "name": "call_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "event_type",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 2
+        },
+        {
+          "name": "received_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": [
+        "receipt_token"
+      ]
+    },
+    {
+      "name": "monitoring_call_tools",
+      "columns": [
+        {
+          "name": "call_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "tool_name",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 2
+        },
+        {
+          "name": "attempts",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "successes",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "technical_failures",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "rejected_actions",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "unclassified_failures",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_status_code",
+          "type": "integer",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_observed_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "monitoring_incidents",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "incident_key",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "active_key",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "source",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "source_event",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "code",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "severity",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "summary",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "opened_check_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_check_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "resolved_check_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "acknowledged_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "resolved_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "resolution_kind",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "updated_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": []
+    },
+    {
+      "name": "monitoring_check_receipts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "body_hash",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "applied",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "result",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {
+        "result": "object"
+      },
+      "omittedColumns": []
+    },
+    {
+      "name": "monitoring_alerts",
+      "columns": [
+        {
+          "name": "id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 1
+        },
+        {
+          "name": "incident_id",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "kind",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "attempts",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "first_attempt_at",
+          "type": "integer",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "email_id",
+          "type": "text",
+          "nullable": true,
+          "primaryKey": 0
+        },
+        {
+          "name": "accepted_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "last_error",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        },
+        {
+          "name": "created_at",
+          "type": "text",
+          "nullable": false,
+          "primaryKey": 0
+        }
+      ],
+      "jsonColumns": {},
+      "omittedColumns": [
+        "payload",
+        "payload_hash",
+        "connection_fingerprint",
+        "lock_token",
+        "lock_until",
+        "next_attempt_at",
+        "retryable"
+      ]
+    }
+  ],
+  "schemaId": "9057174fc1f600038d890479b76f134f7f66069dedae8596996c1490d9396d51"
+}

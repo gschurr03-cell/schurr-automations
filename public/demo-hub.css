@@ -1,0 +1,35 @@
+/* Optional examples, all reachable without a video or email gate. */
+.demo-hub-hero h1 { max-width: 21ch !important; }
+.demo-hub-hero > .dealer-link { margin-top: 20px; }
+.demo-hub-heading { display: flex; gap: 24px; justify-content: space-between; align-items: baseline; margin-bottom: 28px; }
+.demo-hub-heading h2 { font-size: clamp(28px, 3vw, 40px); max-width: 24ch; }
+.demo-hub-heading p { color: #d4c4e0; font-size: 15px; }
+.demo-hub-feature { display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid #796087; background: #1b1720; }
+.demo-hub-image { display: flex; align-items: center; min-width: 0; min-height: 100%; overflow: hidden; background: #e9e7e4; }
+.demo-hub-image img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
+.demo-hub-feature-copy { padding: clamp(26px, 4vw, 50px); min-width: 0; }
+.demo-hub-number { display: block; font-size: 13px; color: #d9b4fa; margin-bottom: 16px; font-variant-numeric: tabular-nums; }
+.demo-hub-feature h3, .demo-hub-options h3 { font-size: clamp(23px, 2.7vw, 32px); line-height: 1.2; margin-bottom: 18px; }
+.demo-hub-feature-copy > p:not(.demo-hub-number), .demo-hub-options p, .demo-hub-next p { font-size: 17px; line-height: 1.6; color: #d4cbdc; }
+.demo-hub-feature-copy .button { margin-top: 24px; white-space: normal; }
+.demo-hub-feature-copy .demo-hub-caption, .demo-hub-next .demo-hub-caption { font-size: 13px; margin-top: 16px; }
+.demo-hub-options { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; margin-top: 30px; }
+.demo-hub-options article { padding-block: 24px 4px; border-top: 1px solid #796087; }
+.demo-hub-options .dealer-link { margin-top: 12px; font-size: 16px; }
+.demo-hub-scope { margin-top: 26px; font-size: 14px; color: #d4cbdc; line-height: 1.6; }
+.demo-hub-next { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.demo-hub-next h2 { font-size: clamp(27px, 3vw, 38px); line-height: 1.2; margin-bottom: 20px; }
+.demo-hub-next .dealer-link, .demo-hub-next .button { margin-top: 20px; }
+@media (max-width: 800px) {
+  .demo-hub-heading { display: block; }
+  .demo-hub-heading p { margin-top: 14px; }
+  .demo-hub-feature, .demo-hub-next { grid-template-columns: minmax(0, 1fr); }
+  .demo-hub-image img { min-height: 0; height: auto; aspect-ratio: 3 / 2; }
+  .demo-hub-next { gap: 40px; }
+  .demo-hub-options { gap: 28px; }
+}
+@media (max-width: 540px) {
+  .demo-hub-options { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .demo-hub-feature-copy { padding: 25px 22px; }
+  .demo-hub-feature-copy .button, .demo-hub-next .button { width: 100%; text-align: center; }
+}

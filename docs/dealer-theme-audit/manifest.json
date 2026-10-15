@@ -1,0 +1,94 @@
+{
+  "candidate": "dealer-first-2026-10-14",
+  "base_version": 106,
+  "base_commit": "14e116f976b359c2be6c3d1fda03c36ffdcee0c0",
+  "created_at_utc": "2026-10-14T17:57:10.236206+00:00",
+  "source_and_test_hashes": [
+    {
+      "path": "app/book/automotive/campaign-page.tsx",
+      "sha256": "067790eb8dfa1d5c38c092bfc703b97955948b78950aa1f50696049e49967616"
+    },
+    {
+      "path": "app/book/booking-form.tsx",
+      "sha256": "bc7bc061d08c1ef6c23ce6d69fb3c36ba1ec86dbdf5f66afcaa1caea10670e75"
+    },
+    {
+      "path": "app/book/page.tsx",
+      "sha256": "842850f49e954e9280c36591fb463066c5cab6878d1e515620069158196ac315"
+    },
+    {
+      "path": "public/site.js",
+      "sha256": "fb09fb7e0bc8d9294d3a52f77842fc4e26db9e66399ba822ed7930ce0710c67d"
+    },
+    {
+      "path": "site-html/demo.html",
+      "sha256": "109d653e552a74b1f442968d9a4ea6cae3750d23e90cabe86975d11721285bda"
+    },
+    {
+      "path": "site-html/how-it-works/index.html",
+      "sha256": "94a47c4dbb7189999a4c032f581c283a5e163b2ca6e13da08cc60aeb8d7f6b4e"
+    },
+    {
+      "path": "site-html/index.html",
+      "sha256": "49ff15fd1eab21c83df05dda9537cb6ee0978feefacf88b0b7455f5c13350def"
+    },
+    {
+      "path": "site-html/industries/used-car-dealers/index.html",
+      "sha256": "bb5a5a4f1df92387daa0ed4260f4ace837865ddc960094f7483dd50a233bdb83"
+    },
+    {
+      "path": "site-html/inquire.html",
+      "sha256": "2e526e46f74edb9a3b01a7b02a3aeda58e07321cde9ece42d7c0fbff236a5027"
+    },
+    {
+      "path": "site-html/meet-gavin/index.html",
+      "sha256": "b09ab4d9c6649ec9442c6f6b2a0f830a3f1a198f5a8b24fda68417ae2d2e5ba0"
+    },
+    {
+      "path": "site-html/privacy/index.html",
+      "sha256": "0c0564342d9b410cf043c4178c83ee78842e6afa45e1dae06fd9c412da4b6b1f"
+    },
+    {
+      "path": "site-html/resources/inquiry-checklist/index.html",
+      "sha256": "376281aa3cfda9478d90ea12f40ea4bfa917d4b14bf65f213bbaa76b717cb9d4"
+    },
+    {
+      "path": "site-html/solutions/ai-receptionist/index.html",
+      "sha256": "8e2ecdd3f5808f741d4af927cbeb1d41145a8cc57d530176b18ac3e786fa9ee3"
+    },
+    {
+      "path": "site-html/solutions/custom-automation/index.html",
+      "sha256": "1f1ed5fa484798bb77f72548ebe8c09b7123c0e53fb946e33fe465e539c7a335"
+    },
+    {
+      "path": "site-html/solutions/local-seo-reviews/index.html",
+      "sha256": "81081b4936b1c397e83b2fe335e209aabcb5abf050d057ec2f43e293dbcd390d"
+    },
+    {
+      "path": "site-html/solutions/websites-chatbots/index.html",
+      "sha256": "bf09a457984f293cf640612469987c2fccdca9c29279064e25e84af67226735a"
+    },
+    {
+      "path": "site-html/why-automation/index.html",
+      "sha256": "c6e0d5a56fc34c77c310ecd98a37e92dd276858de80e1284b7778d6b89dc2ab8"
+    },
+    {
+      "path": "tests/public-inquiry-recovery.test.cjs",
+      "sha256": "43d06b922f8ec386e7640f437812a9c41f0d330c5262a3348d1bd67971318303"
+    },
+    {
+      "path": "tests/site-content.test.cjs",
+      "sha256": "8ab1d8d01678ea0d42948b424902f45cd7475b1bce679ac050eee894d96f7438"
+    }
+  ],
+  "database_migrations": 0,
+  "provider_changes": false,
+  "production_submissions": 0,
+  "deployment_performed": false,
+  "browser_qa": "unavailable",
+  "protected_assets": {
+    "count": 85,
+    "all_match_reviewed_hashes": true,
+    "baseline_manifest": "docs/website-review/manifest.json"
+  }
+}

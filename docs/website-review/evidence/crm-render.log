@@ -1,0 +1,14 @@
+PASS all CRM screens reject wrong/anonymous accounts before private reads; login exposes no owner email
+PASS all empty owner screens render a working state and owner CRM entry opens the dashboard
+PASS manual lead creation retains its original source choices while list filters expose fixed campaign attribution
+PASS Automation Desk consolidates tools, requests and client setups under one sidebar entry
+PASS Automation Desk distinguishes disconnected, incomplete, test and verified live intake; a configured number alone is not live
+PASS optional connection failures keep Automation Desk tools usable; unavailable core settings do not render defaults as current
+PASS Automation Desk separates verified sender, enabled inquiry emails and delivery-report configuration without exposing secrets
+PASS connection evidence distinguishes owner alerts from customer delivery, protects secrets and tolerates a status outage
+PASS automatic email states render separately from personal follow-up and never mislabel attempted cancellations
+PASS populated client setup preserves escaped input, public/staff separation, export and truthful connection states
+PASS populated pages render escaped contacts, notes and tasks with the correct edit/deletion forms
+PASS invalid and deleted records show recoverable states without creating an unrelated task
+
+12 CRM server-rendering/access groups passed. Browser session and hydration testing remain external checks.

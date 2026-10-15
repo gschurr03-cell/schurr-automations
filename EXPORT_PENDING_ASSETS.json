@@ -1,0 +1,1162 @@
+{
+  "reason": "Automatic approval review requires explicit asset and document upload authorization for this private GitHub repository.",
+  "repository": "gschurr03-cell/schurr-automations",
+  "source_commit": "ee288f6c871af79b6fe65eacfd9cd3adb5468810",
+  "files": [
+    {
+      "path": "design/previews/amethyst-home.jpg",
+      "mode": "100644",
+      "sha": "ca12f710a0a385626f7c3b0662686f72dc235f08",
+      "size": 77453,
+      "type": "blob"
+    },
+    {
+      "path": "design/previews/precision-home.jpg",
+      "mode": "100644",
+      "sha": "30a2b8aba30f0f9638180c8a16beea846c4d1970",
+      "size": 65863,
+      "type": "blob"
+    },
+    {
+      "path": "design/previews/revenue-evidence-v92.jpg",
+      "mode": "100644",
+      "sha": "ad0c7b480a3a618055025910f1badf1c6f79aad7",
+      "size": 89706,
+      "type": "blob"
+    },
+    {
+      "path": "design/previews/signal-home-v92.jpg",
+      "mode": "100644",
+      "sha": "a6f9bf85422a4c2be9387aa17479325c5f3bc434",
+      "size": 71036,
+      "type": "blob"
+    },
+    {
+      "path": "design/previews/studio-home.jpg",
+      "mode": "100644",
+      "sha": "b756a9cbde2a73cf2cce97cf41288991a7ecc26d",
+      "size": 73843,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/01_public_overview.html",
+      "mode": "100644",
+      "sha": "fed4d7ee691e02c9abef55697cc2c2d8e3c3a2f6",
+      "size": 7274,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/01_public_overview.txt",
+      "mode": "100644",
+      "sha": "d7fb89228f483544fac0933499727d3627f581c0",
+      "size": 2270,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/02_private_offer_reference.html",
+      "mode": "100644",
+      "sha": "0298e6f1f3cc4deb2b74d288775fcd87257bbdb7",
+      "size": 7739,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/02_private_offer_reference.txt",
+      "mode": "100644",
+      "sha": "3ab54e18cd1e4f2664f9de9a560580cfb2c98daa",
+      "size": 2970,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/03_conversation_record.html",
+      "mode": "100644",
+      "sha": "631bacf36f869847205d704840cedd41257cab2f",
+      "size": 7146,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/03_conversation_record.txt",
+      "mode": "100644",
+      "sha": "a52a7005edf8d861654ac936c910611633bdf7f8",
+      "size": 1616,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/04_follow_up_templates.txt",
+      "mode": "100644",
+      "sha": "39d5ec0e68588653bbb66b8d8896e60b0e655759",
+      "size": 2511,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/05_recording_checklist.md",
+      "mode": "100644",
+      "sha": "a2da8e0216f4835a8ded5c5d98e3ff211efb8421",
+      "size": 3418,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/PRINT_VERIFICATION.json",
+      "mode": "100644",
+      "sha": "6f04a01b86ea5a9bf45751b69396c59ec496d8c7",
+      "size": 811,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/README.md",
+      "mode": "100644",
+      "sha": "4c76ac2e744a575379f8429e40ae852e852234a9",
+      "size": 4818,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/output/pdf/01_public_overview.pdf",
+      "mode": "100644",
+      "sha": "8b130f79ebb6dccd855f01fd236606a641dfbc60",
+      "size": 46404,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/output/pdf/02_private_offer_reference.pdf",
+      "mode": "100644",
+      "sha": "fdd09103ba63d005d357b1a2bc924add1e13d40d",
+      "size": 46183,
+      "type": "blob"
+    },
+    {
+      "path": "docs/dealer-demo-kit/outreach/output/pdf/03_conversation_record.pdf",
+      "mode": "100644",
+      "sha": "7ec64a36cf8fa1571ef68693b86b026007dd7cc4",
+      "size": 44670,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-000.webp",
+      "mode": "100644",
+      "sha": "0533cf73ba7c5704ba087995575e023e7726b93d",
+      "size": 103184,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-001.webp",
+      "mode": "100644",
+      "sha": "5ee4b2cc9a19992efbb71715eac8b41d5fec4dea",
+      "size": 103200,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-002.webp",
+      "mode": "100644",
+      "sha": "c3f6938ed1ae761c9aae9d7588a0303b939c226d",
+      "size": 102992,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-003.webp",
+      "mode": "100644",
+      "sha": "a617560bcba0ef77e1c791d6d9430977edcf66a2",
+      "size": 103036,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-004.webp",
+      "mode": "100644",
+      "sha": "529de3f24c50b890072bb96944b2e8b5100a6810",
+      "size": 102900,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-005.webp",
+      "mode": "100644",
+      "sha": "6a521f0069d91ab93ca202cbaa18974dd0366892",
+      "size": 102184,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-006.webp",
+      "mode": "100644",
+      "sha": "505739eb0315c148bd31753e38bbf2cd33d2f62d",
+      "size": 101648,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-007.webp",
+      "mode": "100644",
+      "sha": "9b005a111125784790135b12c74c1686024cd672",
+      "size": 101682,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-008.webp",
+      "mode": "100644",
+      "sha": "ed3e3508be060461c3b06486074b2617e125a9b3",
+      "size": 100870,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-009.webp",
+      "mode": "100644",
+      "sha": "80e10eaafdf4ddd870fdf5c0092e45c9b775574c",
+      "size": 99968,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-010.webp",
+      "mode": "100644",
+      "sha": "e9aa53b40384a17ef2be96ed30ae7517a5efa604",
+      "size": 98850,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-011.webp",
+      "mode": "100644",
+      "sha": "432cb7ddaa8dd68204a9e6a730610bd5c25392ae",
+      "size": 97120,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-012.webp",
+      "mode": "100644",
+      "sha": "7bab955150a38fe63778b6ef03c68068fb44f2bc",
+      "size": 95390,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-013.webp",
+      "mode": "100644",
+      "sha": "de6c0208d6eeabdf803735649465a2fa0da1726f",
+      "size": 90570,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-014.webp",
+      "mode": "100644",
+      "sha": "fc992da020965c38d9ef8143bef50f6e55076aea",
+      "size": 88088,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-015.webp",
+      "mode": "100644",
+      "sha": "6c1d276d5d1bb4130f39cc3da1263cdac1903a6b",
+      "size": 85740,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-016.webp",
+      "mode": "100644",
+      "sha": "4237388e57366635304351683d4e99ea170f6d52",
+      "size": 83910,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-017.webp",
+      "mode": "100644",
+      "sha": "3c905c2b9143cb22fe0c40360ea0c88e5b295fb5",
+      "size": 82312,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-018.webp",
+      "mode": "100644",
+      "sha": "f4b3e2572f1568ca7ff5670f6e02650ed9df563c",
+      "size": 81684,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-019.webp",
+      "mode": "100644",
+      "sha": "53cbeb096be2a6602af46a861c29875f1dcbc2b4",
+      "size": 81260,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-020.webp",
+      "mode": "100644",
+      "sha": "2fc517a73f2e8d56932c2db682bfa31b9d4b56ff",
+      "size": 81288,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-021.webp",
+      "mode": "100644",
+      "sha": "d3f547230b1919b22759dcb4a5bf210e4f06eb72",
+      "size": 81690,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-022.webp",
+      "mode": "100644",
+      "sha": "799ebbda92a79383d3fcc3a0785ea687b3102c98",
+      "size": 81958,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-023.webp",
+      "mode": "100644",
+      "sha": "0ee55f91baa6e04585c2aefa8ca1e82d60bddeaa",
+      "size": 82100,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-024.webp",
+      "mode": "100644",
+      "sha": "7265ce7558b91dac9b850309c3392def118b94de",
+      "size": 83966,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-025.webp",
+      "mode": "100644",
+      "sha": "8843eaf55d345defc3524d581ba883d868d287f7",
+      "size": 84586,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-026.webp",
+      "mode": "100644",
+      "sha": "ab6ec7884ec101bccc32e09a743b3384e42b3ba2",
+      "size": 85792,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-027.webp",
+      "mode": "100644",
+      "sha": "dc13c25a020ff784969afd176df0572bd1527d9c",
+      "size": 86420,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-028.webp",
+      "mode": "100644",
+      "sha": "a8c9b5ead8fd742862ec97a6250bcc93eaa222a4",
+      "size": 86654,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-029.webp",
+      "mode": "100644",
+      "sha": "10219afeb65b8d869148063aa94c6c600b5d8899",
+      "size": 85836,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-030.webp",
+      "mode": "100644",
+      "sha": "ee5c7b71c1baa38ba42fc6d4539c5cfb7983401f",
+      "size": 84168,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-031.webp",
+      "mode": "100644",
+      "sha": "946bab8ba8154acaf4f33f384a025f16791607ca",
+      "size": 81624,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-032.webp",
+      "mode": "100644",
+      "sha": "bcb22ed9237c0d3d47e79fe5e7ffe944b3e0a116",
+      "size": 79006,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-033.webp",
+      "mode": "100644",
+      "sha": "a42f039a1f9f14c0e5c477c683d53125316fa724",
+      "size": 77278,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-034.webp",
+      "mode": "100644",
+      "sha": "32273b74fbbe115cd81d2443936ace8f05d48b42",
+      "size": 75572,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-035.webp",
+      "mode": "100644",
+      "sha": "33a5ace14a082db7687a61df90e437f77b00f659",
+      "size": 75014,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-036.webp",
+      "mode": "100644",
+      "sha": "3bf3c65a26c9eaea761e3de2ccb643ffb3d0c4ec",
+      "size": 75182,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-037.webp",
+      "mode": "100644",
+      "sha": "c006075e2886bae091e7c4ab34b26d32eb844a44",
+      "size": 75358,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-038.webp",
+      "mode": "100644",
+      "sha": "7661820c9b461efd6aa39b5bd6adfcea9117cd1c",
+      "size": 75140,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-039.webp",
+      "mode": "100644",
+      "sha": "c7f80ec873aec4271402a4c7591d49efb2e4ac1a",
+      "size": 74546,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-040.webp",
+      "mode": "100644",
+      "sha": "5601bc784e041bb290ece9d49b6efdc0c0a229b5",
+      "size": 73250,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-041.webp",
+      "mode": "100644",
+      "sha": "217de6538699caf8886a497043a2a7ba4ea93455",
+      "size": 71398,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-042.webp",
+      "mode": "100644",
+      "sha": "033211bb8fa7aeca748b01eb77cbd5f16c06e2c5",
+      "size": 70002,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-043.webp",
+      "mode": "100644",
+      "sha": "4ca4364542bc401ba7197d09299dba17b9006b68",
+      "size": 68416,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-044.webp",
+      "mode": "100644",
+      "sha": "0af2a45f7bed39048c3e345d21d624c15e4f357b",
+      "size": 67414,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-045.webp",
+      "mode": "100644",
+      "sha": "3f2eda15c83dd0cdc9c8ce8b4d90bd60552678e8",
+      "size": 66568,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-046.webp",
+      "mode": "100644",
+      "sha": "cd6a500e1e92b3a2b0be3bba5afc135c9359787a",
+      "size": 65854,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/frame-047.webp",
+      "mode": "100644",
+      "sha": "da1947d7bb736cc7f48a1c191a705d21718bacde",
+      "size": 65910,
+      "type": "blob"
+    },
+    {
+      "path": "public/amethyst-signal/poster.webp",
+      "mode": "100644",
+      "sha": "0533cf73ba7c5704ba087995575e023e7726b93d",
+      "size": 103184,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-000.webp",
+      "mode": "100644",
+      "sha": "617e03bb5d8ba3ef7d251e0aaf4a3e041f798f95",
+      "size": 144356,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-001.webp",
+      "mode": "100644",
+      "sha": "4bbbc010ee79494d56fb146f2223caf8f265eff3",
+      "size": 139030,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-002.webp",
+      "mode": "100644",
+      "sha": "7cdac2f829251eb844777a74c718b51ab9f87ba1",
+      "size": 135410,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-003.webp",
+      "mode": "100644",
+      "sha": "c8d1dd5de3d553993d4b641bac42b8fc6b065583",
+      "size": 134480,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-004.webp",
+      "mode": "100644",
+      "sha": "1c6dfd44553e864775db8e1509bbac05330a648a",
+      "size": 135572,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-005.webp",
+      "mode": "100644",
+      "sha": "8cc584e723d547dc4f684b4a4b8dcb186a8cb5ff",
+      "size": 136650,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-006.webp",
+      "mode": "100644",
+      "sha": "ce18fd7fd393e2f26ae407ed0adcc61d5b340c1b",
+      "size": 134774,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-007.webp",
+      "mode": "100644",
+      "sha": "41fec9e26f5495dae9e25d1459293333dfbc5cfc",
+      "size": 132900,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-008.webp",
+      "mode": "100644",
+      "sha": "593683b028d9126b64dc5b71e4490d810956f8f3",
+      "size": 129516,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-009.webp",
+      "mode": "100644",
+      "sha": "2c4fea346f15364f70e4261807798cfb07d318a8",
+      "size": 130294,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-010.webp",
+      "mode": "100644",
+      "sha": "ae9c87f58753a5b57247486f5f5d96d39ed72ffc",
+      "size": 131630,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-011.webp",
+      "mode": "100644",
+      "sha": "43399851ea8bbf2d6d83f74ae4229da4513f0446",
+      "size": 130842,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-012.webp",
+      "mode": "100644",
+      "sha": "ed52ffbeb353913dab049436545636c6b406dff1",
+      "size": 130748,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-013.webp",
+      "mode": "100644",
+      "sha": "dc915ef9b98d6054173e8b93364c637f4daeb634",
+      "size": 130742,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-014.webp",
+      "mode": "100644",
+      "sha": "38ef66bc56021154e9862beeb0ca64786ab2e8ff",
+      "size": 132534,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-015.webp",
+      "mode": "100644",
+      "sha": "da3ff5c390f071a3e6bcf82ee93cd7ee51658698",
+      "size": 133236,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-016.webp",
+      "mode": "100644",
+      "sha": "5e4c33272b02a107d5c1c064d6ea5c63ae656429",
+      "size": 132960,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-017.webp",
+      "mode": "100644",
+      "sha": "5e1ccd3be98c9c8fac336b22957e3b409ff89acb",
+      "size": 133316,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-018.webp",
+      "mode": "100644",
+      "sha": "66c75ffe74af2896df729b6bfa5575cb570a57c7",
+      "size": 133050,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-019.webp",
+      "mode": "100644",
+      "sha": "dba4d514ee61ceac37288eee46e2f384703e6036",
+      "size": 130540,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-020.webp",
+      "mode": "100644",
+      "sha": "0f5536ce249189fe0b8e20f3d83c449652daf0ea",
+      "size": 128692,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-021.webp",
+      "mode": "100644",
+      "sha": "2293785ebaaa7aea39850c20e78e4c92136bc1d9",
+      "size": 127616,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-022.webp",
+      "mode": "100644",
+      "sha": "736e82e5ac072d6f9c065b95b9364dad141560af",
+      "size": 127286,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-023.webp",
+      "mode": "100644",
+      "sha": "c9590fbb41595afcaf24de66598c7e0f7b415181",
+      "size": 126140,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-024.webp",
+      "mode": "100644",
+      "sha": "8323c45adaf6ca1ffa2c2a3b74ad71b3d426802c",
+      "size": 126064,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-025.webp",
+      "mode": "100644",
+      "sha": "1a1a97f5948929f2b02752ec6f3ec2f8d38eef3d",
+      "size": 125748,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-026.webp",
+      "mode": "100644",
+      "sha": "87ef8020c7470af811a9786947a57b2ccc13c85d",
+      "size": 125222,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-027.webp",
+      "mode": "100644",
+      "sha": "360bfc4a446dec4c33639de527d8ff1480831fd4",
+      "size": 124948,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-028.webp",
+      "mode": "100644",
+      "sha": "846df791ab9de839ce57492f0c09dbc15a3241df",
+      "size": 124780,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-029.webp",
+      "mode": "100644",
+      "sha": "691afc7908a3392001f2ebcc59c5ce752397eeca",
+      "size": 124866,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-030.webp",
+      "mode": "100644",
+      "sha": "b942351c70894b9c5b704823d4247100dcf1d092",
+      "size": 125188,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-031.webp",
+      "mode": "100644",
+      "sha": "676a527d7bc822a9516c4efa0cdf624a89760eef",
+      "size": 124768,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-032.webp",
+      "mode": "100644",
+      "sha": "6fd8d4c0e65aebfe46c7c5f00aca5fe4688286e6",
+      "size": 124938,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-033.webp",
+      "mode": "100644",
+      "sha": "1b99ee24e3702b8b8f9b384ff02fb6895d0d8e90",
+      "size": 125092,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-034.webp",
+      "mode": "100644",
+      "sha": "1a1ee477aa1caf58d1a506fdf49810feeb257ba0",
+      "size": 125306,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-035.webp",
+      "mode": "100644",
+      "sha": "b46a5871f724da1514c95ca50a18f622c3558055",
+      "size": 126482,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-036.webp",
+      "mode": "100644",
+      "sha": "711e13c55ded8eef6a529e49fb2fc625774ef62e",
+      "size": 126782,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-037.webp",
+      "mode": "100644",
+      "sha": "265b176271a824ad05787ddac5ccc6afb9b178c7",
+      "size": 127782,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-038.webp",
+      "mode": "100644",
+      "sha": "f67ea900300bf584c9066808fc801caab18bb659",
+      "size": 129078,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-039.webp",
+      "mode": "100644",
+      "sha": "6bb7092ed049f0d069c14169484300603b4a63b4",
+      "size": 130940,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-040.webp",
+      "mode": "100644",
+      "sha": "12b32c9e36afea12a7e8a9d94ec6ec2d4955831f",
+      "size": 130260,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-041.webp",
+      "mode": "100644",
+      "sha": "46108839a0772af5609f9543fa5189e1fb970541",
+      "size": 130002,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-042.webp",
+      "mode": "100644",
+      "sha": "588da528b8211455ba7df48c3b084bcf95976a4c",
+      "size": 129748,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-043.webp",
+      "mode": "100644",
+      "sha": "6150a13dd939c45ee97955404335eb32e141438c",
+      "size": 128318,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-044.webp",
+      "mode": "100644",
+      "sha": "7c56f7d22361a49aaf71f45825e0fd9a6e7e2b5d",
+      "size": 127400,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-045.webp",
+      "mode": "100644",
+      "sha": "5b34edff74f98307908019b5820fc5f10a6e6fa7",
+      "size": 126626,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-046.webp",
+      "mode": "100644",
+      "sha": "673287493529d98f33409e6d9ce23d1e07b37ca6",
+      "size": 130618,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-047.webp",
+      "mode": "100644",
+      "sha": "875fc757f0803858838a5634c9087b83323742b8",
+      "size": 133922,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-048.webp",
+      "mode": "100644",
+      "sha": "6fe1b11364a0e35ff339e861a6c6fbc3d8ca18ce",
+      "size": 135042,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-049.webp",
+      "mode": "100644",
+      "sha": "7a6d7737f6ebc797b7698867ae4f186400516d08",
+      "size": 134834,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-050.webp",
+      "mode": "100644",
+      "sha": "252d0247cc62448443a01ab8758a235136f975f9",
+      "size": 131688,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-051.webp",
+      "mode": "100644",
+      "sha": "76bb8a4b532883a3de0216d98f82fa95ec78e584",
+      "size": 130274,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-052.webp",
+      "mode": "100644",
+      "sha": "4addb6004df0ecd7f1df410d660fe6a6b6981d73",
+      "size": 129850,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-053.webp",
+      "mode": "100644",
+      "sha": "a4819011c39e025c54a1084bba5e2403a7ee8c5a",
+      "size": 131494,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-054.webp",
+      "mode": "100644",
+      "sha": "7da22a0f605d74b9a6a4bb78ddb0bfea1ac6435a",
+      "size": 138244,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-055.webp",
+      "mode": "100644",
+      "sha": "106049d0763bd9aeab618ee2bb25290d6cc2d956",
+      "size": 144866,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-056.webp",
+      "mode": "100644",
+      "sha": "36bf0388a888ea19b9078415ca4f2955593a5bb4",
+      "size": 152004,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-057.webp",
+      "mode": "100644",
+      "sha": "3347dda863994059bcb3d5943dc54a2bb37753db",
+      "size": 151042,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-058.webp",
+      "mode": "100644",
+      "sha": "2154f85d55c4a4ccb00ab8174c1a00726dea5d07",
+      "size": 140872,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/frame-059.webp",
+      "mode": "100644",
+      "sha": "926d9e850122b042f169348aa00403f41c5d5465",
+      "size": 133992,
+      "type": "blob"
+    },
+    {
+      "path": "public/atlantic-scene/poster.webp",
+      "mode": "100644",
+      "sha": "617e03bb5d8ba3ef7d251e0aaf4a3e041f798f95",
+      "size": 144356,
+      "type": "blob"
+    },
+    {
+      "path": "public/automotive/dealer-poster.png",
+      "mode": "100644",
+      "sha": "f503a70c1c7c91aca4c57f86937ad9444d0883c8",
+      "size": 117468,
+      "type": "blob"
+    },
+    {
+      "path": "public/automotive/repair-poster.png",
+      "mode": "100644",
+      "sha": "36be8c3487b1c82b3997e733f5a4797da6e6fbb8",
+      "size": 116082,
+      "type": "blob"
+    },
+    {
+      "path": "public/brand-afterhours.webp",
+      "mode": "100644",
+      "sha": "b033cc6f5b338c39e3aaffc8b58c753406374465",
+      "size": 54128,
+      "type": "blob"
+    },
+    {
+      "path": "public/brand-current.webp",
+      "mode": "100644",
+      "sha": "3af1cc3f80f0168d1aaf16ed2c7426244d1647a6",
+      "size": 100646,
+      "type": "blob"
+    },
+    {
+      "path": "public/brand-directions-board.webp",
+      "mode": "100644",
+      "sha": "33768fa7930668474335756a86dc9435932031ed",
+      "size": 171708,
+      "type": "blob"
+    },
+    {
+      "path": "public/brand-redline.webp",
+      "mode": "100644",
+      "sha": "69d5c61db8b85d50f3aead2172fb8e554421c354",
+      "size": 57996,
+      "type": "blob"
+    },
+    {
+      "path": "public/brand-undertow.webp",
+      "mode": "100644",
+      "sha": "6a32fede0c5d1a736f2e028ffe2fe9bcea7c8a99",
+      "size": 84548,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/audit.pdf",
+      "mode": "100644",
+      "sha": "5272984450db64f54098c02f7b4934da3ff3a3ab",
+      "size": 49517,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/brain.pdf",
+      "mode": "100644",
+      "sha": "aadfb9b44c3f9fc62586464be249b172291354d0",
+      "size": 49948,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/calls.pdf",
+      "mode": "100644",
+      "sha": "9534195419fbd1e19016018c0aa354c4a3770a0e",
+      "size": 49505,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/coding.pdf",
+      "mode": "100644",
+      "sha": "517cceff1725d820fd58cfd48f84eb89f954346f",
+      "size": 49948,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/growth.pdf",
+      "mode": "100644",
+      "sha": "b6faebfbefbb35a1e35f783bcb2e9d167cba8c86",
+      "size": 49423,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/leads.pdf",
+      "mode": "100644",
+      "sha": "62df52c6e379f78e4d54973f304adc17dc6dedca",
+      "size": 49505,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/marketing.pdf",
+      "mode": "100644",
+      "sha": "a75b8bc1d21f43291658a4071cdcf130ba7f0d23",
+      "size": 49423,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/reviews.pdf",
+      "mode": "100644",
+      "sha": "ec6940297eb6cc3b3f5ffab589c6317f7377bded",
+      "size": 49423,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/time.pdf",
+      "mode": "100644",
+      "sha": "6f2889bef2f703ea9bdfec56f28e1f69b9580160",
+      "size": 49948,
+      "type": "blob"
+    },
+    {
+      "path": "public/briefs/website.pdf",
+      "mode": "100644",
+      "sha": "e01b24513f22e8a77cf421ffe79bcc903d0f2dcc",
+      "size": 49517,
+      "type": "blob"
+    },
+    {
+      "path": "public/downloads/schurr-operational-restore-kit-05d52b40b42ab40d.tar.gz",
+      "mode": "100644",
+      "sha": "449ac2ac02f3a91b79e8df79f1d21bbf12979f4b",
+      "size": 16634,
+      "type": "blob"
+    },
+    {
+      "path": "public/downloads/schurr-operational-restore-kit-13f66559dd59d6d4.tar.gz",
+      "mode": "100644",
+      "sha": "0f70c47d002789093ffc84eee7660e066b1e1eaa",
+      "size": 12464,
+      "type": "blob"
+    },
+    {
+      "path": "public/downloads/schurr-operational-restore-kit-7333da7afe62d296.tar.gz",
+      "mode": "100644",
+      "sha": "10ecc88b0b38c71fb21054e16766c20a8275f7ac",
+      "size": 15007,
+      "type": "blob"
+    },
+    {
+      "path": "public/downloads/schurr-operational-restore-kit-9057174fc1f60003.tar.gz",
+      "mode": "100644",
+      "sha": "db02941953797970d4afe22cfea3b6131dc8c1d6",
+      "size": 17020,
+      "type": "blob"
+    },
+    {
+      "path": "public/downloads/schurr-operational-restore-kit-cfe675aa7b2eb04a.tar.gz",
+      "mode": "100644",
+      "sha": "6a22175eb23c703517925c579e61776d07726859",
+      "size": 14437,
+      "type": "blob"
+    },
+    {
+      "path": "public/downloads/schurr-operational-restore-kit-f8a05b0c930af1d5.tar.gz",
+      "mode": "100644",
+      "sha": "b974fd4a84b72cab66d67487584d636ad215d1e7",
+      "size": 16014,
+      "type": "blob"
+    },
+    {
+      "path": "public/examples/dealership/sample-crossover.png",
+      "mode": "100644",
+      "sha": "5cbb4bfeced0e84bb06673fcca94104e40dd262e",
+      "size": 2335614,
+      "type": "blob"
+    },
+    {
+      "path": "public/fonts/archivo-latin.woff2",
+      "mode": "100644",
+      "sha": "716d4abd199a236dc4b9e112f63429b9b47ce911",
+      "size": 34928,
+      "type": "blob"
+    },
+    {
+      "path": "public/fonts/source-sans-3-latin.woff2",
+      "mode": "100644",
+      "sha": "864cc4177aab8cc9312a81d4b7b6af7fdcf4092c",
+      "size": 28740,
+      "type": "blob"
+    },
+    {
+      "path": "public/hero-wide.webp",
+      "mode": "100644",
+      "sha": "e6e69df953cc55d7870e65b02b4af625040d7dbf",
+      "size": 82714,
+      "type": "blob"
+    },
+    {
+      "path": "public/kinetic-core-poster.webp",
+      "mode": "100644",
+      "sha": "dfc0dcaa49cb1a6aa0c883d4ec65887823144e02",
+      "size": 136492,
+      "type": "blob"
+    },
+    {
+      "path": "public/metal-sculpture.webp",
+      "mode": "100644",
+      "sha": "079984192738c7d5ae1b6d721bfdfae82681ddbe",
+      "size": 56974,
+      "type": "blob"
+    },
+    {
+      "path": "public/reception-after-hours.webp",
+      "mode": "100644",
+      "sha": "82b6148cf9c580817fdb26064892b04f26758c46",
+      "size": 126894,
+      "type": "blob"
+    },
+    {
+      "path": "public/schurr-afterhours-logo.webp",
+      "mode": "100644",
+      "sha": "f95e32807a1b62490e93ca18c466312f6aa70a67",
+      "size": 22158,
+      "type": "blob"
+    },
+    {
+      "path": "public/schurr-fusion-approved.png",
+      "mode": "100644",
+      "sha": "12514deb5be695ad5a66334871a02f75685afd87",
+      "size": 1414219,
+      "type": "blob"
+    },
+    {
+      "path": "public/social-card.png",
+      "mode": "100644",
+      "sha": "f1f9097310f248fc0f455298ca028f7ff92b703f",
+      "size": 83970,
+      "type": "blob"
+    },
+    {
+      "path": "public/videos/business-overview-poster.jpg",
+      "mode": "100644",
+      "sha": "1f8c4dd7d009114ca7b44951cd5866ddfde2b487",
+      "size": 83182,
+      "type": "blob"
+    },
+    {
+      "path": "public/videos/business-overview.mp4",
+      "mode": "100644",
+      "sha": "958651edb16dd771bcc5708023ac83686df30fe4",
+      "size": 6730962,
+      "type": "blob"
+    },
+    {
+      "path": "public/videos/dealer-explainer.mp4",
+      "mode": "100644",
+      "sha": "b255a476fb8dcd1bfc9a412805cb6da473e43364",
+      "size": 4839545,
+      "type": "blob"
+    },
+    {
+      "path": "public/videos/repair-explainer.mp4",
+      "mode": "100644",
+      "sha": "678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e",
+      "size": 4190217,
+      "type": "blob"
+    }
+  ]
+}

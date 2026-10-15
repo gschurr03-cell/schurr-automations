@@ -1,0 +1,32 @@
+{
+  "checked_at_utc": "2026-10-14T17:52:58.709287+00:00",
+  "method": "Anonymous public HTTP GET, not browser rendering",
+  "base_version": 106,
+  "base_commit": "14e116f976b359c2be6c3d1fda03c36ffdcee0c0",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "date": "Wed, 14 Oct 2026 17:52:54 GMT",
+      "title": "Schurr Automations | Practical AI &amp; Business Automation",
+      "matches_version106_source": true,
+      "sha256": "31535338d3dd5ae6855c69c6481f2c6a9202c69ca8701180bb8e5e5cc6784d1a"
+    },
+    {
+      "path": "/solutions/ai-receptionist/",
+      "status": 200,
+      "date": "Wed, 14 Oct 2026 17:52:58 GMT",
+      "title": "AI Receptionist | Schurr Automations",
+      "matches_version106_source": true,
+      "sha256": "4c36f820ca96d2f16b421f08842fa84711bd9394bf822705ac5cebb36e46e278"
+    },
+    {
+      "path": "/industries/used-car-dealers/",
+      "status": 200,
+      "date": "Wed, 14 Oct 2026 17:52:58 GMT",
+      "title": "Inquiry & Callback Workflows for Used-Car Dealers | Schurr Automations",
+      "matches_version106_source": true,
+      "sha256": "13487f8c837b29f757d54d2da40fed6553a5b7407ea52d0ef6bb11949201b1a1"
+    }
+  ]
+}

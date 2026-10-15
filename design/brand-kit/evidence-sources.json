@@ -1,0 +1,30 @@
+{
+  "verified": "2026-10-09",
+  "sources": {
+    "response": {
+      "display": "21\u00d7",
+      "source": "Lead Response Management study, 2007",
+      "url": "https://cdn2.hubspot.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf"
+    },
+    "booking": {
+      "display": "$134K+",
+      "source": "Zapier case study, 2024",
+      "url": "https://zapier.com/blog/how-zapier-tables-and-chatgpt-prevent-missed-sales-leads/"
+    },
+    "web": {
+      "display": "+53%",
+      "source": "Google web.dev case study, 2022",
+      "url": "https://web.dev/case-studies/rakuten"
+    },
+    "automation": {
+      "display": "$300K",
+      "source": "Zapier case study, 2025",
+      "url": "https://zapier.com/blog/contractor-appointments-books-millions-with-ai-automation/"
+    },
+    "search": {
+      "display": "72%",
+      "source": "BrightLocal consumer research, 2026",
+      "url": "https://www.brightlocal.com/research/consumer-search-behavior-speed/"
+    }
+  }
+}

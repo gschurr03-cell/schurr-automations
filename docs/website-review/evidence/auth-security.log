@@ -1,0 +1,11 @@
+PASS actual authentication helper requires both forwarded identity headers
+PASS owner allowlist fails closed and sign-in return paths remain local
+PASS anonymous, non-owner and unconfigured owner pages never read private data
+PASS authorized owner pages escape hostile data and use cursor pagination
+PASS unused methods, image transforms and ambiguous paths stop before framework execution
+PASS explicit and headerless multipart Server Actions stop before the framework decoder
+PASS documented page and API methods continue through the guarded Worker
+PASS final HTML and RSC responses keep private data uncached and owner pages unframeable
+PASS public pages use self-hosted executable scripts and owner links exit preview frames
+
+9 auth, rendering and Worker security regression groups passed. Hosting identity-header provenance remains a deployment check.

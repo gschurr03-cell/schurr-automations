@@ -1,0 +1,12 @@
+PASS observation pins exact agent/LLM versions, fingerprints configuration, excludes volatile timestamps and exposes no private payload
+PASS known native tool/inbound URLs and configured number fallback work; missing, locked and undecryptable connections fail closed
+PASS ambiguous/malformed routes, arbitrary inbound overrides and unresolved versions never produce a configuration hash or write
+PASS published and tag routes resolve honestly; published connection and older routed drafts are never silently promoted or changed
+PASS explicit connection patches only canonical URL and missing lifecycle events, preserves extras/defaults, and is idempotent after readback
+PASS unrelated existing webhooks, unapproved origins and configuration drift before patch refuse all writes
+PASS uncertain PATCH replies require fresh proof; collateral changes and failed readback are never accepted or automatically retried
+PASS redirects, provider errors, oversized responses and unsupported privacy/tool envelopes remain sanitized and fail closed
+PASS missing booking tools fail readiness; owner update pins the actual routed LLM and preserves voice and routing
+PASS expired or wrong lock, published or old routed versions and missing version metadata block tool writes
+PASS lost tool-update replies reconcile once; collateral changes and route drift never report success
+11 Retell monitoring adapter groups passed.

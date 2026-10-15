@@ -1,0 +1,15 @@
+{
+  "frameCount": 48,
+  "width": 720,
+  "height": 720,
+  "samplesPerPixel": 12,
+  "pattern": "frame-{index:03d}.webp",
+  "firstFrame": 0,
+  "lastFrame": 47,
+  "background": "#140F1B",
+  "compression": "lossless WebP",
+  "renderer": "Analytic C++ CPU ray tracer",
+  "geometry": "Three machined rounded-rectangle titanium modules with real bevels and separately modeled recessed amethyst lacquer inserts",
+  "motion": "Cubic ease assembly along shared depth axis plus an 11-degree yaw, 8-degree pitch, 8-degree roll turn",
+  "totalBytes": 4068578
+}

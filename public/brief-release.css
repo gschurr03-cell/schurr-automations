@@ -1,0 +1,42 @@
+/* October brief: preserve the approved studio palette and make the path compact. */
+.brief-home .hero-scroll .hero{display:grid;grid-template-columns:1fr 1.08fr;position:relative;min-height:0;padding-block:48px;gap:40px}
+.brief-home .opening-copy{text-align:left;padding-top:0}
+.brief-home .opening-copy .hero-subhead{max-width:none;margin-inline:0}
+.brief-home .hero h1{font-size:clamp(2.5rem,4.25vw,4.2rem);font-weight:700;line-height:1.1;max-width:none;letter-spacing:-.04em}
+.brief-home .hero-subhead{font-size:19px;line-height:1.55;margin-top:24px}
+.brief-home .overview-jump{display:block;width:fit-content;min-height:44px;padding-block:12px;color:#d9baeF}
+.brief-home .founder-note{margin-top:10px;color:#cec9d3;font-size:15px;line-height:1.5}
+.brief-home main>.section{padding-block:clamp(36px,4.4vw,64px)}
+.brief-home h2{font-weight:650;font-size:clamp(28px,3vw,40px);line-height:1.17;letter-spacing:-.025em}
+.brief-home .brief-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.brief-home .brief-split p{font-size:18px;line-height:1.6;color:#d4cfd9;margin-top:18px}
+.brief-home .brief-split .text-link{display:inline-flex;min-height:44px;align-items:center;margin-top:16px;color:#d9baef}
+.brief-home .handoff-steps{list-style:none;counter-reset:handoff;padding:0;margin:0}
+.brief-home .handoff-steps li{counter-increment:handoff;position:relative;padding:16px 0 16px 48px;border-top:1px solid #49414e}
+.brief-home .handoff-steps li::before{content:counter(handoff,decimal-leading-zero);position:absolute;left:0;top:18px;color:#d9baef;font-variant-numeric:tabular-nums}
+.brief-home .handoff-steps strong{display:block;font-size:20px;font-weight:600}
+.brief-home .handoff-steps span{display:block;margin-top:5px;font-size:17px;line-height:1.5;color:#d4cfd9}
+.brief-home .service-groups{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:30px}
+.brief-home .service-groups>div>h3{font-size:23px;line-height:1.35;font-weight:600;min-height:3em}
+.brief-home .home-services{margin-top:18px}
+.brief-home .home-service{display:block;padding-block:20px}
+.brief-home .home-service h4{font-size:21px;font-weight:600;line-height:1.35}
+.brief-home .home-service h4 a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;text-decoration-color:#907aa0}
+.brief-home .home-service p{margin-top:8px;font-size:17px}
+.brief-home .home-proof{background:#242029}
+.brief-home .proof-phone{border-top:1px solid #796286;padding-top:22px}
+.brief-home .proof-phone h3{font-size:25px;line-height:1.25}
+.brief-home .proof-phone>a{display:inline-flex;align-items:center;min-height:44px;margin-top:10px;font-size:28px;font-variant-numeric:tabular-nums;color:#eddcff}
+.brief-home .home-contact-section p{color:#45404c!important}
+.brief-home .home-contact-actions .button{white-space:normal;text-align:center}
+.header .desktop-nav{gap:22px}
+.header .desktop-nav .button{font-size:14px;padding-inline:18px}
+.mobile-fit-action{display:none}
+.flow-list.flow-list--four{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+@media(max-width:760px){.flow-list.flow-list--four{grid-template-columns:1fr}}
+:where(a,button,summary,input,select,textarea):focus-visible{outline:2px solid #d9baef;outline-offset:5px}
+.light-section :where(a,button,summary,input,select,textarea):focus-visible,.final-section :where(a,button,summary,input,select,textarea):focus-visible{outline-color:#633e88}
+@media(max-width:1180px){.header .desktop-nav{display:none}.header .mobile-nav{display:block}.header .mobile-fit-action{display:inline-flex;align-items:center;min-height:44px;color:#f4edf9;font-size:15px;margin-left:auto;margin-right:18px;text-decoration:underline;text-underline-offset:5px}.header-inner{gap:8px}}
+@media(max-width:760px){.brief-home .hero-scroll .hero{display:flex;padding-block:32px 24px;gap:22px}.brief-home .hero h1{font-size:clamp(2.25rem,9vw,3.8rem)}.brief-home .brief-split,.brief-home .service-groups{grid-template-columns:1fr;gap:26px}.brief-home .service-groups>div>h3{min-height:0}.brief-home .hero-subhead{font-size:18px}.brief-home .story-copy{min-height:0}.brief-home .home-contact-layout{gap:26px}.brief-home .home-contact-section h2{max-width:none}.header .brand-logo{width:145px}.header .mobile-fit-action{font-size:14px;margin-right:8px}}
+@media(max-width:390px){.header .brand-logo{width:125px}.header .mobile-fit-action{font-size:13px}.header .mobile-nav summary{padding-inline:8px}.brief-home .hero .button{padding-inline:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.brief-home *{animation:none!important;transition:none!important}.brief-home .hero-scroll .hero{position:relative;min-height:0}}

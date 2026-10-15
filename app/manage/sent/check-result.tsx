@@ -1,0 +1,4 @@
+ 'use client';
+import {useState} from 'react';
+import {useRouter} from 'next/navigation';
+export default function CheckResult({id}:{id:string}){const router=useRouter(),[busy,setBusy]=useState(false),[error,setError]=useState('');return <><button type="button" className="crm-button crm-button-secondary" disabled={busy} onClick={async()=>{setBusy(true);setError('');try{const r=await fetch('/api/manage/gmail',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'reconcile',id}),signal:AbortSignal.timeout(30000)}),data=await r.json() as {ok?:boolean;error?:string};if(!r.ok||!data.ok)throw Error(data.error||'Gmail result could not be checked.');router.refresh();}catch(e){setError(e instanceof Error?e.message:'Check interrupted. No email was resent.');}finally{setBusy(false);}}}>{busy?'Checking…':'Check Gmail result'}</button>{error&&<p role="alert" className="crm-help">{error}</p>}</>;}

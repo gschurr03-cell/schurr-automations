@@ -1,0 +1,30 @@
+import {database,RequestError} from './inquiries';
+import {contentHash,getAutomationSettings,saveOperation,type OperationRun} from './automation-desk';
+export type SearchDay={date:string;clicks:number;impressions:number;position:number|null};
+export type SearchReport={property:string;searchType:string;startDate:string;endDate:string;timezone:string;filters:string;aggregation:string;days:number;reportedDays:number;complete:boolean;clicks:number;impressions:number;ctr:number|null;position:number|null;rows:SearchDay[];source:string};
+const fail=(message:string):never=>{throw new RequestError(400,message);};
+function date(value:unknown){if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value)||!Number.isFinite(Date.parse(value))||new Date(value).toISOString().slice(0,10)!==value)fail('Use valid report dates.');return value as string;}
+// A bounded, quoted CSV reader. Only a Dates export is accepted; query/page totals are not equivalent.
+function csvRows(raw:unknown){if(typeof raw!=='string'||new TextEncoder().encode(raw).length>40000)fail('Upload a Dates CSV smaller than 40 KB.');const text=(raw as string).replace(/^\uFEFF/,'').replace(/\r\n/g,'\n'),rows:string[][]=[];let row:string[]=[],cell='',quoted=false,closed=false;
+ for(let i=0;i<text.length;i++){const c=text[i];if(quoted){if(c==='"'){if(text[i+1]==='"'){cell+='"';i++;}else{quoted=false;closed=true;}}else cell+=c;}else if(c==='"'){if(cell||closed)fail('The CSV has invalid quotes.');quoted=true;}else if(c===','||c==='\n'){row.push(cell.trim());cell='';closed=false;if(c==='\n'){if(row.some(Boolean))rows.push(row);row=[];}}else{if(closed)fail('The CSV has invalid quotes.');cell+=c;}if(cell.length>100||row.length>5||rows.length>501)fail('Use the five-column daily Dates export, up to 500 days.');}
+ if(quoted)fail('The CSV has an unfinished quoted value.');row.push(cell.trim());if(row.some(Boolean))rows.push(row);if(rows.length<2||rows.length>501)fail('Include 1–500 daily rows.');return rows;
+}
+export function parseSearchReport(data:Record<string,unknown>):SearchReport{
+ if(!['sc-domain:schurrautomations.com','https://schurrautomations.com/'].includes(String(data.property)))fail('Choose Schurr’s Search Console property.');
+ if(!['web','image','video','news'].includes(String(data.searchType)))fail('Choose the export’s search type.');
+ if(data.unfiltered!==true)fail('Use daily data with no query, page, country, device or appearance filters.');
+ const startDate=date(data.startDate),endDate=date(data.endDate),days=(Date.parse(endDate)-Date.parse(startDate))/86400000+1;if(days<1||days>500)fail('Choose a report period of 1–500 days.');
+ const table=csvRows(data.csv),header=table.shift()!.map(x=>x.toLowerCase());if(header.join('|')!=='date|clicks|impressions|ctr|position')fail('Use the English daily Dates CSV: Date, Clicks, Impressions, CTR, Position.');
+ const seen=new Set<string>(),rows=table.map(c=>{if(c.length!==5)fail('Every CSV row must have five columns.');const day=date(c[0]);if(day<startDate||day>endDate||seen.has(day))fail('Dates must be unique and inside the selected report period.');seen.add(day);
+ const count=(v:string)=>{if(!/^(?:\d+|\d{1,3}(?:,\d{3})+)$/.test(v))fail('Clicks and impressions must be whole numbers.');const n=Number(v.replace(/,/g,''));if(!Number.isSafeInteger(n)||n>1000000000)fail('Search counts are too large.');return n;};
+ const clicks=count(c[1]),impressions=count(c[2]);if(clicks>impressions)fail('Clicks cannot exceed impressions.');
+ if(!/^\d+(?:\.\d+)?%$/.test(c[3])||Number(c[3].slice(0,-1))>100||Math.abs(Number(c[3].slice(0,-1))-(impressions?100*clicks/impressions:0))>0.011)fail('CTR does not match the daily clicks and impressions.');
+ const position=c[4]===''?null:Number(c[4]);if(position!==null&&(!/^\d+(?:\.\d+)?$/.test(c[4])||!Number.isFinite(position)||position<0||position>100000)||impressions>0&&(position===null||position<1))fail('Check the daily position values.');
+ return {date:day,clicks,impressions,position:impressions?position:null};}).sort((a,b)=>a.date.localeCompare(b.date));
+ const clicks=rows.reduce((sum,r)=>sum+r.clicks,0),impressions=rows.reduce((sum,r)=>sum+r.impressions,0);
+ return {property:String(data.property),searchType:String(data.searchType),startDate,endDate,timezone:'America/Los_Angeles',filters:'none',aggregation:'property/daily',days,reportedDays:rows.length,complete:rows.length===days,clicks,impressions,ctr:impressions?clicks/impressions:null,position:impressions?rows.reduce((sum,r)=>sum+(r.position||0)*r.impressions,0)/impressions:null,rows,source:'Owner-uploaded Search Console Dates CSV; Google account access and file provenance are not verified.'};
+}
+export function compareSearchReports(current:SearchReport,previous:SearchReport){if(!current.complete||!previous.complete||current.days!==previous.days||previous.endDate>=current.startDate||['property','searchType','filters','aggregation','timezone'].some(k=>current[k as keyof SearchReport]!==previous[k as keyof SearchReport]))return null;return {startDate:previous.startDate,endDate:previous.endDate,clicks:current.clicks-previous.clicks,impressions:current.impressions-previous.impressions,clicksPercent:previous.clicks?(current.clicks-previous.clicks)/previous.clicks*100:null,ctrPoints:current.ctr!==null&&previous.ctr!==null?(current.ctr-previous.ctr)*100:null};}
+export async function importSearchReport(data:Record<string,unknown>){const output=parseSearchReport(data),settings=await getAutomationSettings();const key=await contentHash(JSON.stringify({output,revision:settings.revision}));return {id:await saveOperation('search_import',key,{report:output},output,settings.revision),output};}
+
+export async function listSearchReportRuns(){return (await database().prepare("SELECT id,kind,event_key AS eventKey,profile_revision AS profileRevision,input,output,status,created_at AS createdAt,updated_at AS updatedAt FROM automation_runs WHERE kind='search_import' AND status!='cancelled' ORDER BY created_at DESC,id DESC LIMIT 50").all<OperationRun>()).results;}

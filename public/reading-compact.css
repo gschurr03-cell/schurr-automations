@@ -1,0 +1,59 @@
+/* Final reading pass: preserve the brand and motion, reduce mobile repetition. */
+.compact-reading .proof-source p { margin: 0; }
+.compact-reading .research-note { max-width: 72ch; }
+.compact-reading .research-grid .study-context {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .compact-reading .section,
+  .compact-reading .section:has(> .editorial-split),
+  .compact-reading .section.guarantee-section,
+  .compact-reading .section.page-close { padding-block: 42px; }
+  .compact-reading .page-hero { padding-block: 32px 38px; }
+  .compact-reading .page-hero .breadcrumb { margin-bottom: 22px; }
+  .compact-reading .page-hero-bottom { gap: 22px; margin-top: 22px; }
+  .compact-reading .service-hero-layout { gap: 28px; }
+  .compact-reading .service-proof { padding: 22px 0 0; }
+  .compact-reading .service-proof .proof-number {
+    font-size: clamp(52px, 16vw, 64px);
+    margin: 8px 0 12px;
+    letter-spacing: -.04em;
+  }
+  .compact-reading .service-proof h2 { font-size: 23px; }
+  .compact-reading .service-proof > p { margin-top: 12px; }
+  .compact-reading .proof-source { margin-top: 15px; padding-top: 12px; }
+  .compact-reading .motion-section { padding-block: 36px; }
+  .compact-reading .solution-tabs nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+  }
+  .compact-reading .solution-tabs a { min-height: 48px; padding-block: 10px; }
+  .compact-reading .editorial-split { gap: 24px; }
+  .compact-reading .editorial-split > div > p { margin-top: 16px; }
+  .compact-reading .detail-list article { padding-block: 18px; }
+  .compact-reading .detail-list article:first-child { padding-top: 0; }
+  .compact-reading .detail-list article:last-child { padding-bottom: 0; }
+  .compact-reading .flow-list { margin-top: 24px; gap: 20px; }
+  .compact-reading .flow-list li { padding-top: 18px; }
+  .compact-reading .flow-note { margin-top: 22px; }
+  .compact-reading .research-grid { gap: 22px; }
+  .compact-reading .research-grid article { padding-block: 18px 0; }
+  .compact-reading .evidence-page .stat-number { font-size: 54px; padding-top: 0; }
+  .compact-reading .research-grid h4 { margin-block: 10px 8px; }
+  .compact-reading .research-note { margin-top: 22px; font-size: 14px; }
+  .compact-reading .rd-sample-section { padding-block: 38px; }
+  .compact-reading .about-opening { padding-block: 34px; }
+  .compact-reading .about-letter,
+  .compact-reading .about-perspective,
+  .compact-reading .about-engagement,
+  .compact-reading .about-close { padding-block: 42px; }
+  .compact-reading .about-practice-list article { padding-block: 22px; }
+  .compact-reading .about-practice-list article:first-child { padding-top: 0; }
+  .compact-reading .footer-signature { padding-block: 16px 8px; gap: 20px; }
+  .compact-reading .footer-signature img { width: 130px; height: 120px; }
+  .compact-reading .footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+}

@@ -1,0 +1,5 @@
+PASS Primary text: 15.55:1 contrast against board surface
+PASS Secondary text: 10.59:1 contrast against board surface
+PASS Accent text: 9.97:1 contrast against board surface
+PASS Node border: 3.22:1 contrast against board surface
+PASS Standalone preview embeds exact page styles, both fonts and animation controller.

@@ -1,0 +1,36 @@
+{
+  "frameCount": 48,
+  "totalBytes": 4068578,
+  "posterByteIdentical": true,
+  "backgroundExactRGB": [
+    20,
+    15,
+    27
+  ],
+  "all50pxBordersExact": true,
+  "minimumSilhouetteMarginPx": 65,
+  "adjacentFrameMeanAbsoluteRGBDifferenceRange": [
+    0.24802854938271604,
+    6.129570473251029
+  ],
+  "firstMidLastBounds": [
+    [
+      99,
+      113,
+      637,
+      654
+    ],
+    [
+      121,
+      123,
+      610,
+      635
+    ],
+    [
+      142,
+      136,
+      587,
+      614
+    ]
+  ]
+}

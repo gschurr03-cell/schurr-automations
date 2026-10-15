@@ -1,0 +1,16 @@
+{
+  "candidate": "schurr-handoff-2026-10-14-r2",
+  "recorded_at_utc": "2026-10-14T17:14:24.029884+00:00",
+  "tester": "Codex",
+  "node": "v24.19.0",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "checkout": "/workspace/scratch/35c1926b0923/site",
+  "source_basis": "762e8b5ce9209939fe0d453246348dfd64d0b49c",
+  "browser": "Not available; no browser, preview server, production submissions or live provider calls used",
+  "database": "In-memory SQLite using repository migrations; synthetic records only",
+  "providers": "Synthetic/mock transports only",
+  "typecheck_exit": 0,
+  "earlier_build_exit": 0,
+  "final_build": "Performed by the Sites preparation command before commit/package; see build.log",
+  "timing": "Session preparation elapsed includes copy, code, local tests and handoff; original and per-ticket minutes were not separately tracked"
+}

@@ -1,0 +1,6 @@
+PASS real intake/task functions persist one callback and local notification across separate processes and duplicate submissions
+PASS unavailable fictional salesperson routes a pending callback to the fictional duty manager, without claiming a transfer
+PASS injected task-write failure rolls back the task receipt, preserves captured inquiry, shows honest fallback, and retries safely
+PASS local inbox failure never claims delivery, preserves the callback, and duplicate retry creates only one local notice
+PASS provider connections and appointments remain empty, runtime ignores ambient provider keys, fixed fixture guard and snapshot escaping hold
+All 5 isolated dealer demo groups passed. Test database removed after verification.

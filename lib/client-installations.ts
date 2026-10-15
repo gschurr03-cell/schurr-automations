@@ -1,0 +1,41 @@
+import {CLIENT_SOURCE_VERSION} from './client-source-version';
+import {database,RequestError} from './inquiries';
+import {getClientSetup,clientConfigurationHash} from './client-setups';
+import {INSTALL_FIELDS,INSTALL_CAPABILITIES,capabilityOffer,emptyInstallationTarget,preparationNeeds,type InstallationTarget,type ClientInstallation} from './client-installation-policy';
+import type {OfferId} from './client-templates';
+type Row={clientId:string;revision:number;briefRevision:number;target:string;updatedAt:string};
+const select='client_id AS clientId,revision,brief_revision AS briefRevision,target,updated_at AS updatedAt';
+const sourceHosts=['schurrautomations.com','schurr-automations.gavschurr.chatgpt.site'];
+const sourceProject='appgprj_6abd3e1333308191928b1d9102e7b093';
+function origin(value:string){const u=new URL(value);if(u.protocol!=='https:'||u.username||u.password||u.search||u.hash||u.pathname!=='/'||u.hostname==='localhost'||u.hostname.endsWith('.local')||sourceHosts.some(h=>u.hostname===h||u.hostname.endsWith('.'+h)))throw Error();return u.origin;}
+export function cleanInstallationTarget(input:unknown,offers:OfferId[]):InstallationTarget{
+ if(!input||typeof input!=='object'||Array.isArray(input))throw new RequestError(400,'Provide the client installation settings.');
+ const raw=input as Record<string,unknown>,t=emptyInstallationTarget();
+ if(Object.keys(raw).some(k=>k!=='scope'&&!INSTALL_FIELDS.some(([field])=>field===k)))throw new RequestError(400,'Use only the installation fields. Keep credentials in the separate deployment.');
+ for(const [key,label] of INSTALL_FIELDS){const v=raw[key]??'';if(typeof v!=='string'||v.length>200||/[\u0000-\u001f\u007f]/.test(v))throw new RequestError(400,'Check '+label+'.');t[key]=v.trim();}
+ if(/(?:\b(?:re_|whsec_|sk-|key_)[A-Za-z0-9_-]{16,}|\bBearer\s+\S+|-----BEGIN.*PRIVATE KEY|[?&](?:token|secret|password|api.?key)=)/i.test(JSON.stringify(t)))throw new RequestError(400,'Do not save keys, tokens or passwords here.');
+ for(const key of ['origin','nativeOrigin'] as const)if(t[key])try{t[key]=origin(t[key]);}catch{throw new RequestError(400,'Use a distinct HTTPS client origin, without a path, credentials or query string.');}
+ for(const key of ['ownerAccount','senderEmail'] as const){t[key]=t[key].toLowerCase();if(t[key]&&!/^[^\s@<>,;"\\]+@[^\s@<>,;"\\]+\.[^\s@<>,;"\\]+$/.test(t[key]))throw new RequestError(400,'Use one plain email address for '+key+'.');}
+ for(const key of ['deploymentRef','databaseRef'] as const)if(t[key]&&(!/^[A-Za-z0-9][A-Za-z0-9._:-]{2,120}$/.test(t[key])||t[key]===sourceProject))throw new RequestError(400,'Use a separate client '+key+'.');
+ for(const key of ['inboundNumber','transferNumber'] as const)if(t[key]&&(!/^\+[1-9]\d{7,14}$/.test(t[key])||['+19857710552','+19852328337'].includes(t[key])))throw new RequestError(400,'Use a dedicated client phone number in international format.');
+ if(t.voiceAgentId&&(!/^agent_[A-Za-z0-9_-]+$/.test(t.voiceAgentId)||t.voiceAgentId==='agent_392d73b1d64b4ec905b3d41554'))throw new RequestError(400,'Use this client’s own voice agent reference.');
+ const scope=raw.scope;if(!scope||typeof scope!=='object'||Array.isArray(scope)||Object.keys(scope).some(k=>!Object.hasOwn(INSTALL_CAPABILITIES,k)))throw new RequestError(400,'Review the selected capabilities.');
+ for(const key of Object.keys(INSTALL_CAPABILITIES) as (keyof InstallationTarget['scope'])[]){const v=(scope as Record<string,unknown>)[key];if(v!=='prepare'&&v!=='deferred'||v==='prepare'&&!offers.includes(capabilityOffer[key]))throw new RequestError(400,'Prepared capabilities must match the selected offers.');t.scope[key]=v;}
+ if(t.scope.liveTransfer==='prepare'&&t.scope.voice!=='prepare')throw new RequestError(400,'Prepare voice before a live transfer connection.');
+ return t;
+}
+export async function getClientInstallation(clientId:unknown):Promise<ClientInstallation>{const setup=await getClientSetup(clientId),row=await database().prepare(`SELECT ${select} FROM client_installations WHERE client_id=?`).bind(setup.id).first<Row>();return row?{...row,target:JSON.parse(row.target),stale:row.briefRevision!==setup.revision}:{clientId:setup.id,revision:0,briefRevision:setup.revision,target:emptyInstallationTarget(),updatedAt:'',stale:false};}
+export async function saveClientInstallation(data:Record<string,unknown>){const setup=await getClientSetup(data.clientId),expected=Number(data.installationRevision);if(data.briefRevision!==setup.revision||!Number.isSafeInteger(expected)||expected<0)throw new RequestError(409,'The brief or installation changed. Reload before saving.');const target=cleanInstallationTarget(data.target,setup.offers),now=new Date().toISOString(),token=crypto.randomUUID(),db=database();
+ let result;try{result=await db.batch([
+ db.prepare(`INSERT INTO client_installations(client_id,brief_revision,target,revision,save_token,updated_at) SELECT ?,?,?,1,?,? WHERE ?=0 AND EXISTS(SELECT 1 FROM client_setups WHERE id=? AND revision=?) ON CONFLICT(client_id) DO NOTHING RETURNING client_id`).bind(setup.id,setup.revision,JSON.stringify(target),token,now,expected,setup.id,setup.revision),
+ db.prepare(`UPDATE client_installations SET brief_revision=?,target=?,revision=revision+1,save_token=?,updated_at=? WHERE client_id=? AND revision=? AND ?>0 AND EXISTS(SELECT 1 FROM client_setups WHERE id=? AND revision=?) RETURNING client_id`).bind(setup.revision,JSON.stringify(target),token,now,setup.id,expected,expected,setup.id,setup.revision),
+ db.prepare("UPDATE client_launch_checks SET outcome='stale' WHERE client_id=? AND EXISTS(SELECT 1 FROM client_installations WHERE client_id=? AND save_token=?)").bind(setup.id,setup.id,token),
+ ]);}catch(error){if(/UNIQUE constraint|client_install_/i.test(String(error)))throw new RequestError(409,'A saved client already uses one of these resources. Use a separate origin, deployment, database, agent and inbound number.');throw error;}if(!result[0]?.results?.length&&!result[1]?.results?.length)throw new RequestError(409,'The installation changed in another tab. Reload before saving.');return getClientInstallation(setup.id);
+}
+export async function clientPreparationPackage(clientId:unknown,briefRevision:unknown,installationRevision:unknown){const setup=await getClientSetup(clientId),installation=await getClientInstallation(setup.id);if(setup.revision!==Number(briefRevision)||installation.revision!==Number(installationRevision)||!installation.revision||installation.stale)throw new RequestError(409,'Save and review the current business brief and installation before downloading.');const target=cleanInstallationTarget(installation.target,setup.offers),needs=preparationNeeds(target,setup.profile);if(needs.length)throw new RequestError(400,'Add: '+needs.join(', ')+'.');
+ if(setup.profile.businessName.toLowerCase()==='schurr automations'||!setup.profile.website||new URL(setup.profile.website).origin!==target.origin||!setup.profile.alertEmail||!setup.profile.replyEmail||!setup.profile.timezone)throw new RequestError(400,'Approve the client’s own business name, matching website, staff inbox, reply inbox and timezone.');
+ const brief={clientId:setup.id,revision:setup.revision,offers:setup.offers,profile:setup.profile};const hash=async(v:unknown)=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(v)))),n=>n.toString(16).padStart(2,'0')).join('');
+ const configurationHash=await clientConfigurationHash(setup),targetHash=await hash({revision:installation.revision,briefRevision:installation.briefRevision,target});
+ const latest=await database().prepare('SELECT s.revision AS briefRevision,i.revision AS installationRevision FROM client_setups s JOIN client_installations i ON i.client_id=s.id WHERE s.id=?').bind(setup.id).first<{briefRevision:number;installationRevision:number}>();if(latest?.briefRevision!==setup.revision||latest.installationRevision!==installation.revision)throw new RequestError(409,'Setup changed while exporting. Download again.');
+ return {format:'schurr-client-preparation-v1',sourceVersion:CLIENT_SOURCE_VERSION,brief,configurationHash,target,installationRevision:installation.revision,targetHash,liveActionsEnabled:false,meaning:'Prepares a NEW isolated source workspace. Does not create provider accounts, deploy or enable services.'};
+}

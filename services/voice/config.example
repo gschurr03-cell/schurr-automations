@@ -1,0 +1,12 @@
+# Copy into your hosting provider's secret settings. Do not commit real values.
+VOICE_ENABLED=false
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_PHONE_NUMBER=
+GOOGLE_API_KEY=
+# Choose and verify a currently available native-audio model for your Google project.
+GEMINI_LIVE_MODEL=
+PUBLIC_VOICE_ORIGIN=
+SCHURR_SITE_ORIGIN=https://schurr-automations.gavschurr.chatgpt.site
+# Same random value, at least 32 characters, on the Site and this gateway.
+VOICE_INGEST_SECRET=

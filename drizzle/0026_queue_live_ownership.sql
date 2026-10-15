@@ -1,0 +1,2 @@
+DROP INDEX `gmail_queue_outbox_idx`;--> statement-breakpoint
+CREATE UNIQUE INDEX `gmail_queue_outbox_idx` ON `gmail_queue_items` (`outbox_id`) WHERE "gmail_queue_items"."status" IN ('pending','dispatching','held');

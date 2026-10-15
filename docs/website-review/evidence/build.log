@@ -1,0 +1,119 @@
+$ node scripts/run-framework.mjs build
+
+  vinext build  (Vite 8.0.16)
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mProxy environment variables detected. We'll use your proxy for fetch requests.[0m
+
+
+[1/5] analyze client references...
+[2Ktransforming...✓ 469 modules transformed.
+rendering chunks...
+✓ built in 1.63s
+[2/5] analyze server references...
+[2Ktransforming...✓ 174 modules transformed.
+rendering chunks...
+✓ built in 436ms
+[3/5] build rsc environment...
+[2Ktransforming...✓ 466 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 1.50s
+[4/5] build client environment...
+[2Ktransforming...✓ 1940 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 2.20s
+[5/5] build ssr environment...
+[2Ktransforming...✓ 179 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 759ms
+[0m
+  Route (app)
+  ┌ λ /                                 
+  ├ λ /api/assistant                    
+  ├ λ /api/booking                      
+  ├ λ /api/demo                         
+  ├ λ /api/gmail/queue                  
+  ├ λ /api/gmail/sync                   
+  ├ λ /api/health                       
+  ├ λ /api/inquiries                    
+  ├ λ /api/inquiry-token                
+  ├ λ /api/manage/automations           
+  ├ λ /api/manage/client-installations  
+  ├ λ /api/manage/client-setups         
+  ├ λ /api/manage/contact-import        
+  ├ λ /api/manage/crm                   
+  ├ λ /api/manage/customer-email        
+  ├ λ /api/manage/export                
+  ├ λ /api/manage/gmail                 
+  ├ λ /api/manage/gmail/callback        
+  ├ λ /api/manage/gmail/queue           
+  ├ λ /api/manage/inquiries             
+  ├ λ /api/manage/monitoring            
+  ├ λ /api/manage/monitoring-connection 
+  ├ λ /api/manage/operational-backup    
+  ├ λ /api/manage/outreach              
+  ├ λ /api/manage/owner-alerts          
+  ├ λ /api/manage/receptionist          
+  ├ λ /api/manage/receptionist-auditions
+  ├ λ /api/manage/response              
+  ├ λ /api/manage/scheduling            
+  ├ λ /api/manage/website-followup      
+  ├ λ /api/metrics                      
+  ├ λ /api/monitoring/run               
+  ├ λ /api/resend/events                
+  ├ λ /api/retell/events                
+  ├ λ /api/retell/inbound               
+  ├ λ /api/retell/tools                 
+  ├ λ /api/voice/intake                 
+  ├ λ /api/website-callback/tools       
+  ├ λ /api/website-followup             
+  ├ ? /book                             
+  ├ λ /brand-directions                 
+  ├ ƒ /crm                              
+  ├ λ /demo                             
+  ├ λ /how-it-works                     
+  ├ λ /industries/used-car-dealers      
+  ├ λ /inquire                          
+  ├ ƒ /login                            
+  ├ ƒ /manage                           
+  ├ ƒ /manage/automations               
+  ├ ƒ /manage/clients                   
+  ├ ƒ /manage/clients/:id               
+  ├ ƒ /manage/clients/:id/demo          
+  ├ ƒ /manage/clients/demo              
+  ├ ƒ /manage/inquiries                 
+  ├ ƒ /manage/leads                     
+  ├ ƒ /manage/leads/:id                 
+  ├ ƒ /manage/leads/new                 
+  ├ ƒ /manage/mail                      
+  ├ ƒ /manage/metrics                   
+  ├ ƒ /manage/monitoring                
+  ├ ƒ /manage/operational-backup        
+  ├ ƒ /manage/outreach                  
+  ├ ƒ /manage/pipeline                  
+  ├ ƒ /manage/receptionist              
+  ├ ƒ /manage/receptionist/auditions    
+  ├ ƒ /manage/response                  
+  ├ ƒ /manage/schedule                  
+  ├ ƒ /manage/sent                      
+  ├ ƒ /manage/settings                  
+  ├ ƒ /manage/tasks                     
+  ├ λ /meet-gavin                       
+  ├ λ /privacy                          
+  ├ λ /resources/inquiry-checklist      
+  ├ λ /solutions/ai-receptionist        
+  ├ λ /solutions/custom-automation      
+  ├ λ /solutions/local-seo-reviews      
+  ├ λ /solutions/websites-chatbots      
+  └ λ /why-automation                   
+
+  λ API  ƒ Dynamic  ? Unknown
+
+  ? Some routes could not be classified. vinext currently uses static analysis
+    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.
+    Automatic classification will be improved in a future release.
+
+  Build complete. Run `vinext start` to start the production server.
+

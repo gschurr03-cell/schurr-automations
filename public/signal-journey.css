@@ -1,0 +1,36 @@
+/* One sculptural signal. The accepted precision palette and page layout stay intact. */
+.hero-scroll.has-signal{min-height:170svh}
+.hero-scroll.has-signal .hero{display:block;position:sticky;top:0;padding-block:25px 45px;min-height:0}
+.signal-stage{position:relative;height:450px;margin:0;isolation:isolate;overflow:hidden}
+.signal-canvas,.signal-fallback{position:absolute;inset:5px 0 38px;pointer-events:none}
+.signal-canvas canvas{display:block;width:100%;height:100%;outline:none}
+.signal-fallback{width:100%;height:calc(100% - 43px);opacity:1}
+.signal-stage.is-webgl-ready .signal-fallback{visibility:hidden}
+.signal-stage:not(.is-webgl-ready) .signal-canvas{visibility:hidden}
+.signal-piece-depth{fill:url(#signal-edge)}
+.signal-piece-face{fill:url(#signal-titanium);stroke:#c8c5cf;stroke-width:.55}
+.signal-stage figcaption{position:absolute;bottom:11px;left:0;font:400 11px/1.4 Archivo,Arial,sans-serif;color:#bcb9c1}
+.signal-stage .motion-toggle{position:absolute;bottom:0;right:0;min-height:44px;padding:10px 0 10px 15px;border:0;background:none;color:#bcb9c1;font:400 11px/1.4 Archivo,Arial,sans-serif;cursor:pointer;touch-action:manipulation}
+.signal-stage .motion-toggle[hidden]{display:none}
+.signal-stage .motion-toggle:hover{color:#fff}
+.signal-detail{position:absolute;left:50%;bottom:54px;transform:translateX(-50%);text-align:center;margin:0;max-width:80%;width:max-content;font:400 12px/1.4 Archivo,Arial,sans-serif;letter-spacing:.015em;color:#c6becb}
+.signal-navigation{display:flex;gap:25px;flex-shrink:0;border:0}
+.signal-navigation button{border:0;padding:10px 0;min-height:44px;background:none;font:400 12px/1.4 Archivo,Arial,sans-serif;color:#96919c;border-bottom:1px solid transparent;cursor:pointer;touch-action:manipulation}
+.signal-navigation button[aria-pressed=true]{border-color:#d2cbd4;color:#fff}
+.signal-navigation button:hover{color:#fff}
+:is(.signal-navigation button,.signal-stage .motion-toggle):focus-visible{outline:2px solid #d2cbd4;outline-offset:5px}
+@media(min-width:1550px){.signal-stage{height:550px}.signal-canvas,.signal-fallback{inset:5px 0 43px}.signal-detail{bottom:57px}}
+@media(max-width:1100px){.signal-navigation{gap:17px}}
+@media(max-width:760px){
+ .hero-scroll.has-signal{min-height:0}
+ .hero-scroll.has-signal .hero{position:relative;display:block;padding-block:15px 28px;min-height:0}
+ .signal-stage{height:285px;margin-inline:-10px;width:calc(100% + 20px)}
+ .signal-canvas,.signal-fallback{inset:-8px 0 39px}
+ .signal-fallback{height:calc(100% - 31px);width:122%;max-width:none;left:-11%;right:auto}
+ .signal-stage figcaption{font-size:10px;left:10px;bottom:10px}
+ .signal-stage .motion-toggle{font-size:10px;right:10px}
+ .signal-detail{bottom:53px;font-size:11px;max-width:90%}
+ .signal-navigation{justify-content:space-between;margin-top:18px;gap:15px;width:100%}
+ .signal-navigation button{font-size:12px;padding-block:10px}
+}
+@media(prefers-reduced-motion:reduce){.hero-scroll.has-signal{min-height:0}.hero-scroll.has-signal .hero{position:relative;min-height:0}.signal-stage{scroll-behavior:auto}}

@@ -1,0 +1,1 @@
+ALTER TABLE `crm_mutations` ADD `attempt_id` text DEFAULT '' NOT NULL;

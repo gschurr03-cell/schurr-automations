@@ -1,0 +1,671 @@
+{
+  "release_version": 105,
+  "commit_sha": "227bc480503afdc68a4ab2d69b8063e4e6b88906",
+  "origin": "https://schurrautomations.com",
+  "started_at_utc": "2026-10-14T17:38:29.197505+00:00",
+  "completed_at_utc": "2026-10-14T17:39:25.150865+00:00",
+  "method": "Anonymous read-only HTTP GET through Python urllib; no browser, authentication, form submission, provider call, or database query. Redirects followed only on same host, except /manage where first redirect is retained.",
+  "limitations": [
+    "HTTP checks do not establish visual layout, JavaScript interaction, accessibility, print layout, live message delivery, or provider integration correctness."
+  ],
+  "request_count": 36,
+  "results": [
+    {
+      "path": "/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:29.198562+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/?release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 31780,
+      "sha256": "31535338d3dd5ae6855c69c6481f2c6a9202c69ca8701180bb8e5e5cc6784d1a",
+      "date": "Wed, 14 Oct 2026 17:38:34 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85bc2f8fca670-DFW",
+      "title": "Schurr Automations | Practical AI & Business Automation",
+      "canonical": "https://schurrautomations.com/",
+      "h1": "Capture more opportunities. Give your team time back.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/privacy/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:29.199194+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/privacy?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/privacy?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 11141,
+      "sha256": "5bf7674e0843b1599ceb6ad4db3aa0f18992084c56d1d9a91ae6a96344cbc2a3",
+      "date": "Wed, 14 Oct 2026 17:38:38 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85bdb3c04a670-DFW",
+      "title": "Privacy | Schurr Automations",
+      "canonical": "https://schurrautomations.com/privacy/",
+      "h1": "How your informationis handled.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/demo/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:29.199945+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/demo?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/demo?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 10676,
+      "sha256": "325cc2e2ee9990578ac8c6bf0b3ed0a0199c47f52313458a2279f9d04a3d1674",
+      "date": "Wed, 14 Oct 2026 17:38:38 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85bdb8d94a670-DFW",
+      "title": "Dealer Walkthrough & AI Receptionist Demo | Schurr Automations",
+      "canonical": "https://schurrautomations.com/demo/",
+      "h1": "See what happens after the first question.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/how-it-works/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:34.764016+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/how-it-works?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/how-it-works?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 19253,
+      "sha256": "9390be44a18403b79712d1d13f59da044184e6054b066a9863b3a77161d250aa",
+      "date": "Wed, 14 Oct 2026 17:38:42 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85bf43fcaa670-DFW",
+      "title": "Our Approach | Schurr Automations",
+      "canonical": "https://schurrautomations.com/how-it-works/",
+      "h1": "A clear plan. A useful result.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/meet-gavin/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:38.021739+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/meet-gavin?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/meet-gavin?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 14219,
+      "sha256": "39f0a602762ba5c8cd3dc3a0c1ba267df2c33741957dc723dbc68f5d095ce824",
+      "date": "Wed, 14 Oct 2026 17:38:45 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85c0cff7ba670-DFW",
+      "title": "Meet Gavin Schurr | Schurr Automations",
+      "canonical": "https://schurrautomations.com/meet-gavin/",
+      "h1": "Business thinking.Built into the details.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/why-automation/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:38.071714+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/why-automation?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/why-automation?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 16157,
+      "sha256": "d656fb3c01c5513d9d161f2ef7cfd159eed14d2ae1543b61f88bad9c664b2ee2",
+      "date": "Wed, 14 Oct 2026 17:38:45 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85c0cbe8ba670-DFW",
+      "title": "Why Automation | Schurr Automations",
+      "canonical": "https://schurrautomations.com/why-automation/",
+      "h1": "Start with your records. Measure what changes.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/ai-receptionist/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:42.024492+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/solutions/ai-receptionist?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/solutions/ai-receptionist?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 19360,
+      "sha256": "4c36f820ca96d2f16b421f08842fa84711bd9394bf822705ac5cebb36e46e278",
+      "date": "Wed, 14 Oct 2026 17:38:49 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85c247c3ca670-DFW",
+      "title": "AI Receptionist | Schurr Automations",
+      "canonical": "https://schurrautomations.com/solutions/ai-receptionist/",
+      "h1": "Answer the call. Make the next step clear.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/custom-automation/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:45.923008+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/solutions/custom-automation?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/solutions/custom-automation?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18896,
+      "sha256": "7d9d59712a7b23aa160bb008152029946ab3ce55209047832fbadc865b571999",
+      "date": "Wed, 14 Oct 2026 17:38:54 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85c3cc9f9a670-DFW",
+      "title": "Workflow Automation | Schurr Automations",
+      "canonical": "https://schurrautomations.com/solutions/custom-automation/",
+      "h1": "Stop losing the next step between people and tools.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/websites-chatbots/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:45.979200+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/solutions/websites-chatbots?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/solutions/websites-chatbots?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 16476,
+      "sha256": "8aa373c9c7154929a004f1401302bde64bea8008dcd091c4c0353b831d30d5ff",
+      "date": "Wed, 14 Oct 2026 17:38:54 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85c3d4ba1a670-DFW",
+      "title": "Website Design & Development | Schurr Automations",
+      "canonical": "https://schurrautomations.com/solutions/websites-chatbots/",
+      "h1": "Make your business easier to understand and easier to contact.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/solutions/local-seo-reviews/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:49.756349+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/solutions/local-seo-reviews?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/solutions/local-seo-reviews?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 16846,
+      "sha256": "10ab77c8d1e10d7e62be7db745b93aa107dd3597b6b8f450fab42839d30244bd",
+      "date": "Wed, 14 Oct 2026 17:38:59 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85c606a17a670-DFW",
+      "title": "SEO, AEO & Reviews | Schurr Automations",
+      "canonical": "https://schurrautomations.com/solutions/local-seo-reviews/",
+      "h1": "Help the right customers find clear answers about your business.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/industries/used-car-dealers/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:54.215143+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/industries/used-car-dealers?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/industries/used-car-dealers?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 10947,
+      "sha256": "13487f8c837b29f757d54d2da40fed6553a5b7407ea52d0ef6bb11949201b1a1",
+      "date": "Wed, 14 Oct 2026 17:39:05 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85c84ff62a670-DFW",
+      "title": "Inquiry & Callback Workflows for Used-Car Dealers | Schurr Automations",
+      "canonical": "https://schurrautomations.com/industries/used-car-dealers/",
+      "h1": "Give every serious vehicle inquiry a clear next step.",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/resources/inquiry-checklist/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:54.322805+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/resources/inquiry-checklist?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/resources/inquiry-checklist?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 7470,
+      "sha256": "85188dcaf7fe7f4135977a61bff7734c7b9e78cd126878b65058399d8ffa46a0",
+      "date": "Wed, 14 Oct 2026 17:39:05 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85c85488fa670-DFW",
+      "title": "Inquiry Checklist | Schurr Automations",
+      "canonical": "https://schurrautomations.com/resources/inquiry-checklist/",
+      "h1": "Can your team trace an inquiry to its next action?",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/inquire/",
+      "kind": "public_html",
+      "checked_at_utc": "2026-10-14T17:38:59.322777+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/inquire?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 308,
+          "location": "/inquire?release_check=release105-1791999509"
+        }
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 8690,
+      "sha256": "d4add35f8e48088880dff89617fdf2b5776d1309ca5f7ec50570289f4fc7c0f8",
+      "date": "Wed, 14 Oct 2026 17:39:10 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85ca51d5da670-DFW",
+      "title": "Contact Schurr Automations",
+      "canonical": "https://schurrautomations.com/inquire/",
+      "h1": "Where does the next customer get stuck?",
+      "checks": {
+        "http_200": true,
+        "canonical_expected": true,
+        "title_present": true,
+        "one_h1": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/book?for=dealer&via=card",
+      "kind": "qr_booking",
+      "checked_at_utc": "2026-10-14T17:39:05.174066+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/book?for=dealer&via=card&release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 19195,
+      "sha256": "0c35d056625e853f4844caa6db0ee7ba4a65f8866e549b8c019411321c328e6b",
+      "date": "Wed, 14 Oct 2026 17:39:10 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85ca4cc63a670-DFW",
+      "title": "Request a 15-minute fit call | Schurr Automations",
+      "canonical": "https://schurrautomations.com/book",
+      "h1": "Give every serious vehicle inquiry a clear next step.",
+      "checks": {
+        "http_200": true,
+        "canonical_book": true,
+        "request_15_minutes": true,
+        "campaign_visible": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/book?for=dealer&via=hanger",
+      "kind": "qr_booking",
+      "checked_at_utc": "2026-10-14T17:39:05.216889+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/book?for=dealer&via=hanger&release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 19199,
+      "sha256": "fb64b0251358825ccd274650c33c7f9a10f7ff17f6fe8fbbf793d409f910164f",
+      "date": "Wed, 14 Oct 2026 17:39:10 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85ca50d39a670-DFW",
+      "title": "Request a 15-minute fit call | Schurr Automations",
+      "canonical": "https://schurrautomations.com/book",
+      "h1": "Give every serious vehicle inquiry a clear next step.",
+      "checks": {
+        "http_200": true,
+        "canonical_book": true,
+        "request_15_minutes": true,
+        "campaign_visible": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/book?for=repair&via=card",
+      "kind": "qr_booking",
+      "checked_at_utc": "2026-10-14T17:39:10.313971+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/book?for=repair&via=card&release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 19231,
+      "sha256": "135440786d3bd77f41fab853f0a3cb1f7a3d1fa1eecc74ca662e53d128c0bbba",
+      "date": "Wed, 14 Oct 2026 17:39:16 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85cc9795fa670-DFW",
+      "title": "Request a 15-minute fit call | Schurr Automations",
+      "canonical": "https://schurrautomations.com/book",
+      "h1": "Give the next repair inquiry a clear next step.",
+      "checks": {
+        "http_200": true,
+        "canonical_book": true,
+        "request_15_minutes": true,
+        "campaign_visible": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/book?for=repair&via=hanger",
+      "kind": "qr_booking",
+      "checked_at_utc": "2026-10-14T17:39:10.336157+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/book?for=repair&via=hanger&release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 19235,
+      "sha256": "4eb2fa5d0c4c1dbce8e3c43a029d944ede479f9ae2c0dff0b58f2b36f675a3ec",
+      "date": "Wed, 14 Oct 2026 17:39:16 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85cc9caa0a670-DFW",
+      "title": "Request a 15-minute fit call | Schurr Automations",
+      "canonical": "https://schurrautomations.com/book",
+      "h1": "Give the next repair inquiry a clear next step.",
+      "checks": {
+        "http_200": true,
+        "canonical_book": true,
+        "request_15_minutes": true,
+        "campaign_visible": true,
+        "old_promise_absent": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/dealer-demo.js",
+      "kind": "asset",
+      "checked_at_utc": "2026-10-14T17:39:10.336929+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/dealer-demo.js?release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/javascript",
+      "bytes": 3867,
+      "sha256": "e6c788391620d3d1ac58fd0c84031c758e20b0842ddf8654193a13d9abdc27ca",
+      "date": "Wed, 14 Oct 2026 17:39:16 GMT",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cf_ray": "a4a85cc97955a670-DFW",
+      "checks": {
+        "http_200": true,
+        "matches_release105_local_asset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/dealer-demo.css",
+      "kind": "asset",
+      "checked_at_utc": "2026-10-14T17:39:16.147232+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/dealer-demo.css?release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/css",
+      "bytes": 9514,
+      "sha256": "2b9c616fcc3e8ab5cf0760779ca54e31ec884f06d41b692436632db27bff18c3",
+      "date": "Wed, 14 Oct 2026 17:39:20 GMT",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cf_ray": "a4a85ce11ea4a670-DFW",
+      "checks": {
+        "http_200": true,
+        "matches_release105_local_asset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/brief-release.css",
+      "kind": "asset",
+      "checked_at_utc": "2026-10-14T17:39:16.206039+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/brief-release.css?release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/css",
+      "bytes": 4743,
+      "sha256": "8138e7feb4a89f87f3912482c2dd2cdfe07df9e7501cb89b189f1685e9e1f70d",
+      "date": "Wed, 14 Oct 2026 17:39:19 GMT",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cf_ray": "a4a85ce13edfa670-DFW",
+      "checks": {
+        "http_200": true,
+        "matches_release105_local_asset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "kind": "sitemap",
+      "checked_at_utc": "2026-10-14T17:39:16.259485+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/sitemap.xml?release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/xml",
+      "bytes": 951,
+      "sha256": "764fc4968ea0ba49d6a043787651cda15e8242d4bdd40bd6a1dab0dabe99cda7",
+      "date": "Wed, 14 Oct 2026 17:39:20 GMT",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cf_ray": "a4a85ce13edea670-DFW",
+      "urls": [
+        "https://schurrautomations.com/",
+        "https://schurrautomations.com/how-it-works/",
+        "https://schurrautomations.com/why-automation/",
+        "https://schurrautomations.com/meet-gavin/",
+        "https://schurrautomations.com/demo/",
+        "https://schurrautomations.com/privacy/",
+        "https://schurrautomations.com/solutions/ai-receptionist/",
+        "https://schurrautomations.com/solutions/custom-automation/",
+        "https://schurrautomations.com/solutions/websites-chatbots/",
+        "https://schurrautomations.com/solutions/local-seo-reviews/",
+        "https://schurrautomations.com/industries/used-car-dealers/",
+        "https://schurrautomations.com/resources/inquiry-checklist/"
+      ],
+      "checks": {
+        "http_200": true,
+        "matches_local_sitemap": true,
+        "twelve_public_routes": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/robots.txt",
+      "kind": "robots",
+      "checked_at_utc": "2026-10-14T17:39:19.936003+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/robots.txt?release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "text/plain",
+      "bytes": 109,
+      "sha256": "dec3a07b863035bd40ee16538fed9d811e8405a6014db57dab72b573c1da5a19",
+      "date": "Wed, 14 Oct 2026 17:39:24 GMT",
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cf_ray": "a4a85d002f65a670-DFW",
+      "checks": {
+        "http_200": true,
+        "manage_disallowed": true,
+        "api_disallowed": true,
+        "canonical_sitemap": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/manage",
+      "kind": "anonymous_owner_boundary",
+      "checked_at_utc": "2026-10-14T17:39:20.078220+00:00",
+      "status": 307,
+      "final_url": "https://schurrautomations.com/manage?release_check=release105-1791999509",
+      "redirects": [
+        {
+          "status": 307,
+          "location": "/signin-with-chatgpt?return_to=%2Fmanage"
+        }
+      ],
+      "content_type": null,
+      "bytes": 0,
+      "date": "Wed, 14 Oct 2026 17:39:24 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85d0078a0a670-DFW",
+      "title": null,
+      "canonical": null,
+      "h1": null,
+      "checks": {
+        "anonymous_blocked": true,
+        "private_no_store": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/api/booking",
+      "kind": "request_only_booking",
+      "checked_at_utc": "2026-10-14T17:39:20.087643+00:00",
+      "status": 200,
+      "final_url": "https://schurrautomations.com/api/booking?release_check=release105-1791999509",
+      "redirects": [],
+      "content_type": "application/json",
+      "bytes": 177,
+      "sha256": "83b3a6b988661954f237e09e530eddc8a180d8e7207eb55c6986e726426dd42c",
+      "date": "Wed, 14 Oct 2026 17:39:25 GMT",
+      "cache_control": "private, no-store",
+      "cf_ray": "a4a85d001f0fa670-DFW",
+      "public_configuration": {
+        "ok": true,
+        "mode": "request",
+        "enabled": false,
+        "duration": 15,
+        "timezone": "America/Denver",
+        "slots": [],
+        "message": "Request a 15-minute fit call. Gavin will confirm the time with you."
+      },
+      "checks": {
+        "http_200": true,
+        "request_only_15_minute": true
+      },
+      "passed": true
+    }
+  ],
+  "failed_paths": [],
+  "target_count": 24,
+  "observations": [
+    "Non-root public HTML routes normalize their trailing slash with one HTTP 308 redirect; canonical metadata preserves the established slash-form URL. No redirect loop was observed.",
+    "Anonymous /manage returned HTTP 307 to /signin-with-chatgpt?return_to=%2Fmanage; that redirect was deliberately not followed."
+  ]
+}

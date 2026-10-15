@@ -1,0 +1,38 @@
+{
+  "release": "schurr-release-repair-2026-10-14",
+  "base_version": 105,
+  "base_commit": "227bc480503afdc68a4ab2d69b8063e4e6b88906",
+  "created_at_utc": "2026-10-14T17:41:50.933084+00:00",
+  "files": [
+    {
+      "path": "public/site.js",
+      "sha256": "72f7c2faa7c3d9234e8238c5f5dab5690a297720af8ae2e065bed02595f5a990"
+    },
+    {
+      "path": "public/agency.js",
+      "sha256": "3cb8bbe8710fb484059587a031bea8f406e651080057657b4053df53a73cf7a4"
+    },
+    {
+      "path": "site-html/demo.html",
+      "sha256": "210d07cf0017a161515efebccd3ad89f9231544f62c675d5ffa140e15b2df3b4"
+    },
+    {
+      "path": "site-html/resources/inquiry-checklist/index.html",
+      "sha256": "b1e3ae64b362807e4afe8482463c22d9f9b4199efb410958c08f6e890beec7a0"
+    },
+    {
+      "path": "tests/public-inquiry-recovery.test.cjs",
+      "sha256": "4b1b341bafbe99ed095b403564ecab3fb603ecec7b3af7b32da6c1f1d0df8e63"
+    },
+    {
+      "path": "tests/site-content.test.cjs",
+      "sha256": "fdee6d215dc518134a80d99f2de713d75f26f6130173382436041005cc5d97b8"
+    }
+  ],
+  "verification": [
+    "Six synthetic inquiry-recovery and phone-tracking groups passed",
+    "Content and CTA-source assertions passed",
+    "24 public HTTP targets passed before this repair; affected scripts will be checked after publication"
+  ],
+  "limits": "No browser/device/print acceptance, live provider message delivery or rollback rehearsal."
+}

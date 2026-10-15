@@ -1,0 +1,15 @@
+PASS anonymous and non-owner CRM reads/writes are denied before storage; origin/body/type enforced
+PASS manual creation persists real fees without website consent/quota; retries are idempotent
+PASS all website inquiries appear immediately and CRM edits preserve original input, consent, and retry hashes
+PASS competing/stale edits produce one winning change and no false history
+PASS notes persist literally, duplicate notes are prevented, and removal is scoped to its parent
+PASS tasks support due/overdue, complete/reopen, edits, stale protection, and timezone-aware day boundaries
+PASS workspace settings persist without permitting authorization changes
+PASS action values, fees, contact fields, cursors and SQL-bound searches reject hostile input
+PASS pagination and export traverse all records; literal search and CSV formula protection work
+PASS a reused mutation key with competing actions cannot create unreceipted records
+PASS confirmed revision-checked deletion removes original inquiries and cascades notes/tasks
+PASS partial failures roll back lead, receipt and history together; a safe retry completes
+PASS CRM/login/export share private response protections and forms do not fall back to PII-in-URL GET
+
+13 CRM integration/security groups passed against real SQLite with foreign keys enabled.

@@ -1,0 +1,15 @@
+import { getOverview, listLeads, STAGES, SERVICE_NAMES, type Stage } from '@/lib/crm';
+import { CRMShell, crmContext, AccessDenied, Unavailable, AddLead, CRMForm, money, todayFor, StageBadge } from '../crm-ui';
+export const dynamic='force-dynamic';
+export const metadata={title:'Pipeline | Schurr CRM'};
+export default async function Pipeline() {
+  const {access,settings}=await crmContext('/manage/pipeline'); let content;
+  if(!access.allowed) content=<AccessDenied access={access}/>;
+  else if(!settings) content=<Unavailable/>;
+  else {try {
+    const stages:Stage[]=['new','contacted','discovery','proposal','won'];
+    const [overview,...columns]=await Promise.all([getOverview(todayFor(settings)),...stages.map(stage=>listLeads({stage},12))]);
+    content=<><p className="crm-alert">Monthly and setup amounts are estimated contract values in USD. Won means you marked the opportunity as won; it does not confirm a payment.</p><div className="crm-pipeline" role="region" aria-label="Sales pipeline" tabIndex={0}>{stages.map((stage,index)=>{const total=overview.stages.find(s=>s.stage===stage);const column=columns[index];return <section className="crm-pipeline-column" key={stage}><div className="crm-pipeline-heading"><div><StageBadge stage={stage}/><span>{total?.count||0}</span></div><strong>{money(total?.monthlyCents||0)}<small> / month</small></strong><p>{money(total?.setupCents||0)} setup potential</p></div><div className="crm-pipeline-cards">{column.items.map(lead=><article className="crm-deal-card" key={lead.id}><a href={`/manage/leads/${lead.id}`}><strong>{lead.business||lead.name}</strong>{lead.business&&<span>{lead.name}</span>}</a><p>{SERVICE_NAMES[lead.service]}</p><div className="crm-deal-value">{money(lead.monthlyCents)}<span>/mo</span></div><CRMForm action="stage" stayOnPage compact submitLabel="Move"><input type="hidden" name="leadId" value={lead.id}/><input type="hidden" name="revision" value={lead.revision}/><label className="crm-sr-only" htmlFor={`stage-${lead.id}`}>Stage for {lead.name}</label><select id={`stage-${lead.id}`} name="stage" defaultValue={lead.stage}>{Object.entries(STAGES).map(([key,label])=><option value={key} key={key}>{label}</option>)}</select></CRMForm></article>)}{!column.items.length&&<p className="crm-column-empty">No opportunities here yet.</p>}</div>{column.nextCursor&&<a className="crm-column-link" href={`/manage/leads?stage=${stage}`}>View all {total?.count} opportunities</a>}</section>;})}</div><div className="crm-actions crm-pipeline-footer"><a href="/manage/leads?stage=lost">Lost opportunities ({overview.stages.find(s=>s.stage==='lost')?.count||0})</a><a href="/manage/leads?stage=archived">Archived ({overview.stages.find(s=>s.stage==='archived')?.count||0})</a></div></>;
+  }catch{content=<Unavailable/>;}}
+  return <CRMShell active="/manage/pipeline" title="Pipeline" description="Move each opportunity toward a clear decision." access={access} settings={settings} actions={access.allowed?<AddLead/>:undefined}>{content}</CRMShell>;
+}

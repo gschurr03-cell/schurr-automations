@@ -1,0 +1,14 @@
+PASS one source receives 3 inquiries/15min; fourth rejects; second source admitted; saved retry remains 200
+PASS concurrent requests cannot exceed source inquiry admission limit
+PASS metric 61 rejects without increment; another source remains available
+PASS ninth token request rejects and second source retains its allowance
+PASS rejected token flood cannot consume shared allowance
+PASS rejected metric flood cannot consume shared allowance
+PASS fingerprint ignores X-Forwarded-For/X-Real-IP, rotates daily, and source headers are not stored
+PASS expiry cleanup is bounded to 500 rows per call and removes remaining expiry on next request
+PASS 15-minute inquiry window resets and daily 10 limit remains enforced
+PASS cursor pagination returns all 10,251 records with duplicate timestamps and at most 100/page
+PASS malformed, oversized, and injection-shaped cursors reject
+PASS exhausted shared cap rejects new sources without creating rate-limit rows
+
+12 independent checks passed; 0 failed.

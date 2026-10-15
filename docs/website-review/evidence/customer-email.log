@@ -1,0 +1,16 @@
+PASS explicit current opt-in required; absent/false remains manual and keeps historical digest
+PASS public checkbox is optional and unchecked; switching channels clears consent and cannot restore it
+PASS website call-request link selects phone contact and requires a callback number
+PASS new inquiries atomically send once under concurrent/repeated submission; consent cannot be changed and follow-up remains needed
+PASS historical/manual inquiry retries never backfill customer or owner sends
+PASS CRM corrections, handled/paused states and withdrawal after claim stop sends without changing payloads
+PASS suppression survives retry; deletion removes pending emails and durable receipt blocks refreshed-token replay
+PASS lost provider response and concurrent retry recover one accepted email using identical bytes and key
+PASS email failure preserves inquiry and owner alert; credential changes and expiry cannot create duplicate customer sends
+PASS atomic recipient cooldown prevents repeated confirmations and provider retry-after is honored
+PASS manual retry is owner-only, origin-bound and limited to existing saved confirmation
+PASS signed delivery events reject forged/stale calls, dedupe replays, preserve stronger outcomes, suppress complaints and reconcile early arrival
+PASS customer outbox failure rolls back the whole new-inquiry transaction including replay receipt
+PASS early bounce survives report outages; owner reads reconcile outside the visible page, suppress later contact and never resend
+PASS persisted event recovery does not depend on successfully writing the pending-report marker
+15 customer-email integration groups passed (SQLite/WebCrypto; simulated provider).

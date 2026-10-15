@@ -1,0 +1,20 @@
+PASS scheduling and calendar downloads require the owner; writes require the correct origin
+PASS draft defaults, explicit rule approval, optimistic settings and daylight-saving validation
+PASS concurrent reservations have one winner, duplicate requests reuse the booking, and buffers exclude conflicts
+PASS cancellation releases availability without reopening old receipts; outside commitments block offered times
+PASS phone edits and live-mode changes during reservation cannot substitute contacts or admit a stale action
+PASS recording a reply stops reminders atomically and a duplicate outcome cannot partly change the request
+PASS past-due retries return their receipt; withdrawal and completed callbacks never reopen
+PASS callback disable races and stale displayed timezones fail closed
+PASS booking stops open follow-ups and deleting the lead removes linked private appointment data
+PASS a failed transaction leaves no appointment or outcome receipt
+PASS rescheduling is atomic, preserves identity and old slots on conflict, has exact replay receipts, and same-call cancellation survives withdrawal
+PASS replay reads current state after intervening cancellation and failed mutation batches roll back the operation receipt
+PASS appointment contact lookup stays current for handled requests and requests outside the visible response queue
+PASS owner cancellation API records its outcome once, keeps reminders stopped, and safely replays concurrent or retried requests
+PASS legacy and current reminder receipts reject changed recipients, allow exact retries, and stop immediately when the contact changes
+PASS approved first-run schedule seeds once and never overwrites existing owner settings
+PASS dirty schedule drafts retain their original revision across prop refreshes while pristine forms adopt current hours
+PASS month reads include history, spanning blocks and more than 200 records; midnight ends are exclusive and overflow is explicit
+PASS calendar dates follow saved timezone at DST, month boundaries and fractional offsets; repeated times have distinct zones
+19 scheduling groups passed; all contacts fictional and zero external sends.

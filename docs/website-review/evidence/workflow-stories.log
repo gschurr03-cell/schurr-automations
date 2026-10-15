@@ -1,0 +1,18 @@
+PASS initialization matches markup with no number element or optional overview
+PASS autoplay advances one persistent workflow, lights nodes in order, and completes once
+PASS packet follows native path geometry and disappears at the destination
+PASS camera frames the opening and final outcome on desktop and mobile
+PASS chapters interpolate, update accessible state, and settle without autoplay
+PASS pause and resume keep the exact narrative position
+PASS overview freezes progress, shows the complete route, and returns to the same camera
+PASS reduced motion presents a completed overview and honors manual chapter changes
+PASS enabling reduced motion mid-play cancels animation and safely resolves the story
+PASS fixed-stage stories retain the whole composition during playback, resizing, and completion
+PASS fixed-stage stories preserve pause, resume, manual selection, and replay behavior
+PASS opacity windows enter, hold, and leave at their authored timeline boundaries
+PASS scene transforms ease translation and scale together, clamp endpoints, and default to identity
+PASS fixed-stage reduced motion resolves to a static outcome and keeps manual chapters accessible
+PASS offscreen suspends rendering and resumes without skipped wall time
+PASS hidden tab suspends rendering and resumes without skipped wall time
+PASS pagehide suspends rendering and resumes without skipped wall time
+PASS all 17 workflow behavior checks

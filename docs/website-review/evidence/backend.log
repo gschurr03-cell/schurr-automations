@@ -1,0 +1,14 @@
+PASS successful inquiry and its metric commit together
+PASS idempotent retries avoid duplicate rows/counts; changed content conflicts
+PASS concurrent retries share one receipt
+PASS origin, signature, token/key binding, expiry, and refresh are enforced
+PASS consent, honeypot, types, field bounds, JSON, and streaming body limit are validated
+PASS phone reply needs no email; unchecked optional choices create no email or AI callback
+PASS missing storage or signing secret fails closed
+PASS a metric failure rolls back inquiry creation instead of producing a partial write
+PASS hostile text remains data in prepared statements
+PASS metrics are atomic fixed buckets; public clients cannot claim saved inquiries
+PASS owner checks fail closed; legacy deletion redirects to the CRM confirmation flow
+PASS daily intake limit is explicit and does not prevent a committed retry receipt
+
+12 backend checks passed using real SQLite and mocked runtime/auth bindings.

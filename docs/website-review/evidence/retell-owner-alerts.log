@@ -1,0 +1,35 @@
+PASS owner actions reject anonymous, other-account and cross-origin requests before provider access
+PASS key encrypted with authenticated encryption, never returned, intake closed before connection
+PASS uncertain create recovers the original LLM and agent retry reuses it without duplicate resources
+PASS pre-answer delay authenticates destination, preserves routing, deduplicates concurrent retries, bounds waits and continues on timing-store failure
+PASS raw-body signatures, freshness in both directions and agent authorization enforced
+PASS only validated capture verifies the connection; test and playground requests do not create contacts
+PASS live activation checks assigned number and only canonical connected inbound phone calls pass
+PASS live save creates one CRM contact, permission note and response; retries cannot overwrite confirmed details
+PASS withdrawal still pauses saved calls after switching to test and replay cannot reopen them
+PASS opt-out wins capture races and a switch to test mode blocks an in-flight new capture
+PASS committed capture stays successful and exact retries stay unique when connection timestamps fail
+PASS withdrawal of an existing verified request survives a later provider error without allowing new captures or wrong destinations
+PASS trusted runtime connection requires verification bound to key, recipient and sender and never returns its key
+PASS owner alert recipient is fixed, auth/origin enforced, sender test required and key encrypted with separate purpose
+PASS live capture queues once and background delivery recovers a lost response with one provider email, unchanged payload and stable idempotency
+PASS email outages cannot undo capture; persistent failed alerts retry safely under concurrent requests
+PASS quota Retry-After is honored, expired ambiguous deliveries never auto-resend, paused requests cancel and redirects never forward keys
+PASS recipient change retargets only untouched messages; prior attempts never reuse a modified payload or send to the old address
+PASS older unresolved alerts remain reachable after newer messages through validated paginated history
+PASS concurrent website submissions commit the overlay and outbox once, recover delivery on exact retries, keep the owner fixed and preserve voice alerts
+PASS an existing receipt does not backfill a removed or historical website overlay or owner alert
+PASS overlay or owner-outbox storage failure rolls back intake, metrics and response together without scheduling delivery
+PASS website pause before or after claim and inquiry deletion before send prevent owner delivery
+PASS website email outages preserve a successful receipt and immutable outbox, with safe retry after a lost provider response
+PASS legacy or mismatched dashboard verification cannot override a valid runtime proof or activate on its own
+PASS sender cutover updates only untouched messages, preserves attempted and accepted history, and uses a new connection-test reference
+PASS new verified native key supersedes an old DB key, and a later verified dashboard key can replace it
+PASS secret rotation fails closed and setup state contains no credential material
+PASS signed inbound operations check rules, book once, preserve cancelled receipts, save/stop callbacks and install tools without changing the voice
+PASS matching phone data and model-supplied IDs cannot access another call’s booking
+PASS web simulations cannot reuse a phone-call ID to reach lookup, cancellation or withdrawal exemptions
+PASS lookup and cancellation exemptions retain canonical call identity, destination and status checks
+PASS explicit same-call cancellation survives test mode, provider error, withdrawal and booking disablement with idempotent retries
+PASS prepared business proof keeps email active after cutover, invalid legacy/newer proofs cannot displace it, owner-only tests preserve queues and never expose keys
+34 Retell integration groups passed (real SQLite/crypto; simulated Retell API).

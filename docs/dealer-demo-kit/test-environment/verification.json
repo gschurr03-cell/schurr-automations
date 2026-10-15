@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-14T18:34:15.980Z",
+  "checks": [
+    "real intake/task functions persist one callback and local notification across separate processes and duplicate submissions",
+    "unavailable fictional salesperson routes a pending callback to the fictional duty manager, without claiming a transfer",
+    "injected task-write failure rolls back the task receipt, preserves captured inquiry, shows honest fallback, and retries safely",
+    "local inbox failure never claims delivery, preserves the callback, and duplicate retry creates only one local notice",
+    "provider connections and appointments remain empty, runtime ignores ambient provider keys, fixed fixture guard and snapshot escaping hold"
+  ],
+  "actualPhoneCall": "NOT TESTED",
+  "externalNotificationDelivery": "NOT TESTED",
+  "browserAndLocalServer": "NOT TESTED; optional server was not started",
+  "productionDataAccessed": false,
+  "externalMessagesSent": 0,
+  "sourceHashes": {
+    "lib/voice-intake.ts": "329f219b5c3bbc81424108c58c2813b5b652cc802b5337e92e22573303b599e8",
+    "lib/crm.ts": "f98ac4cec9ffe83eebe9281b3d443d7eec393133351d75b2d53f07484a1f3f6d",
+    "lib/inquiries.ts": "004ec2e7b231d08439afaf8cfd94122f037e4374b90236f0f01d776ed3e18857",
+    "docs/dealer-demo-kit/test-environment/runtime.cjs": "0cd75e2f8586ac8711d9ed439285405219f76180796ebaf3d438b60ed47dc5a8"
+  }
+}

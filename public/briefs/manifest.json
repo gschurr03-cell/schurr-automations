@@ -1,0 +1,82 @@
+{
+  "calls": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/calls.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      346.79,
+      257.29
+    ]
+  },
+  "leads": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/leads.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      346.79,
+      257.29
+    ]
+  },
+  "time": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/time.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      206.69,
+      298.69
+    ]
+  },
+  "growth": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/growth.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      361.09,
+      298.69
+    ]
+  },
+  "website": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/website.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      332.49,
+      298.69
+    ]
+  },
+  "reviews": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/reviews.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      361.09,
+      298.69
+    ]
+  },
+  "marketing": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/marketing.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      361.09,
+      298.69
+    ]
+  },
+  "brain": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/brain.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      206.69,
+      298.69
+    ]
+  },
+  "audit": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/audit.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      332.49,
+      298.69
+    ]
+  },
+  "coding": {
+    "file": "/workspace/sites/schurr-automations/public/briefs/coding.pdf",
+    "pages": 2,
+    "content_bottoms": [
+      206.69,
+      298.69
+    ]
+  }
+}

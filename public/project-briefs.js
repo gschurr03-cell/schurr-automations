@@ -1,0 +1,216 @@
+'use strict';
+window.SCHURR_BRIEF_SECTIONS = [
+  ['scope', 'Proposed scope'],
+  ['workflow', 'Operational workflow'],
+  ['inputs', 'Client requirements'],
+  ['acceptance', 'Acceptance criteria'],
+  ['metrics', 'Performance measures'],
+  ['costDrivers', 'Cost considerations'],
+  ['discovery', 'Discovery questions']
+];
+window.formatSchurrProjectBrief = function (goal) {
+  const brief = window.SCHURR_PROJECT_BRIEFS[goal];
+  if (!brief) throw new Error('Choose a valid project brief.');
+  return [
+    'SCHURR AUTOMATIONS', 'PROJECT PLANNING BRIEF', '', brief.title, '',
+    'This brief outlines a proposed engagement. Scope, fees, and delivery dates are confirmed after reviewing your requirements and existing systems.', '',
+    'YOUR BUSINESS', 'Business name: ____________________', 'Contact name: ____________________',
+    'Current tools: ____________________', 'Priority outcome: ____________________', '',
+    'THE BUSINESS OBJECTIVE', brief.objective, '',
+    ...window.SCHURR_BRIEF_SECTIONS.flatMap(([key, heading]) => [heading.toUpperCase(), ...brief[key].map((item, i) => `${i + 1}. ${item}`), '']),
+    'DISCUSS THE SCOPE',
+    'Use this brief to discuss your existing systems, required changes, and business objectives. The initial scope will reflect those requirements.', '',
+    'Call Gavin directly: (985) 232-8337', 'Email Gavin: gavin@schurrautomations.com', 'https://schurrautomations.com', '',
+    'YOUR NOTES', '____________________________________________________________',
+    '____________________________________________________________', '',
+    'Downloading this brief does not submit an inquiry or confirm a project.'
+  ].join('\n');
+};
+window.SCHURR_PROJECT_BRIEFS = {
+  "calls": {
+    "title": "AI receptionist & lead response",
+    "text": "Answer calls, recover missed inquiries, and help qualified customers reach the next conversation through an agreed follow-up and booking workflow.",
+    "objective": "Capture useful customer details and help qualified inquiries reach your team or an appointment while you focus on the business.",
+    "scope": [
+      "AI call coverage using approved answers, qualification questions, and transfer rules.",
+      "Lead recovery and follow-up for agreed missed-call, website, chat, and advertising inquiry sources.",
+      "Qualification, appointment requests or supported booking, CRM handoff, and staff notifications.",
+      "Agreed follow-up timing, contact permissions, stopping rules, testing, and support."
+    ],
+    "workflow": [
+      "A customer calls or submits an inquiry through a connected source.",
+      "The system answers approved questions and collects the required details and contact permission.",
+      "It routes the request, offers supported booking, or prepares the next staff action.",
+      "Agreed follow-up stops on reply, opt-out, booking, or staff takeover; your team receives the context."
+    ],
+    "inputs": [
+      "Phone and inquiry sources, business information, coverage hours, and contact permissions.",
+      "CRM, calendar, booking rules, team contacts, and unanswered-transfer instructions.",
+      "Representative inquiries, approved replies, and the follow-up schedule you want tested."
+    ],
+    "acceptance": [
+      "Test calls and inquiries capture accurate details and reach the correct staff destination.",
+      "Booking conflicts, duplicate events, unavailable tools, and unanswered transfers follow agreed rules.",
+      "Reply, opt-out, booking, and staff-takeover tests stop further automated follow-up."
+    ],
+    "metrics": [
+      "Answered-call rate and time to a substantive response.",
+      "Qualified conversations, completed bookings, and attributable booked work."
+    ],
+    "costDrivers": [
+      "Call volume, duration, messaging, and software usage.",
+      "Connected sources, booking complexity, coverage, and support."
+    ],
+    "discovery": [
+      "Where do calls or inquiries get missed today?",
+      "Which questions and next steps can follow approved rules?",
+      "When should a person take over, and who owns that response?"
+    ],
+    "questions": [
+      "Where do calls or inquiries get missed today?",
+      "Which questions and next steps can follow approved rules?",
+      "When should a person take over, and who owns that response?"
+    ]
+  },
+  "website": {
+    "title": "Websites & chatbots",
+    "text": "Build a website for your service business that explains your offer and makes inquiries, quotes, and appointments easier.",
+    "objective": "Help suitable customers move from browsing your website to a useful inquiry, with an experience that works on desktop and mobile.",
+    "scope": [
+      "A specialized service-business website, an existing-site improvement, a chatbot, or a combination.",
+      "Industry-specific service pages, responsive layouts, inquiry or booking actions, and search metadata.",
+      "Website chat using approved information, with lead capture and staff handoff.",
+      "Chatbot answer and handoff testing, content maintenance, and agreed connections to lead response."
+    ],
+    "workflow": [
+      "A visitor finds the relevant service page or asks a question in website chat.",
+      "The website explains the service; chat answers from approved business information.",
+      "The visitor submits an inquiry or requests the supported next step.",
+      "Details reach the agreed staff destination or a connected lead-response workflow."
+    ],
+    "inputs": [
+      "Brand assets, service details, page content, and existing website access.",
+      "Approved chatbot sources, common questions, and staff handoff instructions.",
+      "Hosting arrangements, inquiry fields, and any CRM or booking connections."
+    ],
+    "acceptance": [
+      "Pages and inquiry paths work on the agreed mobile and desktop sizes.",
+      "Chat tests cover routine questions, missing information, unsupported claims, and handoff.",
+      "Submitted details reach the correct destination; your team can maintain the approved content."
+    ],
+    "metrics": [
+      "Completed inquiries and qualified contacts by traffic source.",
+      "Mobile performance, answer accuracy, and successful staff handoffs."
+    ],
+    "costDrivers": [
+      "Page count, content preparation, and existing site complexity.",
+      "Chat usage, integrations, hosting, testing, and maintenance."
+    ],
+    "discovery": [
+      "Does your current site need replacing, improving, or simply a chatbot?",
+      "What do customers need to know before they contact you?",
+      "Where should an inquiry go after the visitor submits it?"
+    ],
+    "questions": [
+      "Does your current site need replacing, improving, or simply a chatbot?",
+      "What do customers need to know before they contact you?",
+      "Where should an inquiry go after the visitor submits it?"
+    ]
+  },
+  "reviews": {
+    "title": "Local SEO & Google reviews",
+    "text": "Help nearby customers find your business and build trust through accurate local information and a consistent review process.",
+    "objective": "Improve the path from local search to a qualified inquiry, and make requesting and responding to reviews part of completed service.",
+    "scope": [
+      "Improve Google Business Profile information, service areas, and relevant local service pages.",
+      "Prioritize local search improvements and consistent business details.",
+      "Request Google reviews after agreed service events using the same eligibility rules for all customers.",
+      "Prepare review-response drafts for approval and track local inquiries alongside review activity."
+    ],
+    "workflow": [
+      "Review the current business profile, local pages, and sources of qualified inquiries.",
+      "Make approved improvements to business information and relevant search content.",
+      "After eligible completed work, send the agreed review request through a permitted channel.",
+      "Staff review response drafts; reporting tracks search inquiries and the review process."
+    ],
+    "inputs": [
+      "Business Profile access, locations, service areas, and accurate service details.",
+      "Website access, existing search reporting, and available inquiry attribution.",
+      "Completed-job records, contact permissions, review link, and response approver."
+    ],
+    "acceptance": [
+      "Agreed business information and local content changes are accurate and approved.",
+      "Review requests use consistent eligibility without screening for expected sentiment.",
+      "Duplicate requests are prevented and review responses follow the approval process."
+    ],
+    "metrics": [
+      "Qualified local inquiries and attributed booked work.",
+      "Eligible customers invited, review recency, and response time."
+    ],
+    "costDrivers": [
+      "Locations, local content needs, and current profile condition.",
+      "Job-system integrations, request volume, reporting, and maintenance."
+    ],
+    "discovery": [
+      "Which services and areas should local customers find you for?",
+      "How do you know a job is complete and a review request is appropriate?",
+      "Who approves business information and public review responses?"
+    ],
+    "questions": [
+      "Which services and areas should local customers find you for?",
+      "How do you know a job is complete and a review request is appropriate?",
+      "Who approves business information and public review responses?"
+    ]
+  },
+  "coding": {
+    "title": "Custom software & workflow automation",
+    "text": "Organize sales, bring customers back, and reduce repetitive admin with CRM setup, follow-up workflows, and custom software.",
+    "objective": "Help your team move opportunities toward booked work and repeat business while recovering time spent on routine administration.",
+    "scope": [
+      "CRM setup or cleanup: contacts, pipeline stages, next actions, ownership, and agreed connections.",
+      "B2B outreach and appointment workflows: reviewed messages, reply tracking, qualification, and supported booking.",
+      "Customer retention: email reminders, rebooking, and reactivation; optional SMS with a configured sender and opt-in contacts.",
+      "Quote drafts, onboarding, reporting, and data transfer between compatible business applications.",
+      "Custom AI tools, internal dashboards, client portals, or knowledge assistants using approved sources.",
+      "Workflow consulting, staff documentation, action approvals, exception handling, and launch checks."
+    ],
+    "workflow": [
+      "A staff request or agreed business event starts the process.",
+      "The system retrieves permitted information and prepares the answer, draft, or update.",
+      "Staff review designated actions; missing or conflicting information is referred to its owner.",
+      "Approved work reaches the agreed tools, with a record and instructions for exceptions."
+    ],
+    "inputs": [
+      "Current CRM or workflow, representative records, business rules, and the outcome to improve.",
+      "Application access, approved contact permissions, sender setup, and integration requirements.",
+      "Data owners, action approvals, examples of exceptions, and baseline time or sales measures."
+    ],
+    "acceptance": [
+      "Representative tasks produce the agreed output and preserve required approvals.",
+      "Knowledge answers reference approved sources and respect user access permissions.",
+      "Missing information, repeated events, and failed connections follow documented recovery steps."
+    ],
+    "metrics": [
+      "Staff hours recovered after review, corrections, and maintenance.",
+      "Qualified meetings, repeat bookings, pipeline progress, and attributable completed work."
+    ],
+    "costDrivers": [
+      "Process complexity, custom interfaces, and connected applications.",
+      "Source preparation, permission requirements, usage, and support."
+    ],
+    "discovery": [
+      "Where do leads, past customers, or repeated admin need better follow-through?",
+      "Which CRM, calendar, and business tools does your team already use?",
+      "Who approves contact lists, messages, and actions before launch?"
+    ],
+    "questions": [
+      "Where do leads, past customers, or repeated admin need better follow-through?",
+      "Which CRM, calendar, and business tools does your team already use?",
+      "Who approves contact lists, messages, and actions before launch?"
+    ]
+  }
+};
+window.SCHURR_SERVICE_ALIASES = {"leads": "calls", "time": "coding", "growth": "reviews", "marketing": "reviews", "brain": "coding", "audit": "website"};
+for (const [legacy, current] of Object.entries(window.SCHURR_SERVICE_ALIASES)) {
+  window.SCHURR_PROJECT_BRIEFS[legacy] = window.SCHURR_PROJECT_BRIEFS[current];
+}

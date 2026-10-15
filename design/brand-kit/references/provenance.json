@@ -1,0 +1,35 @@
+{
+  "retrieved": "2026-10-09",
+  "method": "git clone --depth 1 via permitted network",
+  "executed_upstream_scripts": false,
+  "repositories": [
+    {
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "license": "MIT as declared in repository README; no standalone root LICENSE file in this snapshot"
+    },
+    {
+      "url": "https://github.com/vercel-labs/web-interface-guidelines",
+      "commit": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "license": "MIT, Copyright (c) 2025 Vercel Labs, full LICENSE retrieved"
+    }
+  ],
+  "files": {
+    "agent-skills/skills/web-design-guidelines/SKILL.md": {
+      "bytes": 1231,
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    "agent-skills/README.md": {
+      "bytes": 7838,
+      "sha256": "7c02f64b08fc6c4eef03c01d64f3e2ed478193ccfcbd14edba379abe23304651"
+    },
+    "web-interface-guidelines/command.md": {
+      "bytes": 8055,
+      "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
+    },
+    "web-interface-guidelines/LICENSE": {
+      "bytes": 1068,
+      "sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2"
+    }
+  }
+}

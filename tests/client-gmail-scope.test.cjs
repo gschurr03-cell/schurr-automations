@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const {createRequire}=require('node:module');
+const root=process.env.SCHURR_SOURCE_ROOT||path.resolve(__dirname,'..'),script=path.join(__dirname,'../scripts/prepare-client.cjs');
+const scriptRequire=createRequire(path.join(root,'scripts/prepare-client.cjs')),moduleObject={exports:{}};
+vm.runInNewContext(fs.readFileSync(script,'utf8'),{require:scriptRequire,module:moduleObject,exports:moduleObject.exports,__dirname:path.join(root,'scripts'),console,URL,Intl,process},{filename:script});
+const {clientSourceExcluded,adaptClientWorkspaceSurface,rewrite}=moduleObject.exports;
+for(const name of ['app/manage/outreach/page.tsx','app/manage/mail/page.tsx','app/manage/mail/workspace.tsx','app/api/manage/gmail/route.ts','app/api/manage/gmail/callback/route.ts','app/api/gmail/sync/route.ts'])assert.equal(clientSourceExcluded(name),true,name);
+for(const name of ['app/manage/response/page.tsx','app/api/resend/events/route.ts','lib/gmail-connection.ts','app/api/manage/customer-email/route.ts'])assert.equal(clientSourceExcluded(name),false,name);
+const nav=adaptClientWorkspaceSurface(`const NAV=[['/manage','Home',Home], ["/manage/mail", "Mailbox", Mail], ['/manage/outreach', 'Outreach', Send], ['/manage/response','Replies',Inbox], []];`,'app/manage/crm-ui.tsx');
+assert.ok(!nav.includes('/manage/mail'));assert.ok(!nav.includes('/manage/outreach'));assert.ok(nav.includes('/manage/response'));
+const realNavigation=adaptClientWorkspaceSurface(fs.readFileSync(path.join(root,'app/manage/crm-ui.tsx'),'utf8'),'app/manage/crm-ui.tsx');assert.ok(!realNavigation.includes('/manage/mail'));assert.ok(!realNavigation.includes('/manage/outreach'));
+const settings=adaptClientWorkspaceSurface(fs.readFileSync(path.join(root,'app/manage/settings/page.tsx'),'utf8'),'app/manage/settings/page.tsx');assert.ok(!settings.includes('/manage/mail'));assert.match(settings,/Agency outreach sending and Gmail reply imports are not included/);assert.ok(settings.includes('/manage/schedule'));
+assert.throws(()=>adaptClientWorkspaceSurface('<p><a href="/manage/mail">Changed layout</a></p>','app/manage/settings/page.tsx'),/Review the generated-client/);
+const gmail=rewrite(`export const EXPECTED_EMAIL='gavin@schurrautomations.com';export const CALLBACK='https://schurrautomations.com/api/manage/gmail/callback';`,'lib/gmail-connection.ts',{'gavin@schurrautomations.com':'replies@client.example','https://schurrautomations.com':'https://client.example'});
+assert.ok(gmail.includes('replies@client.example'));assert.ok(gmail.includes('https://client.example/api/manage/gmail/callback'));assert.ok(!gmail.includes('gavin@'));assert.ok(!gmail.includes('schurrautomations.com'));
+const body=fs.readFileSync(script,'utf8');assert.match(body,/file\.startsWith\('lib\/gmail-'\)/);assert.match(body,/replyIdentity\?\{\.\.\.replace,'gavin@schurrautomations\.com':p\.replyEmail\}/);
+console.log('PASS client starter omits agency Gmail routes and controls, preserves client intake, and rewrites dormant Gmail identity to the client reply inbox and origin');

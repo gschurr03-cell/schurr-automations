@@ -1,0 +1,6 @@
+PASS waits until visible, advances four stages over 9600 ms, and stops once
+PASS offscreen and hidden-document time does not advance or override a user pause
+PASS focus pauses inspection, play focus preserves its action, and manual steps remain selected
+PASS reduced motion starts static, supports manual steps, and changes never auto-resume
+PASS incomplete markup stays untouched and missing visibility support requires explicit playback
+All 5 dealer workflow behavior checks passed. No network or storage used.

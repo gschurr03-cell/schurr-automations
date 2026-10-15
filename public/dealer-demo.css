@@ -1,0 +1,108 @@
+/* Dealer pages use the approved site typography and colour tokens. */
+.dealer-page { --dealer-line: #6e597b; --dealer-panel: #211a29; }
+.dealer-page main { overflow: clip; }
+.dealer-page main [id] { scroll-margin-top: 120px; }
+.dealer-page .dealer-section { padding-block: 62px; border-top: 1px solid var(--dealer-line); }
+.dealer-page .dealer-hero { padding-block: 58px 62px; }
+.dealer-page .dealer-hero h1 { max-width: 18ch; font-size: clamp(2.5rem, 4.8vw, 4.6rem); }
+.dealer-page .dealer-intro { max-width: 65ch; margin-top: 24px; font-size: 20px; }
+.dealer-page .dealer-intro p + p { margin-top: 16px; }
+.dealer-page .dealer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 26px; margin-top: 28px; }
+.dealer-page .dealer-link { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 5px; }
+.dealer-page .dealer-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
+.dealer-page .dealer-grid h2 { font-size: clamp(1.9rem, 3.3vw, 2.9rem); max-width: 20ch; }
+.dealer-page .dealer-copy p + p { margin-top: 18px; }
+.dealer-page .dealer-copy > a { margin-top: 14px; }
+.dealer-page .dealer-steps { counter-reset: dealer; margin: 0; padding: 0; list-style: none; }
+.dealer-page .dealer-steps li { counter-increment: dealer; padding: 18px 0 18px 48px; border-top: 1px solid var(--dealer-line); position: relative; }
+.dealer-page .dealer-steps li:before { content: "0" counter(dealer); position: absolute; left: 0; top: 20px; color: var(--accent); font-family: var(--font); font-size: 14px; }
+.dealer-page .dealer-steps h3 { font-size: 22px; margin-bottom: 8px; }
+.dealer-page .dealer-steps p { font-size: 17px; }
+.dealer-page .dealer-note { border-left: 3px solid var(--accent); padding: 14px 20px; margin-block: 24px 0; background: var(--dealer-panel); font-size: 16px; }
+.dealer-page .dealer-note strong { color: var(--text); }
+.dealer-page .dealer-meta { color: var(--accent); font-size: 14px; font-family: var(--font); margin-bottom: 14px; }
+.dealer-page .dealer-faq h2 { font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 28px; }
+.dealer-page .dealer-close h2 { max-width: 24ch; }
+.dealer-page .dealer-close p { max-width: 67ch; margin-top: 20px; }
+.dealer-page .dealer-phone { display: inline-block; font-family: var(--font); font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.3; color: var(--text); font-variant-numeric: tabular-nums; margin-block: 12px 20px; text-decoration: underline; text-underline-offset: 8px; }
+.dealer-page .dealer-demo-label { font-size: 14px; padding: 16px 20px; border: 1px solid var(--dealer-line); background: var(--dealer-panel); margin-block: 24px; }
+.dealer-page .dealer-demo-label strong { color: var(--text); }
+.dealer-page .dealer-demo-controls { display: flex; flex-wrap: wrap; gap: 10px; border: 0; padding: 0; margin: 0 0 26px; }
+.dealer-page .dealer-demo-controls legend { font-size: 16px; margin-bottom: 12px; }
+.dealer-page .dealer-demo-controls button { cursor: pointer; min-height: 48px; padding: 12px 18px; border: 1px solid var(--dealer-line); background: var(--dealer-panel); color: var(--text); border-radius: 2px; font-size: 16px; transition: background .15s; }
+.dealer-page .dealer-demo-controls button:hover { background: #382c43; }
+.dealer-page .dealer-demo-controls button[aria-pressed="true"] { background: var(--accent); color: #211329; border-color: var(--accent); }
+.dealer-page .dealer-demo-controls button:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.dealer-page .dealer-demo-layout { display: grid; grid-template-columns: 1.08fr 1fr; gap: 32px; }
+.dealer-page .dealer-demo-layout > * { min-width: 0; }
+.dealer-page .dealer-dialogue { margin: 0; padding: 0; list-style: none; }
+.dealer-page .dealer-dialogue li { padding: 20px 0; border-top: 1px solid var(--dealer-line); }
+.dealer-page .dealer-dialogue li:first-child { padding-top: 0; border-top: 0; }
+.dealer-page .dealer-dialogue strong { font-size: 14px; color: var(--accent); }
+.dealer-page .dealer-dialogue p { margin-top: 7px; }
+.dealer-page .dealer-task { border: 1px solid var(--dealer-line); padding: 24px; background: var(--dealer-panel); }
+.dealer-page .dealer-task h3 { margin-bottom: 14px; font-size: 25px; }
+.dealer-page .dealer-record { margin: 0; }
+.dealer-page .dealer-record > div { display: grid; grid-template-columns: 112px 1fr; gap: 16px; padding-block: 12px; border-top: 1px solid var(--dealer-line); font-size: 16px; line-height: 1.5; }
+.dealer-page .dealer-record dt { color: var(--accent); }
+.dealer-page .dealer-record dd { margin: 0; overflow-wrap: anywhere; }
+.dealer-page .dealer-record .dealer-record-status { color: #f5eaff; font-weight: 600; }
+.dealer-page .dealer-event { margin-top: 18px; border-left: 3px solid var(--accent); padding-left: 16px; font-size: 16px; }
+.dealer-page .dealer-example-footnote { margin-top: 22px; font-size: 15px; }
+.dealer-page .dealer-failure-details { margin-top: 28px; }
+.dealer-page .dealer-failure-details summary { cursor: pointer; min-height: 48px; padding-block: 12px; }
+.dealer-page .dealer-failure-details p { margin: 10px 0; }
+.dealer-page .dealer-print-button { cursor: pointer; }
+.dealer-page .worksheet-heading { max-width: 800px; }
+.dealer-page .worksheet-intro { max-width: 77ch; margin-top: 22px; }
+.dealer-page .worksheet-meta { display: flex; flex-wrap: wrap; gap: 25px 50px; padding-block: 26px; }
+.dealer-page .worksheet-meta span { min-width: 220px; border-bottom: 1px solid var(--dealer-line); padding-bottom: 14px; }
+.dealer-page .worksheet-scroll { overflow-x: auto; border: 1px solid var(--dealer-line); }
+.dealer-page .worksheet-table { width: 100%; min-width: 1040px; border-collapse: collapse; font-size: 15px; }
+.dealer-page .worksheet-table th { font-weight: 600; text-align: left; color: var(--text); background: var(--dealer-panel); line-height: 1.4; padding: 12px 10px; border: 1px solid var(--dealer-line); vertical-align: top; }
+.dealer-page .worksheet-table td { height: 88px; border: 1px solid var(--dealer-line); padding: 10px; vertical-align: top; }
+.dealer-page .worksheet-table th:first-child { width: 12%; }
+.dealer-page .worksheet-table th:nth-child(2) { width: 9%; }
+.dealer-page .worksheet-review { padding-left: 24px; margin-block: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 42px; }
+.dealer-page .worksheet-review li { padding-left: 4px; }
+.dealer-page .worksheet-print-address { display: none; }
+.dealer-page [hidden] { display: none !important; }
+@media (max-width: 800px) {
+  .dealer-page .dealer-grid, .dealer-page .dealer-demo-layout { grid-template-columns: 1fr; gap: 30px; }
+  .dealer-page .dealer-section { padding-block: 40px; }
+  .dealer-page .dealer-hero { padding-block: 36px 40px; }
+  .dealer-page .dealer-intro { font-size: 18px; }
+  .dealer-page .dealer-demo-controls { flex-direction: column; align-items: stretch; }
+  .dealer-page .dealer-demo-controls button { text-align: left; }
+  .dealer-page .dealer-record > div { grid-template-columns: 94px 1fr; gap: 12px; }
+  .dealer-page .worksheet-review { grid-template-columns: 1fr; }
+}
+@media (max-width: 400px) {
+  .dealer-page .dealer-actions .button { width: 100%; }
+  .dealer-page .dealer-task { padding: 20px 16px; }
+  .dealer-page .dealer-record > div { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dealer-page *, .dealer-page *::before, .dealer-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+@media print {
+  @page { size: letter landscape; margin: 12mm; }
+  body.worksheet-page { background: #fff !important; color: #000 !important; font-size: 10pt !important; }
+  .worksheet-page .header, .worksheet-page .footer, .worksheet-page .skip-link, .worksheet-page .dealer-actions, .worksheet-page .worksheet-no-print, .worksheet-page .page-entry-line { display: none !important; }
+  .worksheet-page .container { width: 100% !important; max-width: none !important; }
+  .worksheet-page main { overflow: visible !important; }
+  .worksheet-page .dealer-hero, .worksheet-page .dealer-section { padding: 0 !important; border: 0 !important; }
+  .worksheet-page h1 { color: #000 !important; font-size: 23pt !important; max-width: none !important; letter-spacing: -.02em !important; }
+  .worksheet-page h2 { color: #000 !important; font-size: 13pt !important; margin-top: 16px !important; }
+  .worksheet-page p, .worksheet-page li, .worksheet-page th { color: #000 !important; }
+  .worksheet-page .worksheet-intro { font-size: 10pt; max-width: none; margin-top: 10px; line-height: 1.35; }
+  .worksheet-page .worksheet-meta { padding-block: 12px; font-size: 9pt; }
+  .worksheet-page .worksheet-meta span { padding-bottom: 6px; border-color: #777; }
+  .worksheet-page .worksheet-scroll { overflow: visible; border: 0; }
+  .worksheet-page .worksheet-table { min-width: 0; font-size: 8pt; table-layout: fixed; }
+  .worksheet-page .worksheet-table th { background: #eee !important; padding: 7px 5px; border-color: #777; }
+  .worksheet-page .worksheet-table td { height: 51px; border-color: #777; padding: 5px; }
+  .worksheet-page .worksheet-review { grid-template-columns: 1fr 1fr; font-size: 9pt; margin-block: 10px; gap: 5px 30px; }
+  .worksheet-page .dealer-note { border: 0; background: none; padding: 0; font-size: 8.5pt; line-height: 1.4; margin-top: 12px; }
+  .worksheet-page .worksheet-print-address { display: block; font-size: 8pt; margin-top: 8px; }
+}

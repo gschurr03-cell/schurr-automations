@@ -1,0 +1,5 @@
+import {privateJson,routeError,database,RequestError} from '@/lib/inquiries';
+import {readVoiceEvent,captureVoiceLead} from '@/lib/voice-intake';
+import {scheduleOwnerAlert} from '@/lib/owner-alerts';
+export const dynamic='force-dynamic';
+export async function POST(request:Request){try{const input=await readVoiceEvent(request); if(input.action==='stop'){if(typeof input.callSid!=='string'||!/^CA[0-9a-fA-F]{32}$/.test(input.callSid))throw new RequestError(400,'Invalid call reference.');const db=database(),now=new Date().toISOString(); await db.batch([db.prepare('INSERT INTO voice_call_controls (call_sid,stopped_at) VALUES (?,?) ON CONFLICT(call_sid) DO NOTHING').bind(input.callSid,now),db.prepare("UPDATE response_jobs SET status='paused',revision=revision+1,updated_at=? WHERE source_key=? AND status!='paused'").bind(now,`call:${input.callSid}`)]);return privateJson({ok:true,paused:true});} const result=await captureVoiceLead(input);scheduleOwnerAlert(result.leadId);return privateJson({ok:true,...result},result.duplicate?200:201);}catch(error){return routeError(error);}}

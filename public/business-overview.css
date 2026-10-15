@@ -1,0 +1,69 @@
+/* Business-card destination: the supplied overview and its next step. */
+.opening-copy .overview-jump {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 12px 0 0;
+  color: #d2b6ee;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.business-overview {
+  padding-block: clamp(48px, 7vw, 88px);
+  border-block: 1px solid var(--line, #39393d);
+  background: var(--bg, #111113);
+  scroll-margin-top: 28px;
+}
+.business-overview .overview-inner {
+  width: min(100% - 40px, 900px);
+  margin-inline: auto;
+}
+.business-overview h2 {
+  max-width: 24ch;
+  margin: 0;
+  font-size: clamp(30px, 4.5vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.business-overview .overview-intro {
+  max-width: 62ch;
+  margin: 18px 0 26px;
+  color: #d6d5d8;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.business-overview video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
+  border: 1px solid #655176;
+  border-radius: 4px;
+}
+.business-overview .overview-next-step {
+  margin: 20px 0 0;
+}
+.business-overview .overview-note {
+  margin: 12px 0 0;
+  color: #c6c8d2;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.business-overview .overview-note a {
+  color: #d2b6ee;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.business-overview :focus-visible,
+.opening-copy .overview-jump:focus-visible {
+  outline: 2px solid #d2b6ee;
+  outline-offset: 5px;
+}
+@media (max-width: 600px) {
+  .business-overview .overview-next-step .button { width: 100%; }
+  .business-overview .overview-intro { font-size: 17px; }
+}
