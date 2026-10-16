@@ -148,11 +148,11 @@ const status=expected=>error=>error.status===expected;
  assert.equal((await crm.listLeads({q:"'; DROP TABLE inquiries; --"})).items.length,0);
  pass('action values, fees, contact fields, cursors and SQL-bound searches reject hostile input');
 
- const match=command('createLead',{...leadInput,name:'=SUM(1,1)',business:'50%_Match '+ 'long-name-'.repeat(8),note:''});await crm.mutateCrm(match);
+ const match=command('createLead',{...leadInput,name:'=SUM(1,1)',email:'formula@example.com',business:'50%_Match '+ 'long-name-'.repeat(8),note:''});await crm.mutateCrm(match);
  assert.equal((await crm.listLeads({q:'%_'})).items.length,1);
  assert.equal((await crm.listLeads({q:'long-name-'.repeat(8)})).items.length,1);
  const longExport=await exporter.GET(new Request(origin+'/api/manage/export?q='+encodeURIComponent('long-name-'.repeat(8))));assert.equal(longExport.status,200);assert.equal((await longExport.text()).trim().split('\r\n').length,2);
- for(let i=0;i<103;i++) await mutate('createLead',{...leadInput,name:'Export '+i,note:''});
+ for(let i=0;i<103;i++) await mutate('createLead',{...leadInput,name:'Export '+i,email:`export${i}@example.com`,note:''});
  const all=[];let cursor;do{const page=await crm.listLeads({cursor},50);all.push(...page.items);cursor=page.nextCursor;}while(cursor);
  assert.equal(new Set(all.map(x=>x.id)).size,all.length);assert.equal(all.length,106);
  const response=await exporter.GET(new Request(origin+'/api/manage/export'));
@@ -162,7 +162,7 @@ const status=expected=>error=>error.status===expected;
  const filtered=await exporter.GET(new Request(origin+'/api/manage/export?q=50%25_Match'));assert.equal((await filtered.text()).trim().split('\r\n').length,2);
  pass('pagination and export traverse all records; literal search and CSV formula protection work');
 
- const badKey=webcrypto.randomUUID();const cross=await Promise.allSettled([crm.mutateCrm({action:'createLead',mutationId:badKey,...leadInput,name:'Race lead'}),crm.mutateCrm({action:'createTask',mutationId:badKey,title:'Race task',dueDate:'2026-10-02'})]);
+ const badKey=webcrypto.randomUUID();const cross=await Promise.allSettled([crm.mutateCrm({action:'createLead',mutationId:badKey,...leadInput,name:'Race lead',email:'race-lead@example.com'}),crm.mutateCrm({action:'createTask',mutationId:badKey,title:'Race task',dueDate:'2026-10-02'})]);
  assert.equal(cross.filter(x=>x.status==='fulfilled').length,1);
  assert.equal(Number(!!sql.prepare('SELECT id FROM crm_leads WHERE id=?').get(badKey))+Number(!!sql.prepare('SELECT id FROM crm_tasks WHERE id=?').get(badKey)),1);
  pass('a reused mutation key with competing actions cannot create unreceipted records');
@@ -171,13 +171,43 @@ const status=expected=>error=>error.status===expected;
  await assert.rejects(()=>mutate('deleteLead',{leadId:website.id,revision:String(rev),confirmation:'no'}),status(400));
  await assert.rejects(()=>mutate('deleteLead',{leadId:website.id,revision:String(rev-1),confirmation:'DELETE'}),status(409));
  await mutate('deleteLead',{leadId:website.id,revision:String(rev),confirmation:'DELETE'});
- assert.equal(await crm.getLead(website.id),null);assert.equal(sql.prepare('SELECT id FROM inquiries WHERE id=?').get(website.id),undefined);
- assert.equal(sql.prepare('SELECT count(*) AS n FROM crm_events WHERE lead_id=?').get(website.id).n,0);
- assert.equal(sql.prepare('SELECT id FROM crm_tasks WHERE id=?').get(taskId),undefined);
+ assert.equal(await crm.getLead(website.id),null);
+ assert.ok(sql.prepare('SELECT id FROM inquiries WHERE id=?').get(website.id), 'inquiry consent row must survive soft-delete');
+ assert.equal(sql.prepare('SELECT consent_at FROM inquiries WHERE id=?').get(website.id).consent_at, original.consent_at);
+ assert.ok(sql.prepare('SELECT deleted_at FROM crm_leads WHERE id=?').get(website.id).deleted_at);
+ assert.ok(sql.prepare('SELECT count(*) AS n FROM crm_events WHERE lead_id=?').get(website.id).n >= 1);
+ assert.ok(sql.prepare('SELECT id FROM crm_tasks WHERE id=?').get(taskId), 'tasks remain after soft-delete');
+ assert.equal((await crm.listLeads({})).items.some(l=>l.id===website.id), false);
  assert.equal(sql.prepare('PRAGMA foreign_key_check').all().length,0);
- pass('confirmed revision-checked deletion removes original inquiries and cascades notes/tasks');
+ pass('confirmed revision-checked soft-delete keeps inquiry consent and hides the lead from lists');
 
- const rollback=command('createLead',{...leadInput,name:'Rollback test'});
+
+ // High-finding coverage: unique email merge-on-create and list/export filters.
+ const firstEmail=command('createLead',{...leadInput,name:'Dedupe One',email:'dealer@example.com',note:'first'});
+ await crm.mutateCrm(firstEmail);
+ const mergeCreate=command('createLead',{...leadInput,name:'Dedupe Two',email:'dealer@example.com',note:'merged note',stage:'contacted'});
+ const merged=await crm.mutateCrm(mergeCreate);
+ assert.match(merged.redirect,/\/manage\/leads\//);
+ assert.equal(sql.prepare("SELECT count(*) AS n FROM crm_leads WHERE email='dealer@example.com' AND deleted_at IS NULL").get().n,1);
+ const survivor=await crm.getLead(firstEmail.mutationId);
+ assert.equal(survivor.name,'Dedupe Two');assert.equal(survivor.stage,'contacted');
+ assert.ok(sql.prepare("SELECT count(*) AS n FROM crm_events WHERE lead_id=? AND (body LIKE 'merged note%' OR kind='note')").get(firstEmail.mutationId).n >= 1);
+ const clashUpdate=command('createLead',{...leadInput,name:'Other Lead',email:'other-dealer@example.com',note:''});
+ await crm.mutateCrm(clashUpdate);
+ const beforeMerge=await crm.getLead(clashUpdate.mutationId);
+ await mutate('updateLead',{leadId:clashUpdate.mutationId,revision:String(beforeMerge.revision),name:'Merged By Email',business:'Biz',email:'dealer@example.com',phone:'',preferredContact:'email',service:'calls',stage:'proposal',monthlyValue:'0',setupValue:'0'});
+ assert.equal(await crm.getLead(clashUpdate.mutationId),null);
+ assert.ok(sql.prepare('SELECT deleted_at FROM crm_leads WHERE id=?').get(clashUpdate.mutationId).deleted_at);
+ assert.equal((await crm.getLead(firstEmail.mutationId)).name,'Merged By Email');
+ assert.equal(sql.prepare("SELECT count(*) AS n FROM crm_leads WHERE email='dealer@example.com' AND deleted_at IS NULL").get().n,1);
+ const exportAfter=await exporter.GET(new Request(origin+'/api/manage/export'));
+ assert.equal(exportAfter.status,200);
+ const exportBody=await exportAfter.text();
+ assert.ok(!exportBody.includes(clashUpdate.mutationId));
+ assert.ok(exportBody.includes('dealer@example.com'));
+ pass('merge-on-create/update keeps one active email and export omits soft-deleted leads');
+
+ const rollback=command('createLead',{...leadInput,name:'Rollback test',email:'rollback@example.com'});
  sql.exec("CREATE TRIGGER fail_crm_event BEFORE INSERT ON crm_events BEGIN SELECT RAISE(ABORT,'simulated event failure'); END");
  try { assert.equal((await api.POST(request(rollback))).status,503); } finally { sql.exec('DROP TRIGGER fail_crm_event'); }
  assert.equal(sql.prepare('SELECT id FROM crm_leads WHERE id=?').get(rollback.mutationId),undefined);
