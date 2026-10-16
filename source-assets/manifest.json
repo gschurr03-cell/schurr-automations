@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "source_version": 111,
+  "assets": [
+    {
+      "path": "public/examples/dealership/sample-crossover.png",
+      "sha": "5cbb4bfeced0e84bb06673fcca94104e40dd262e",
+      "sha256": "fd0f23a49b2279e698df9ff89a45d40d0571870901f62d5df2c9dd2cad04a933",
+      "size": 2335614,
+      "chunks": [
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-000.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-001.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-002.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-003.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-004.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-005.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-006.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-007.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-008.b64",
+        "source-assets/5cbb4bfeced0e84bb06673fcca94104e40dd262e/part-009.b64"
+      ]
+    },
+    {
+      "path": "public/schurr-fusion-approved.png",
+      "sha": "12514deb5be695ad5a66334871a02f75685afd87",
+      "sha256": "1b9f4a0ca3b6dcb84ae15dacd3691a783e68fe30be894510b6858f36f6f6cf1f",
+      "size": 1414219,
+      "chunks": [
+        "source-assets/12514deb5be695ad5a66334871a02f75685afd87/part-000.b64",
+        "source-assets/12514deb5be695ad5a66334871a02f75685afd87/part-001.b64",
+        "source-assets/12514deb5be695ad5a66334871a02f75685afd87/part-002.b64",
+        "source-assets/12514deb5be695ad5a66334871a02f75685afd87/part-003.b64",
+        "source-assets/12514deb5be695ad5a66334871a02f75685afd87/part-004.b64",
+        "source-assets/12514deb5be695ad5a66334871a02f75685afd87/part-005.b64"
+      ]
+    },
+    {
+      "path": "public/videos/business-overview.mp4",
+      "sha": "958651edb16dd771bcc5708023ac83686df30fe4",
+      "sha256": "7361568c752de251920cc787a98787363b4ee64d294f29b5704a8ea6f837b05b",
+      "size": 6730962,
+      "chunks": [
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-000.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-001.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-002.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-003.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-004.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-005.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-006.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-007.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-008.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-009.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-010.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-011.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-012.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-013.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-014.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-015.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-016.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-017.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-018.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-019.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-020.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-021.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-022.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-023.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-024.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-025.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-026.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-027.b64",
+        "source-assets/958651edb16dd771bcc5708023ac83686df30fe4/part-028.b64"
+      ]
+    },
+    {
+      "path": "public/videos/dealer-explainer.mp4",
+      "sha": "b255a476fb8dcd1bfc9a412805cb6da473e43364",
+      "sha256": "e79876689d677f42aecc09587b061f49d3cb3063b5a22febaf605d68f12c6606",
+      "size": 4839545,
+      "chunks": [
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-000.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-001.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-002.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-003.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-004.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-005.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-006.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-007.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-008.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-009.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-010.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-011.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-012.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-013.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-014.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-015.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-016.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-017.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-018.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-019.b64",
+        "source-assets/b255a476fb8dcd1bfc9a412805cb6da473e43364/part-020.b64"
+      ]
+    },
+    {
+      "path": "public/videos/repair-explainer.mp4",
+      "sha": "678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e",
+      "sha256": "99512da700ee9970e1c1b7da446a2ed2a7e0bcdc8e72e2c14ed094bb138cc32f",
+      "size": 4190217,
+      "chunks": [
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-000.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-001.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-002.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-003.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-004.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-005.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-006.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-007.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-008.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-009.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-010.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-011.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-012.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-013.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-014.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-015.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-016.b64",
+        "source-assets/678a9f6e7cfb9e88fe329d41bb0bf1fb38ab739e/part-017.b64"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-14",
+  "method": "ReportLab with embedded DejaVu fonts; Poppler PNG render visually inspected",
+  "files": [
+    {
+      "path": "output/pdf/01_public_overview.pdf",
+      "pages": 1,
+      "render_inspected": true,
+      "no_clipping_or_overlap": true
+    },
+    {
+      "path": "output/pdf/02_private_offer_reference.pdf",
+      "pages": 1,
+      "render_inspected": true,
+      "no_clipping_or_overlap": true
+    },
+    {
+      "path": "output/pdf/03_conversation_record.pdf",
+      "pages": 1,
+      "render_inspected": true,
+      "no_clipping_or_overlap": true
+    }
+  ],
+  "limits": [
+    "Physical card not decoded",
+    "Live destination and phone/provider behavior unverified",
+    "Wi-Fi/cellular journey not tested",
+    "Actual printer/HTML print pagination not checked"
+  ]
+}

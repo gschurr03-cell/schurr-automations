@@ -4,7 +4,7 @@ This repository contains the current website and private CRM source exported fro
 
 - Original source commit: `ee288f6c871af79b6fe65eacfd9cd3adb5468810`
 - Export date: October 15, 2026
-- Export scope: current website and CRM source, including backend, database schema and migrations, tests, and approved assets. See `EXPORT_NOTES.md` for document assets omitted by automatic upload review.
+- Export scope: website and CRM source, backend, database schema and migrations, tests, assets, and approved outreach documents. See `EXPORT_NOTES.md` for the media storage format.
 
 ## Project map
 
@@ -25,6 +25,8 @@ pnpm build
 ```
 
 The clean checkout uses the portable execution profile by default. `pnpm install:ci` is a Linux-specific helper requiring `flock` and GNU `timeout`; use the direct install command above on macOS.
+
+Five large images/videos are stored as lossless parts in `source-assets/`. `pnpm build` and `pnpm dev` restore them automatically and verify their original hashes. To restore before inspecting files or running tests, use `node scripts/restore-source-assets.mjs`; no dependencies are required. Keep the parts and `source-assets/manifest.json` with the repository. Changes to a restored media file require updating its stored parts and manifest, or deliberately replacing this backup format with a regular Git blob.
 
 The test suites require a Node version with `node:sqlite`. For core CRM checks after dependencies are installed:
 

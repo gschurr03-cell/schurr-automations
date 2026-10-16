@@ -1,0 +1,44 @@
+SCHURR AUTOMATIONS / INTERNAL CONVERSATION RECORD
+
+Business / location:
+Date / route / stop:
+Person / role:
+Decision authority: confirmed / unknown
+Preferred contact and exact address or number:
+
+WHAT THEY DESCRIBED
+Recurring problem, in their words:
+One recent example:
+Current tools / phone routing / website:
+Who owns follow-up today:
+Baseline supplied (source, period and denominator):
+Unknowns:
+
+WHAT WE SHOWED
+Example shown / link / version:
+Mode: simulated / verified test / other accurately described mode
+Useful direction: receptionist / website-search / combined / not a fit
+Questions or objections:
+Connections and access to verify:
+Proposed improvement (our hypothesis, not a verified result):
+
+AGREED NEXT ACTION
+Action:
+Responsible person:
+Due date / time / timezone:
+Follow-up channel:
+Exactly what they agreed to receive:
+Meeting state: none / requested / separately confirmed
+Confirmation reference, only if actually confirmed:
+Definition of done:
+CRM record / owner / date:
+Outcome / next review date:
+
+Keep customer credit, identity, patient and other sensitive records out.
+Record the actual follow-up expectation. Honor a request for no further contact.
+
+FOLLOW-UP STARTER
+Hi [name], thanks for talking today. You mentioned [specific problem]. The example we looked at showed [accurate description and mode]. The next step we agreed on is [action], with [owner] by [date/timezone]. [One useful link, only if relevant.]
+
+Replace every bracket from this conversation. A request is not a confirmed meeting.
+See 04_follow_up_templates.txt for complete editable options. Nothing is sent by this kit.

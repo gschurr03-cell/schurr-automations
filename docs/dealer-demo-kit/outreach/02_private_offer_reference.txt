@@ -1,0 +1,52 @@
+Schurr Automations
+Private / Gavin only
+
+Offer reference for conversations.
+
+Internal monthly anchors from the locked October 14 handoff. Confirm the business problem, usage and supported connections before giving a scoped proposal. This is not a public price sheet or an agreement.
+
+ | Direction | Internal anchor | What must be defined
+
+ | Receptionist only | $1,000 / month | One location and one inbound or overflow call path; included usage and support/correction terms.
+
+ | Combined offer | $2,500 / month | Receptionist + website + SEO/AEO. Each workstream keeps specific deliverables, limits, responsibilities and measurement.
+
+ | Setup | Separately quoted | Price implementation for the agreed scope. No fixed setup amount is approved here.
+
+Receptionist-only scope
+
+- Approved business answers and inquiry capture.
+
+- Structured staff handoff and an owned callback.
+
+- Human fallback for uncertainty or a failed handoff.
+
+- Basic monitoring and a simple report.
+
+- Included usage stated and costed in the quote.
+
+Direct booking, custom CRM connections, live inventory, website/search work, additional departments or campaigns, and unlimited changes are outside this base scope.
+
+Combined scope
+
+Define website pages, content owner, revision rounds, hosting/domain arrangements and maintenance. Define SEO/AEO priorities, reporting and access. Define receptionist usage and routing independently.
+
+Combining services does not make custom CRM, live inventory, direct booking, paid ads, financing workflows or unlimited revisions included. Extra work requires explicit scope and verified access.
+
+No guaranteed rankings, AI mentions, sales or revenue.
+
+Support and meeting boundaries
+
+Support on extended weekdays, 7am to 7pm MT. Gavin provides solo coverage. Automated availability is separate from staffed support. These hours are not a response-time SLA or continuous staffed availability.
+
+The historical 8am–8pm booking window is not the support schedule. Meeting times depend on confirmed availability. Start with a 15-minute fit-call request; arrange a separate 35-minute discovery when useful.
+
+Answer a pricing question
+
+“The receptionist-only starting scope is $1,000 a month, with setup quoted separately. The combined direction is $2,500 a month for separately defined receptionist, website and SEO/AEO work. I’d check your process, usage and connections before confirming the exact scope and quote.”
+
+The delivery commitment
+
+Clear scope. Tested launch. Visible progress. Before work begins, we agree on what the system should do, how we will test it, and what ongoing management includes. When something falls outside the agreed behavior, we handle it through the support and correction terms in your agreement.
+
+No unbounded free-work promise, invented discount or fixed launch date. Existing agreements need separate review. Public material remains quote-based. Source: October 14 demonstration brief and docs/website-review/DECISIONS.md.

@@ -1,0 +1,56 @@
+SCHURR AUTOMATIONS / FOLLOW-UP DRAFTS
+Personalize from 03_conversation_record. These are templates, not sent messages.
+Use the agreed channel. Remove anything that was not discussed or verified.
+
+EMAIL: FOLLOW THROUGH ON AN AGREED ACTION
+
+Subject: [Business name]: [specific next step]
+
+Hi [first name],
+
+Thanks for taking a few minutes to talk [today / on date]. You mentioned that [specific problem in their words], especially when [their example].
+
+The [website / receptionist / staff-handoff] example we looked at showed [one accurate outcome]. [If simulated: That was a fictional walkthrough, not a connection to your systems.]
+
+The next step we agreed on is [specific action], with [responsible person] by [date and timezone]. I’ll [your part of that action].
+
+[If useful and agreed: Here is the demonstration we discussed: https://schurrautomations.com/demo/]
+[If a call was requested but not confirmed: Send me a couple of suitable times and your timezone. I’ll confirm one separately.]
+
+Gavin Schurr
+Schurr Automations
+gavin@schurrautomations.com
+(985) 232-8337
+
+
+SHORT MESSAGE: ONLY WHEN THAT CHANNEL WAS AGREED
+
+Hi [name], Gavin from Schurr Automations. Thanks for talking [today / on date]. You mentioned [specific issue]. As agreed, here is [the relevant example / next action]: [one accurate link or detail]. I’ll [action] by [date]. [If needed: A call time still needs to be confirmed.]
+
+
+IF THEY INVITED FOLLOW-UP BUT NO NEXT ACTION WAS AGREED
+
+Subject: The [specific problem] we discussed
+
+Hi [first name],
+
+Thanks for talking with me about [specific issue]. [One sentence reflecting their actual situation.]
+
+Would a 15-minute fit call be useful to check [one concrete question about their process]? We can start with the tools you already use and decide whether a focused change makes sense.
+
+If so, send me a couple of suitable times and your timezone, or request a call at https://schurrautomations.com/book. I’ll confirm the time separately.
+
+Gavin Schurr
+Schurr Automations
+gavin@schurrautomations.com
+(985) 232-8337
+
+
+BEFORE USING A DRAFT
+- Confirm the person, business, channel and follow-up expectation.
+- Use the problem they described, not an invented loss figure.
+- Identify mock versus saved-test behavior accurately.
+- Do not promise an integration, price, appointment or result that was not agreed.
+- Check the destination on your phone before including it.
+- Remove all bracketed instructions and unused optional lines.
+- If they asked for no more contact, do not send.

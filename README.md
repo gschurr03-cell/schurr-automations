@@ -1,5 +1,7 @@
 # Schurr Automations
 
+For this GitHub checkout, start with [GITHUB_SETUP.md](GITHUB_SETUP.md). Large media is restored automatically before `pnpm dev` and `pnpm build`; the complete source and asset backup is described in [EXPORT_NOTES.md](EXPORT_NOTES.md).
+
 Marketing website with public project inquiries and a protected owner workspace. The approved HTML design is served through Vinext route handlers, while D1 stores inquiries and aggregate site activity.
 
 ## Content

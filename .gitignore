@@ -52,3 +52,10 @@ next-env.d.ts
 # Python voice service local bytecode
 __pycache__/
 *.pyc
+
+# Recreated from verified source-assets parts by assets:restore, dev and build.
+/public/examples/dealership/sample-crossover.png
+/public/schurr-fusion-approved.png
+/public/videos/business-overview.mp4
+/public/videos/dealer-explainer.mp4
+/public/videos/repair-explainer.mp4
