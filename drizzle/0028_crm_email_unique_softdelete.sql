@@ -15,15 +15,20 @@ WHERE `email` != '' AND `deleted_at` IS NULL AND `inquiry_id` IS NOT NULL
 GROUP BY lower(`email`)
 HAVING count(DISTINCT `inquiry_id`) > 1;--> statement-breakpoint
 DROP TABLE `__crm_email_merge_blocker`;--> statement-breakpoint
--- Give the survivor (oldest created_at, then id) any missing inquiry_id from a duplicate.
-UPDATE `crm_leads` AS survivor
-SET `inquiry_id` = (
+-- Stash an inquiry the oldest lead should receive. Copying it while the duplicate
+-- still holds inquiry_id violates crm_leads_inquiry_idx.
+CREATE TABLE `__crm_email_inquiry_move` (
+	`survivor_id` text PRIMARY KEY NOT NULL,
+	`inquiry_id` text NOT NULL
+);--> statement-breakpoint
+INSERT INTO `__crm_email_inquiry_move` (`survivor_id`, `inquiry_id`)
+SELECT survivor.`id`, (
   SELECT d.`inquiry_id` FROM `crm_leads` d
   WHERE d.`email` = survivor.`email` AND d.`email` != '' AND d.`deleted_at` IS NULL
     AND d.`inquiry_id` IS NOT NULL AND d.`id` != survivor.`id`
   ORDER BY d.`created_at` ASC, d.`id` ASC LIMIT 1
-),
-`updated_at` = COALESCE(survivor.`updated_at`, survivor.`created_at`)
+)
+FROM `crm_leads` AS survivor
 WHERE survivor.`email` != '' AND survivor.`deleted_at` IS NULL AND survivor.`inquiry_id` IS NULL
   AND survivor.`id` = (
     SELECT s.`id` FROM `crm_leads` s
@@ -43,6 +48,13 @@ WHERE `email` != '' AND `deleted_at` IS NULL AND `inquiry_id` IS NOT NULL
     WHERE s.`email` = `crm_leads`.`email` AND s.`email` != '' AND s.`deleted_at` IS NULL
     ORDER BY s.`created_at` ASC, s.`id` ASC LIMIT 1
   );--> statement-breakpoint
+UPDATE `crm_leads`
+SET `inquiry_id` = (
+  SELECT m.`inquiry_id` FROM `__crm_email_inquiry_move` m WHERE m.`survivor_id` = `crm_leads`.`id`
+),
+`updated_at` = COALESCE(`updated_at`, `created_at`)
+WHERE `id` IN (SELECT `survivor_id` FROM `__crm_email_inquiry_move`);--> statement-breakpoint
+DROP TABLE `__crm_email_inquiry_move`;--> statement-breakpoint
 -- Re-point foreign keys from duplicate leads to the email survivor (never drop rows).
 UPDATE `crm_events` SET `lead_id` = (
   SELECT s.`id` FROM `crm_leads` s
