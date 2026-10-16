@@ -49,8 +49,15 @@ export const crmLeads = sqliteTable('crm_leads', {
   monthlyCents: integer('monthly_cents').notNull().default(0),
   setupCents: integer('setup_cents').notNull().default(0),
   revision: integer('revision').notNull().default(1),
+  // Soft-delete keeps inquiry consent and activity; list/export omit deleted rows.
+  deletedAt: text('deleted_at'),
   createdAt: text('created_at').notNull(), updatedAt: text('updated_at').notNull(),
-}, table => [uniqueIndex('crm_leads_inquiry_idx').on(table.inquiryId), index('crm_leads_created_idx').on(table.createdAt, table.id)]);
+}, table => [
+  uniqueIndex('crm_leads_inquiry_idx').on(table.inquiryId),
+  index('crm_leads_created_idx').on(table.createdAt, table.id),
+  // Active non-empty emails are unique. Empty emails may repeat. Soft-deleted rows are excluded.
+  uniqueIndex('crm_leads_email_active_idx').on(table.email).where(sql`${table.email} != '' AND ${table.deletedAt} IS NULL`),
+]);
 
 export const crmEvents = sqliteTable('crm_events', {
   id: text('id').primaryKey(),

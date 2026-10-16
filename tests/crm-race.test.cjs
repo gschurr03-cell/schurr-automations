@@ -74,8 +74,9 @@ async function waitFor(n) { while(gates.length<n) await new Promise(resolve=>set
  gates[1](); await duplicate;
  const resurrected=await crm.getLead(key);
  process.stdout.write(JSON.stringify({expected:'Lead remains deleted',actual:resurrected?'Lead resurrected':'Lead remains deleted',events:sql.prepare('SELECT count(*) AS n FROM crm_events WHERE lead_id=?').get(key).n})+'\n');
- assert.equal(resurrected,null,'Delayed duplicate must not resurrect a deleted lead');
- assert.equal(sql.prepare('SELECT count(*) AS n FROM crm_events WHERE lead_id=?').get(key).n,0);
+ assert.equal(resurrected,null,'Delayed duplicate must not resurrect a soft-deleted lead');
+ assert.ok(sql.prepare('SELECT deleted_at FROM crm_leads WHERE id=?').get(key).deleted_at);
+ assert.equal(sql.prepare('SELECT count(*) AS n FROM crm_leads WHERE id=? AND deleted_at IS NULL').get(key).n,0);
  sql.close();
- process.stdout.write('PASS delayed retries cannot resurrect deleted records\n');
+ process.stdout.write('PASS delayed retries cannot resurrect soft-deleted records\n');
 })().catch(error=>{console.error(error.message);process.exitCode=1;});

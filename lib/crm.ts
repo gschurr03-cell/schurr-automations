@@ -27,10 +27,11 @@ const LEADS = `WITH leads AS (
  COALESCE(c.revision,1) AS revision, i.created_at AS createdAt,
  COALESCE(c.updated_at,i.created_at) AS updatedAt, i.message, i.consent_at AS consentAt
  FROM inquiries i LEFT JOIN crm_leads c ON c.inquiry_id = i.id
+ WHERE c.id IS NULL OR c.deleted_at IS NULL
  UNION ALL
  SELECT c.id, NULL, c.name, c.business, c.email, c.phone, c.service, c.preferred_contact,
  c.source, c.stage, c.monthly_cents, c.setup_cents, c.revision, c.created_at,
- c.updated_at, '', '' FROM crm_leads c WHERE c.inquiry_id IS NULL
+ c.updated_at, '', '' FROM crm_leads c WHERE c.inquiry_id IS NULL AND c.deleted_at IS NULL
 )`;
 
 export function validId(value: unknown, field = 'id'): string {
@@ -180,10 +181,28 @@ export async function mutateCrm(input: Record<string, unknown>): Promise<{ redir
   };
   if (action === 'createLead') {
     const c = contact(input); const source = enumField(input, 'source', Object.keys(MANUAL_SOURCES)); const note = text(input, 'note', 6000, false, true);
-    destination = `/manage/leads/${key}?saved=created`;
-    addReceipt('NOT EXISTS(SELECT 1 FROM crm_leads WHERE id=?) AND NOT EXISTS(SELECT 1 FROM inquiries WHERE id=?)',[key,key]);
-    statements.push(db.prepare(`INSERT INTO crm_leads (id,name,business,email,phone,service,preferred_contact,source,stage,monthly_cents,setup_cents,created_at,updated_at) SELECT ?,?,?,?,?,?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?) ON CONFLICT(id) DO NOTHING`).bind(key, c.name, c.business, c.email, c.phone, c.service, c.preferredContact, source, c.stage, c.monthlyCents, c.setupCents, now, now,key,hash,attempt));
-    event(key, note?'note':'system', note||'Lead created.');
+    const existing = c.email
+      ? await db.prepare('SELECT id, revision FROM crm_leads WHERE email = ? AND deleted_at IS NULL').bind(c.email).first<{ id: string; revision: number }>()
+      : null;
+    if (existing) {
+      // Merge-on-create: update the surviving active lead; never insert a second row for the same email.
+      destination = `/manage/leads/${existing.id}?saved=updated`;
+      addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND revision = ? AND deleted_at IS NULL)', [existing.id, existing.revision]);
+      statements.push(db.prepare(`UPDATE crm_leads SET name=?,business=?,email=?,phone=?,service=?,preferred_contact=?,stage=?,monthly_cents=?,setup_cents=?,revision=revision+1,updated_at=? WHERE id=? AND revision=? AND deleted_at IS NULL AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)`).bind(c.name,c.business,c.email,c.phone,c.service,c.preferredContact,c.stage,c.monthlyCents,c.setupCents,now,existing.id,existing.revision,key,hash,attempt));
+      event(existing.id, note?'note':'system', note || 'Merged a duplicate create into this lead.');
+    } else {
+      destination = `/manage/leads/${key}?saved=created`;
+      addReceipt('NOT EXISTS(SELECT 1 FROM crm_leads WHERE id=?) AND NOT EXISTS(SELECT 1 FROM inquiries WHERE id=?)',[key,key]);
+      // ON CONFLICT(email) loses the race safely: no second active row; redirect is repaired after the batch.
+      statements.push(db.prepare(`INSERT INTO crm_leads (id,name,business,email,phone,service,preferred_contact,source,stage,monthly_cents,setup_cents,created_at,updated_at) SELECT ?,?,?,?,?,?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?) ON CONFLICT DO NOTHING`).bind(key, c.name, c.business, c.email, c.phone, c.service, c.preferredContact, source, c.stage, c.monthlyCents, c.setupCents, now, now,key,hash,attempt));
+      // Only write history when this mutation owns the lead row (lost email races insert nothing).
+      statements.push(db.prepare(`INSERT INTO crm_events (id,lead_id,kind,body,created_at) SELECT ?,id,?,?,? FROM crm_leads WHERE id=? AND deleted_at IS NULL AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?) ON CONFLICT(id) DO NOTHING`).bind(key, note?'note':'system', note||'Lead created.', now, key, key,hash,attempt));
+      if (c.email) statements.push(db.prepare(`UPDATE crm_mutations SET redirect = (
+        SELECT '/manage/leads/' || id || CASE WHEN id = ? THEN '?saved=created' ELSE '?saved=updated' END
+        FROM crm_leads WHERE deleted_at IS NULL AND (id = ? OR (email = ? AND email != ''))
+        ORDER BY CASE WHEN id = ? THEN 0 ELSE 1 END LIMIT 1
+      ) WHERE id = ? AND request_hash = ? AND attempt_id = ?`).bind(key, key, c.email, key, key, hash, attempt));
+    }
   } else if (['updateLead','stage','deleteLead','addNote','deleteNote'].includes(action)) {
     const id = validId(input.leadId, 'leadId'); await ensureLead(id);
     destination = `/manage/leads/${id}?saved=updated`;
@@ -191,26 +210,46 @@ export async function mutateCrm(input: Record<string, unknown>): Promise<{ redir
       const rev = revision(input);
       const c = action === 'updateLead' ? contact(input) : null;
       const stage = c?.stage || enumField(input, 'stage', Object.keys(STAGES));
-      addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND revision = ?)', [id, rev]);
-      if (c) statements.push(db.prepare(`UPDATE crm_leads SET name=?,business=?,email=?,phone=?,service=?,preferred_contact=?,stage=?,monthly_cents=?,setup_cents=?,revision=revision+1,updated_at=? WHERE id=? AND revision=? AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)`).bind(c.name,c.business,c.email,c.phone,c.service,c.preferredContact,stage,c.monthlyCents,c.setupCents,now,id,rev,key,hash,attempt));
-      else statements.push(db.prepare('UPDATE crm_leads SET stage=?,revision=revision+1,updated_at=? WHERE id=? AND revision=? AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)').bind(stage,now,id,rev,key,hash,attempt));
-      event(id, 'system', action === 'stage' ? `Stage changed to ${STAGES[stage as Stage]}.` : `Contact and opportunity updated. Stage: ${STAGES[stage as Stage]}.`);
+      if (c?.email) {
+        const clash = await db.prepare('SELECT id FROM crm_leads WHERE email = ? AND deleted_at IS NULL AND id != ?').bind(c.email, id).first<{ id: string }>();
+        if (clash) {
+          // Merge-on-update: fold this lead into the email survivor, keep consent rows, soft-delete the duplicate.
+          destination = `/manage/leads/${clash.id}?saved=updated`;
+          addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND revision = ? AND deleted_at IS NULL) AND EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND deleted_at IS NULL)', [id, rev, clash.id]);
+          statements.push(db.prepare(`UPDATE crm_leads SET name=?,business=?,email=?,phone=?,service=?,preferred_contact=?,stage=?,monthly_cents=?,setup_cents=?,revision=revision+1,updated_at=? WHERE id=? AND deleted_at IS NULL AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)`).bind(c.name,c.business,c.email,c.phone,c.service,c.preferredContact,stage,c.monthlyCents,c.setupCents,now,clash.id,key,hash,attempt));
+          for (const table of ['crm_events','crm_tasks','outreach_prospects','response_jobs','owner_alerts'] as const) {
+            statements.push(db.prepare(`UPDATE ${table} SET lead_id=? WHERE lead_id=? AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)`).bind(clash.id,id,key,hash,attempt));
+          }
+          statements.push(db.prepare('UPDATE crm_leads SET deleted_at=?,revision=revision+1,updated_at=? WHERE id=? AND revision=? AND deleted_at IS NULL AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)').bind(now,now,id,rev,key,hash,attempt));
+          event(clash.id, 'system', `Merged lead ${id} into this record (shared email). Stage: ${STAGES[stage as Stage]}.`);
+        } else {
+          addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND revision = ? AND deleted_at IS NULL)', [id, rev]);
+          statements.push(db.prepare(`UPDATE crm_leads SET name=?,business=?,email=?,phone=?,service=?,preferred_contact=?,stage=?,monthly_cents=?,setup_cents=?,revision=revision+1,updated_at=? WHERE id=? AND revision=? AND deleted_at IS NULL AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)`).bind(c.name,c.business,c.email,c.phone,c.service,c.preferredContact,stage,c.monthlyCents,c.setupCents,now,id,rev,key,hash,attempt));
+          event(id, 'system', `Contact and opportunity updated. Stage: ${STAGES[stage as Stage]}.`);
+        }
+      } else {
+        addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND revision = ? AND deleted_at IS NULL)', [id, rev]);
+        if (c) statements.push(db.prepare(`UPDATE crm_leads SET name=?,business=?,email=?,phone=?,service=?,preferred_contact=?,stage=?,monthly_cents=?,setup_cents=?,revision=revision+1,updated_at=? WHERE id=? AND revision=? AND deleted_at IS NULL AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)`).bind(c.name,c.business,c.email,c.phone,c.service,c.preferredContact,stage,c.monthlyCents,c.setupCents,now,id,rev,key,hash,attempt));
+        else statements.push(db.prepare('UPDATE crm_leads SET stage=?,revision=revision+1,updated_at=? WHERE id=? AND revision=? AND deleted_at IS NULL AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)').bind(stage,now,id,rev,key,hash,attempt));
+        event(id, 'system', action === 'stage' ? `Stage changed to ${STAGES[stage as Stage]}.` : `Contact and opportunity updated. Stage: ${STAGES[stage as Stage]}.`);
+      }
     } else if (action === 'deleteLead') {
-      if (input.confirmation !== 'DELETE') throw new RequestError(400, 'Type DELETE to confirm permanent removal.', { confirmation: 'Type DELETE exactly.' });
+      if (input.confirmation !== 'DELETE') throw new RequestError(400, 'Type DELETE to confirm removal from the active list.', { confirmation: 'Type DELETE exactly.' });
       const rev = revision(input); destination = '/manage/leads?saved=deleted';
-      addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND revision = ?)', [id, rev]);
+      addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND revision = ? AND deleted_at IS NULL)', [id, rev]);
       statements.push(db.prepare(`INSERT INTO voice_call_controls (call_sid,stopped_at)
         SELECT substr(source_key,6),? FROM response_jobs WHERE lead_id=? AND source_key LIKE 'call:%'
         AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)
         ON CONFLICT(call_sid) DO NOTHING`).bind(now,id,key,hash,attempt));
-      statements.push(db.prepare('DELETE FROM inquiries WHERE id=? AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)').bind(id,key,hash,attempt));
-      statements.push(db.prepare('DELETE FROM crm_leads WHERE id=? AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)').bind(id,key,hash,attempt));
+      // Soft-delete: keep the lead row, inquiry consent, and activity; hide from list/export.
+      statements.push(db.prepare('UPDATE crm_leads SET deleted_at=?,revision=revision+1,updated_at=? WHERE id=? AND revision=? AND deleted_at IS NULL AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)').bind(now,now,id,rev,key,hash,attempt));
+      event(id, 'system', 'Lead soft-deleted. Original inquiry consent and history were kept.');
     } else if (action === 'addNote') {
       const kind = enumField(input, 'kind', ['note','call','email','text','meeting']); const body = text(input,'body',6000,true,true);
-      addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ?)', [id]); event(id,kind,body);
+      addReceipt('EXISTS(SELECT 1 FROM crm_leads WHERE id = ? AND deleted_at IS NULL)', [id]); event(id,kind,body);
     } else {
       const noteId = validId(input.noteId,'noteId');
-      addReceipt("EXISTS(SELECT 1 FROM crm_events WHERE id=? AND lead_id=? AND kind <> 'system')",[noteId,id]);
+      addReceipt("EXISTS(SELECT 1 FROM crm_events WHERE id=? AND lead_id=? AND kind <> 'system') AND EXISTS(SELECT 1 FROM crm_leads WHERE id=? AND deleted_at IS NULL)",[noteId,id,id]);
       statements.push(db.prepare('DELETE FROM crm_events WHERE id=? AND lead_id=? AND EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?)').bind(noteId,id,key,hash,attempt));
     }
   } else if (['createTask','updateTask','taskStatus','deleteTask'].includes(action)) {
@@ -220,7 +259,7 @@ export async function mutateCrm(input: Record<string, unknown>): Promise<{ redir
       if (leadId) { await ensureLead(leadId); destination = `/manage/leads/${leadId}?saved=task`; }
       const title = text(input,'title',200,true), dueDate = text(input,'dueDate',10,true);
       if (!DATE.test(dueDate) || !Number.isFinite(Date.parse(dueDate)) || new Date(`${dueDate}T12:00:00Z`).toISOString().slice(0,10) !== dueDate || dueDate < '2000-01-01' || dueDate > '2100-12-31') throw new RequestError(400,'Choose a valid due date.',{dueDate:'Choose a calendar date from 2000 through 2100.'});
-      addReceipt('NOT EXISTS(SELECT 1 FROM crm_tasks WHERE id=?)'+(leadId?' AND EXISTS(SELECT 1 FROM crm_leads WHERE id=?)':''),leadId?[key,leadId]:[key]);
+      addReceipt('NOT EXISTS(SELECT 1 FROM crm_tasks WHERE id=?)'+(leadId?' AND EXISTS(SELECT 1 FROM crm_leads WHERE id=? AND deleted_at IS NULL)':''),leadId?[key,leadId]:[key]);
       statements.push(db.prepare('INSERT INTO crm_tasks (id,lead_id,title,due_date,created_at,updated_at) SELECT ?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM crm_mutations WHERE id=? AND request_hash=? AND attempt_id=?) ON CONFLICT(id) DO NOTHING').bind(key,leadId,title,dueDate,now,now,key,hash,attempt));
       if (leadId) event(leadId,'system',`Follow-up scheduled: ${title}. Due ${dueDate}.`);
     } else {
